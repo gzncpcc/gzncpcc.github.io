@@ -1,9 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo的常用指令合集</title>
+    <url>/2022/02/17/Hexo%E7%9A%84%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%E5%90%88%E9%9B%86/</url>
+    <content><![CDATA[<blockquote>
+<p>Hexo：一个基于Node.js的静态网页生成器，常将它与Github Page搭配使用，创建个人博客网站。</p>
+</blockquote>
+<p>hexo有许多主题，其实最火爆的是NexT、Matery等，复制关键词到GitHub或者baidu都能搜到。权衡利弊最终我还是选择了大多数人使用的next。</p>
+<h4 id="（1）hexo-g或hexo-generate"><a href="#（1）hexo-g或hexo-generate" class="headerlink" title="（1）hexo g或hexo generate"></a>（1）<code>hexo g</code>或<code>hexo generate</code></h4><p>该命令执行后在hexo站点根目录下生成public文件夹<br><img src="https://img-blog.csdnimg.cn/7683010350d24da995d50c154352b35d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_17,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<h4 id="（2）hexo-clean"><a href="#（2）hexo-clean" class="headerlink" title="（2）hexo clean"></a>（2）<code>hexo clean</code></h4><p>把（1）中的<code>public</code>文件夹删除</p>
+<h4 id="（3）hexo-s或hexo-server"><a href="#（3）hexo-s或hexo-server" class="headerlink" title="（3）hexo s或hexo server"></a>（3）<code>hexo s</code>或<code>hexo server</code></h4><p>启动服务，默认地址为<a href="http://localhost:4000/%EF%BC%8C4000%E7%AB%AF%E5%8F%A3">http://localhost:4000/，4000端口</a><br><img src="https://img-blog.csdnimg.cn/185e5eec8e4e4769b821f6157468d87d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_17,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<h4 id="（4）hexo-d或hexo-deploy"><a href="#（4）hexo-d或hexo-deploy" class="headerlink" title="（4）hexo d或hexo deploy"></a>（4）<code>hexo d</code>或<code>hexo deploy</code></h4><p>部署站点，在本地生成<code>.deploy_git</code>文件夹，并将编译后的文件上传至 GitHub。</p>
+<h4 id="（5）hexo-new-layout-lt-title-gt"><a href="#（5）hexo-new-layout-lt-title-gt" class="headerlink" title="（5）hexo new [layout] &lt;title&gt;"></a>（5）<code>hexo new [layout] &lt;title&gt;</code></h4><p>例如： <code>hexo new photo “my-first-blog”</code><br>上述指令执行时，Hexo 会尝试在 scaffolds 中寻找photo.md布局，若找到，则根据该布局新建文章；若未找到或指令中未指定该参数，则使用post.md新建文章。新建文章的名称在_config.yml中配置。<br><img src="https://img-blog.csdnimg.cn/35dacad9d318449696f68e6697eab9c7.png" alt="在这里插入图片描述"></p>
+<h4 id="（6）删除文章"><a href="#（6）删除文章" class="headerlink" title="（6）删除文章"></a>（6）删除文章</h4><p>只需在本地把<code>source/_posts</code>文件夹下的文章源文件删除后，执行以下命令重新部署即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 	// 一定要先 clean，防止灵异事件发生</span><br></pre></td></tr></table></figure>
+
+
+<p>参考文档</p>
+<blockquote>
+<p><a href="https://blog.csdn.net/qq_42889280/article/details/103087433">Hexo博客+Next主题深度优化与定制</a></p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>hexo 学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>categories</title>
     <url>/2022/02/13/categories/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p>阅读笔记<br>技术<br>旅行<br>流金岁月<br>随笔</p>
+]]></content>
   </entry>
   <entry>
     <title>Hello World</title>
@@ -47,5 +73,35 @@
 <p>避免端口冲突，需要将IIS中的80和443端口占用关闭；python程序也可以自定义端口来避免冲突，但相应的ssl.conf中的<code>proxy_pass  http://10.0.0.17/;</code>需要加上端口号。<br><img src="https://img-blog.csdnimg.cn/e613924f820840079f9912c17cf388ef.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>正确的运行顺序：nginx——&gt;python程序</p>
 <p>最后附上网址看<a href="https://gzncpcc.xyz/hmikily">成果</a>：<a href="https://gzncpcc.xyz/">https://gzncpcc.xyz/</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>阅读笔记（一）</title>
+    <url>/2022/02/17/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/zyanggc/oss/raw/master/blog/4f47d483b10e2fdf5bb040b69ec1327a.jpghttps://gitee.com/zyanggc/oss/raw/master/blog/4f47d483b10e2fdf5bb040b69ec1327a.jpg"></p>
+<p>旅行的真义之一不过就是“想象他者的生活”</p>
+<p>我读着书本，有时候我循书中线索走进陌生城市的僻巷酒店或黑暗城区餐厅，并不特别感到害怕，因为我知道我有“某位知识丰富的友人”与我相伴，我其实并不孤单。 每一本书的存在，就意味着一位“前行者”的存在，你并不是一位“冒险者”，你只是一位“追随者”。所以说，岂止是读书“防身”，我几乎可以说，“have book，will travel”。</p>
+<p>关于旅行地的阅读，我们是从旅行结束之后才真正开始的。在旅行之前，我们对旅行地的阅读是一种“想象”；在旅行之际，我们对旅行的阅读则是一种“摸象”；只有在旅行完之后，或者“一再完成”之后，才是我们真正对旅行地了解的开始。</p>
+<p>世事常常如此，真实与美丽两难全。</p>
+<p>自然大地的巨大尺幅让你心情既开朗又悲伤，开朗是因为领悟到尘世之上其实无事值得争执，悲伤是因为意识到个人存在的微不足道与蜉蝣人生的短暂局促。</p>
+<p>不怕折腾的体力和不着急回家的时间，我现在两者都缺。</p>
+]]></content>
+      <tags>
+        <tag>读书笔记 旅行</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>阅读笔记（三）</title>
+    <url>/2022/02/17/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>阅读笔记（二）</title>
+    <url>/2022/02/17/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>阅读笔记（四）</title>
+    <url>/2022/02/17/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E5%9B%9B%EF%BC%89/</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
