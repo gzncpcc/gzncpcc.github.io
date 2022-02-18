@@ -22,20 +22,23 @@
     var CONFIG = {"hostname":"gzncpcc.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="吟子:”我那时侯整天的哭，非常憎恨这个世界，我好象把一辈子的恨都用完了。” 知寿:”我想趁现在把空虚都用光了，老了就不会再空虚了。” 吟子:”知寿，可不能在年轻时都用光了，要是只留下愉快的事，上了年纪，就怕死了。” 和吟子面对面吃饭时，我总觉得自己的岁数倒比她大得多。">
+  <meta name="description" content="基于 SSL 证书，可将站点由 HTTP（Hypertext Transfer Protocol）切换到 HTTPS（Hyper Text Transfer Protocol over Secure Socket Layer），即基于安全套接字层（SSL）进行安全数据传输的加密版 HTTP 协议。  背景：众所众知，一台服务器开放80端口后我们可以直接IP地址访问到web页面，但ip地址暴露会可">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《一个人的好天气》读书笔记摘抄">
-<meta property="og:url" content="https://gzncpcc.github.io/2021/04/17/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/index.html">
+<meta property="og:title" content="Nginx代理：由http到https">
+<meta property="og:url" content="https://gzncpcc.github.io/2022/02/16/Nginx%E4%BB%A3%E7%90%86%EF%BC%9A%E7%94%B1http%E5%88%B0https/index.html">
 <meta property="og:site_name" content="gzncpcc">
-<meta property="og:description" content="吟子:”我那时侯整天的哭，非常憎恨这个世界，我好象把一辈子的恨都用完了。” 知寿:”我想趁现在把空虚都用光了，老了就不会再空虚了。” 吟子:”知寿，可不能在年轻时都用光了，要是只留下愉快的事，上了年纪，就怕死了。” 和吟子面对面吃饭时，我总觉得自己的岁数倒比她大得多。">
+<meta property="og:description" content="基于 SSL 证书，可将站点由 HTTP（Hypertext Transfer Protocol）切换到 HTTPS（Hyper Text Transfer Protocol over Secure Socket Layer），即基于安全套接字层（SSL）进行安全数据传输的加密版 HTTP 协议。  背景：众所众知，一台服务器开放80端口后我们可以直接IP地址访问到web页面，但ip地址暴露会可">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-04-17T05:51:01.000Z">
-<meta property="article:modified_time" content="2022-02-18T09:08:05.712Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/985b4dadeac648a5993d866cc9a591e4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_19,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/e613924f820840079f9912c17cf388ef.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta property="article:published_time" content="2022-02-16T12:27:32.000Z">
+<meta property="article:modified_time" content="2022-02-18T11:38:47.733Z">
 <meta property="article:author" content="gzncpcc">
-<meta property="article:tag" content="阅读笔记">
+<meta property="article:tag" content="Nginx">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/985b4dadeac648a5993d866cc9a591e4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_19,color_FFFFFF,t_70,g_se,x_16">
 
-<link rel="canonical" href="https://gzncpcc.github.io/2021/04/17/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/">
+<link rel="canonical" href="https://gzncpcc.github.io/2022/02/16/Nginx%E4%BB%A3%E7%90%86%EF%BC%9A%E7%94%B1http%E5%88%B0https/">
 
 
 <script id="page-configurations">
@@ -48,7 +51,7 @@
   };
 </script>
 
-  <title>《一个人的好天气》读书笔记摘抄 | gzncpcc</title>
+  <title>Nginx代理：由http到https | gzncpcc</title>
   
 
 
@@ -201,7 +204,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://gzncpcc.github.io/2021/04/17/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/">
+    <link itemprop="mainEntityOfPage" href="https://gzncpcc.github.io/2022/02/16/Nginx%E4%BB%A3%E7%90%86%EF%BC%9A%E7%94%B1http%E5%88%B0https/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/1_vpqtxzmzezeqjj9977.jpg">
@@ -214,7 +217,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          《一个人的好天气》读书笔记摘抄
+          Nginx代理：由http到https
         </h1>
 
         <div class="post-meta">
@@ -224,18 +227,18 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-04-17 13:51:01" itemprop="dateCreated datePublished" datetime="2021-04-17T13:51:01+08:00">2021-04-17</time>
+              <time title="创建时间：2022-02-16 20:27:32" itemprop="dateCreated datePublished" datetime="2022-02-16T20:27:32+08:00">2022-02-16</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-02-18 17:08:05" itemprop="dateModified" datetime="2022-02-18T17:08:05+08:00">2022-02-18</time>
+                <time title="修改时间：2022-02-18 19:38:47" itemprop="dateModified" datetime="2022-02-18T19:38:47+08:00">2022-02-18</time>
               </span>
 
           
-            <span id="/2021/04/17/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="《一个人的好天气》读书笔记摘抄" title="阅读次数">
+            <span id="/2022/02/16/Nginx%E4%BB%A3%E7%90%86%EF%BC%9A%E7%94%B1http%E5%88%B0https/" class="post-meta-item leancloud_visitors" data-flag-title="Nginx代理：由http到https" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -257,8 +260,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2021/04/17/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/04/17/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/" itemprop="commentCount"></span>
+    <a title="valine" href="/2022/02/16/Nginx%E4%BB%A3%E7%90%86%EF%BC%9A%E7%94%B1http%E5%88%B0https/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/02/16/Nginx%E4%BB%A3%E7%90%86%EF%BC%9A%E7%94%B1http%E5%88%B0https/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -273,22 +276,31 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>吟子:”我那时侯整天的哭，非常憎恨这个世界，我好象把一辈子的恨都用完了。”</p>
-<p>知寿:”我想趁现在把空虚都用光了，老了就不会再空虚了。”</p>
-<p>吟子:”知寿，可不能在年轻时都用光了，要是只留下愉快的事，上了年纪，就怕死了。”</p>
-<p>和吟子面对面吃饭时，我总觉得自己的岁数倒比她大得多。</p>
+        <blockquote>
+<p>基于 SSL 证书，可将站点由 HTTP（Hypertext Transfer Protocol）切换到 HTTPS（Hyper Text Transfer Protocol over Secure Socket Layer），即基于安全套接字层（SSL）进行安全数据传输的加密版 HTTP 协议。</p>
+</blockquote>
+<p>背景：众所众知，一台服务器开放80端口后我们可以直接IP地址访问到web页面，但ip地址暴露会可能会引起一些莫名的网络攻击。通常采取的策略就是去申请一个域名，经过域名绑定我们的ip就可以实现直接使用域名来访问，但80端口还是开放的，这样就使用到基于SSL的https了，简而言之就是更安全更方便了。可能某些同学会说我们可以改端口号，IP地址都懒得记那无疑会影响到我们装B不是。。。</p>
 <span id="more"></span>
 
-<p>在活到了这个岁数的人面前，恍惚觉得对方不会再继续老化，只有自己朝着前方的苍老飞速地坠落下去。当我在串加极鱼的时候，在剥柚子的时候，我都会不由得焦急起来。</p>
-<p>可是一觉得没希望了，往往就真的变成那样了。怎么也控制不了自己，总爱那么想。</p>
-<p>我觉得自己永远也过不上正常的生活，得到了的东西又扔掉或被扔掉。想扔掉的东西总业仍不干净。我的人生全是由这些组成的。</p>
-<p>我真想切断一切联系，到一个没有人，什么都没有的地方从头开始。</p>
-<p>不过，在那里又会建立起新的关系吧，等自己意识到时，一切又都结束了吧。</p>
-<p>不去思考什么意义，只是不断重复下去的话，就连人生也会结束。</p>
-<p>年轻的时候大家都拼命地伸出手想要什么，到了我这个岁数，想伸手要的越来越少了。</p>
-<p>知寿:”吟子，外面的世界很残酷吧。我这样的人会很快堕落吧。”</p>
-<p>吟子:”世界不分内外的呀，这世界只有一个。”</p>
-<p>就这样，我不断地更换认识的人，也不断地使自己进入不认识的人们之中去。我既不悲观，也不乐观，只是每天早上睁开眼睛迎接新的一天，一个人努力过下去。</p>
+<p><img src="https://img-blog.csdnimg.cn/985b4dadeac648a5993d866cc9a591e4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_19,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>备案也没想象中那么严格，很简单，2天就审核通过了。这里就直接说最后一步了，安装SSL证书，示例的环境是：windows server 2019 + nginx + flask</p>
+<p> 参考官方文档：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/400/47361">https://cloud.tencent.com/document/product/400/47361</a></p>
+<p>ssl.conf文件内容如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">listen 443 ssl; # 监听443端口</span><br><span class="line">server_name gzncpcc.xyz; #你的域名</span><br><span class="line">ssl_certificate C:/gmssl/nginx-1.16.0/conf/ssl/gzncpcc.xyz_bundle.crt; #ssl证书的crt文件路径</span><br><span class="line">ssl_certificate_key c:/gmssl/nginx-1.16.0/conf/ssl/gzncpcc.xyz.key;</span><br><span class="line">ssl_certificate c:/gmssl/nginx-1.16.0/conf/ssl/gzncpcc.xyz_bundle.pem; #ssl证书的pem文件路径</span><br><span class="line">ssl_certificate_key c:/gmssl/nginx-1.16.0/conf/ssl/gzncpcc.xyz.key; </span><br><span class="line">#先配置签名证书，再配置加密证书，签名加密证书私钥 key 为同一个！</span><br><span class="line">ssl_session_timeout 5m; </span><br><span class="line">ssl_protocols TLSv1.2;</span><br><span class="line">ssl_ciphers SM2-WITH-SMS4-SM3:ECDH:AESGCM:HIGH:MEDIUM:!RC4:!DH:!MD5:!aNULL:!eNULL; </span><br><span class="line">ssl_prefer_server_ciphers on;</span><br><span class="line">location / &#123; </span><br><span class="line">        proxy_pass  http://10.0.0.17/; #/内网地址，这样就可以关闭服务器的80端口了</span><br><span class="line">       # proxy_pass  http://gzncpcc.xyz/; #//公网地址:项目端口号;http://gzncpcc.xyz/;</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">listen 443 ssl; # 监听443端口</span><br><span class="line">server_name blog.gzncpcc.xyz; # 对应子域名</span><br><span class="line">ssl_certificate C:/gmssl/nginx-1.16.0/conf/ssl/blog.gzncpcc.xyz_bundle.crt; #ssl证书的crt文件路径</span><br><span class="line">ssl_certificate_key c:/gmssl/nginx-1.16.0/conf/ssl/blog.gzncpcc.xyz.key;</span><br><span class="line">ssl_certificate c:/gmssl/nginx-1.16.0/conf/ssl/blog.gzncpcc.xyz_bundle.pem; #ssl证书的pem文件路径</span><br><span class="line">ssl_certificate_key c:/gmssl/nginx-1.16.0/conf/ssl/blog.gzncpcc.xyz.key; </span><br><span class="line">#先配置签名证书，再配置加密证书，签名加密证书私钥 key 为同一个！</span><br><span class="line">ssl_session_timeout 5m; </span><br><span class="line">ssl_protocols TLSv1.2;</span><br><span class="line">ssl_ciphers SM2-WITH-SMS4-SM3:ECDH:AESGCM:HIGH:MEDIUM:!RC4:!DH:!MD5:!aNULL:!eNULL; </span><br><span class="line">ssl_prefer_server_ciphers on;</span><br><span class="line">location / &#123; </span><br><span class="line">        proxy_pass  http://127.0.0.1:4000/; # 博客项目</span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="踩雷经验"><a href="#踩雷经验" class="headerlink" title="踩雷经验"></a>踩雷经验</h3><ol>
+<li><strong>没事多重启，把nginx关死再运行，把所有进程杀死。</strong> 否则也不会让我一直改到怀疑人生了，几个小时，什么资料都查了，就是反代理不上，改到怀疑人生，一直出现welcome nginx。。。</li>
+<li>如果用了<code>https</code>，HTML页面引用的链接也要使用https的，例如引用<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">+    &lt;script src=&quot;https://libs.baidu.com/jquery/2.1.1/jquery.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">+    &lt;script src=&quot;https://res.wx.qq.com/open/js/jweixin-1.4.0.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">-    &lt;script src=&quot;http://libs.baidu.com/jquery/2.1.1/jquery.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">-    &lt;script src=&quot;http://res.wx.qq.com/open/js/jweixin-1.4.0.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>下面附上windows上的nginx常用操作指令</p>
+<p>可以杀死名字为nginx.EXE的所有进程：<code>taskkill /fi &quot;imagename eq nginx.EXE&quot; /f</code></p>
+<p>检查： <code>nginx.exe -t</code></p>
+<p>运行：<code>nginx.exe</code></p>
+<p>重载：<code>nginx.exe -s reload</code></p>
+<p>停止：<code>nginx.exe -s stop</code></p>
+<p>查找端口占用情况：<code>netstat -aon | findstr :80 </code></p>
+<p>ps:都是在cmd中执行，其他什么shell、git没有效果。。。</p>
+<p>避免端口冲突，需要将IIS中的80和443端口占用关闭；python程序也可以自定义端口来避免冲突，但相应的ssl.conf中的<code>proxy_pass  http://10.0.0.17/;</code>需要加上端口号。<br><img src="https://img-blog.csdnimg.cn/e613924f820840079f9912c17cf388ef.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>正确的运行顺序：nginx——&gt;python程序</p>
+<p>最后附上网址看<a target="_blank" rel="noopener" href="https://gzncpcc.xyz/hmikily">成果</a>：<a target="_blank" rel="noopener" href="https://gzncpcc.xyz/">https://gzncpcc.xyz/</a></p>
 
     </div>
 
@@ -326,7 +338,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://gzncpcc.github.io/2021/04/17/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/" title="《一个人的好天气》读书笔记摘抄">https://gzncpcc.github.io/2021/04/17/阅读笔记（三）/</a>
+    <a href="https://gzncpcc.github.io/2022/02/16/Nginx%E4%BB%A3%E7%90%86%EF%BC%9A%E7%94%B1http%E5%88%B0https/" title="Nginx代理：由http到https">https://gzncpcc.github.io/2022/02/16/Nginx代理：由http到https/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -376,7 +388,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/" rel="tag"># 阅读笔记</a>
+              <a href="/tags/Nginx/" rel="tag"># Nginx</a>
           </div>
 
         
@@ -390,12 +402,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/12/17/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/" rel="prev" title="如何成为一名更优秀的程序员">
-      <i class="fa fa-chevron-left"></i> 如何成为一名更优秀的程序员
+    <a href="/2022/02/13/categories/" rel="prev" title="categories">
+      <i class="fa fa-chevron-left"></i> categories
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/02/13/categories/" rel="next" title="categories">
-      categories <i class="fa fa-chevron-right"></i>
+    <a href="/2022/02/17/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E5%9B%9B%EF%BC%89/" rel="next" title="那些一看就眼前一亮的句子">
+      那些一看就眼前一亮的句子 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -462,6 +474,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B8%A9%E9%9B%B7%E7%BB%8F%E9%AA%8C"><span class="nav-number">1.</span> <span class="nav-text">踩雷经验</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
