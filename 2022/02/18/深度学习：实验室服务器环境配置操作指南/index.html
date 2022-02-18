@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/cursor/love.js"></script>
+<script src="/live2d-widget/autoload.js"></script>
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"gzncpcc.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="一、使用Anaconda配置Python环境安装anaconda：bash Anaconda3-2019.10-Linux-x86_64.sh 实验室服务器没有挂公网，所以只能用离线方式安装，包括下面的pytorch和TensorFlow都是一样。 123456789panchengchang@a-node03:~&#x2F;envir_packages$ bash Anaconda3-2019.10-Li">
+<meta property="og:type" content="article">
+<meta property="og:title" content="深度学习：">
+<meta property="og:url" content="https://gzncpcc.github.io/2022/02/18/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%EF%BC%9A%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97/index.html">
+<meta property="og:site_name" content="gzncpcc">
+<meta property="og:description" content="一、使用Anaconda配置Python环境安装anaconda：bash Anaconda3-2019.10-Linux-x86_64.sh 实验室服务器没有挂公网，所以只能用离线方式安装，包括下面的pytorch和TensorFlow都是一样。 123456789panchengchang@a-node03:~&#x2F;envir_packages$ bash Anaconda3-2019.10-Li">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210115220547794.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3ZwcXR4em16ZXplcWpqOTk3Nw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210115222845145.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3ZwcXR4em16ZXplcWpqOTk3Nw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210115223107785.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3ZwcXR4em16ZXplcWpqOTk3Nw==,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2022-02-18T09:14:49.000Z">
+<meta property="article:modified_time" content="2022-02-18T09:16:14.144Z">
+<meta property="article:author" content="gzncpcc">
+<meta property="article:tag" content="深度学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20210115220547794.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3ZwcXR4em16ZXplcWpqOTk3Nw==,size_16,color_FFFFFF,t_70">
+
+<link rel="canonical" href="https://gzncpcc.github.io/2022/02/18/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%EF%BC%9A%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>深度学习： | gzncpcc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">gzncpcc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">人生如逆旅，我亦是行人</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gzncpcc.github.io/2022/02/18/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%EF%BC%9A%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/1_vpqtxzmzezeqjj9977.jpg">
+      <meta itemprop="name" content="gzncpcc">
+      <meta itemprop="description" content="绘一纸潇湘，花盏玲珑如妆，雨落弦响，陌上芳华，醉影照天长">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="gzncpcc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          深度学习：
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-02-18 17:14:49 / 修改时间：17:16:14" itemprop="dateCreated datePublished" datetime="2022-02-18T17:14:49+08:00">2022-02-18</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="一、使用Anaconda配置Python环境"><a href="#一、使用Anaconda配置Python环境" class="headerlink" title="一、使用Anaconda配置Python环境"></a>一、使用Anaconda配置Python环境</h2><p>安装anaconda：<code>bash Anaconda3-2019.10-Linux-x86_64.sh </code><br><code>实验室服务器没有挂公网，所以只能用离线方式安装，包括下面的pytorch和TensorFlow都是一样。</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">panchengchang@a-node03:~/envir_packages$ bash Anaconda3-2019.10-Linux-x86_64.sh </span><br><span class="line"></span><br><span class="line">Welcome to Anaconda3 2019.10</span><br><span class="line"></span><br><span class="line">In order to <span class="built_in">continue</span> the installation process, please review the license</span><br><span class="line">agreement.</span><br><span class="line">Please, press ENTER to <span class="built_in">continue</span></span><br><span class="line">&gt;&gt;&gt; </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>按要求一直回车，要输yes就输yes就可以。</p>
+<span id="more"></span>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Do you accept the license terms? [<span class="built_in">yes</span>|no]</span><br><span class="line">[no] &gt;&gt;&gt; <span class="built_in">yes</span></span><br><span class="line"></span><br><span class="line">Anaconda3 will now be installed into this location:</span><br><span class="line">/raid/620/panchengchang_19/anaconda3</span><br><span class="line"></span><br><span class="line">  - Press ENTER to confirm the location</span><br><span class="line">  - Press CTRL-C to abort the installation</span><br><span class="line">  - Or specify a different location below</span><br><span class="line"></span><br><span class="line">[/raid/620/panchengchang_19/anaconda3] &gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-按ENTER确认位置</span><br><span class="line">-按CTRL-C中止安装</span><br><span class="line">-或者在下面指定其他位置</span><br></pre></td></tr></table></figure>
+<p>直接回车就进行安装了，后面还需要再输一次yes</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">Preparing transaction: <span class="keyword">done</span></span><br><span class="line">Executing transaction: <span class="keyword">done</span></span><br><span class="line">installation finished.</span><br><span class="line">Do you wish the installer to initialize Anaconda3</span><br><span class="line">by running conda init? [<span class="built_in">yes</span>|no]</span><br><span class="line">[no] &gt;&gt;&gt; <span class="built_in">yes</span></span><br><span class="line">no change     /raid/620/panchengchang_19/anaconda3/condabin/conda</span><br><span class="line">no change     /raid/620/panchengchang_19/anaconda3/bin/conda</span><br><span class="line">no change     /raid/620/panchengchang_19/anaconda3/bin/conda-env</span><br><span class="line">no change     /raid/620/panchengchang_19/anaconda3/bin/activate</span><br><span class="line">no change     /raid/620/panchengchang_19/anaconda3/bin/deactivate</span><br><span class="line">no change     /raid/620/panchengchang_19/anaconda3/etc/profile.d/conda.sh</span><br><span class="line">no change     /raid/620/panchengchang_19/anaconda3/etc/fish/conf.d/conda.fish</span><br><span class="line">no change     /raid/620/panchengchang_19/anaconda3/shell/condabin/Conda.psm1</span><br><span class="line">no change     /raid/620/panchengchang_19/anaconda3/shell/condabin/conda-hook.ps1</span><br><span class="line">no change     /raid/620/panchengchang_19/anaconda3/lib/python3.7/site-packages/xontrib/conda.xsh</span><br><span class="line">no change     /raid/620/panchengchang_19/anaconda3/etc/profile.d/conda.csh</span><br><span class="line">modified      /raid/620/panchengchang_19/.bashrc</span><br><span class="line"></span><br><span class="line">==&gt; For changes to take effect, close and re-open your current shell. &lt;==</span><br><span class="line"></span><br><span class="line">If you<span class="string">&#x27;d prefer that conda&#x27;</span>s base environment not be activated on startup, </span><br><span class="line">   <span class="built_in">set</span> the auto_activate_base parameter to <span class="literal">false</span>: </span><br><span class="line"></span><br><span class="line">conda config --<span class="built_in">set</span> auto_activate_base <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">Thank you <span class="keyword">for</span> installing Anaconda3!</span><br><span class="line"></span><br><span class="line">===========================================================================</span><br><span class="line"></span><br><span class="line">Anaconda and JetBrains are working together to bring you Anaconda-powered</span><br><span class="line">environments tightly integrated <span class="keyword">in</span> the PyCharm IDE.</span><br><span class="line"></span><br><span class="line">PyCharm <span class="keyword">for</span> Anaconda is available at:</span><br><span class="line">https://www.anaconda.com/pycharm</span><br><span class="line"></span><br><span class="line">panchengchang@a-node03:~/envir_packages$ </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong>重启终端</strong>，输入conda或pip验证用户环境变量是否可以使用。<br><img src="https://img-blog.csdnimg.cn/20210115220547794.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3ZwcXR4em16ZXplcWpqOTk3Nw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这样anaconda就安装成功了。</p>
+<h2 id="二、给conda配置国内源，提升下载速度"><a href="#二、给conda配置国内源，提升下载速度" class="headerlink" title="二、给conda配置国内源，提升下载速度"></a>二、给conda配置国内源，提升下载速度</h2><p>添加清华TUNA镜像源<code>conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</code><br>设置搜索时显示通道地址<code>conda config --set show_channel_urls yes</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(base) panchengchang@a-node03:~$ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</span><br><span class="line">(base) panchengchang@a-node03:~$ conda config --<span class="built_in">set</span> show_channel_urls <span class="built_in">yes</span></span><br><span class="line">(base) panchengchang@a-node03:~$ </span><br></pre></td></tr></table></figure>
+
+
+<h2 id="三、使用conda创建虚拟环境"><a href="#三、使用conda创建虚拟环境" class="headerlink" title="三、使用conda创建虚拟环境"></a>三、使用conda创建虚拟环境</h2><p>新建一个名叫pytorch，python版本为3.7的虚拟环境：conda create -n pytorch python&#x3D;3.7</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(base) panchengchang@a-node03:~$ conda create -n pytorch python=3.7</span><br></pre></td></tr></table></figure>
+<p>然后根据提示输y</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">Proceed ([y]/n)? y</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Downloading and Extracting Packages</span><br><span class="line">tk-8.6.10            | 3.0 MB    | <span class="comment">############################################################################################################################# | 100% </span></span><br><span class="line">readline-8.0         | 356 KB    | <span class="comment">############################################################################################################################# | 100% </span></span><br><span class="line">sqlite-3.33.0        | 1.1 MB    | <span class="comment">############################################################################################################################# | 100% </span></span><br><span class="line">wheel-0.36.2         | 33 KB     | <span class="comment">############################################################################################################################# | 100% </span></span><br><span class="line">python-3.7.9         | 45.3 MB   | <span class="comment">############################################################################################################################# | 100% </span></span><br><span class="line">setuptools-51.1.2    | 739 KB    | <span class="comment">############################################################################################################################# | 100% </span></span><br><span class="line">pip-20.3.3           | 1.8 MB    | <span class="comment">############################################################################################################################# | 100% </span></span><br><span class="line">xz-5.2.5             | 341 KB    | <span class="comment">############################################################################################################################# | 100% </span></span><br><span class="line">ncurses-6.2          | 817 KB    | <span class="comment">############################################################################################################################# | 100% </span></span><br><span class="line">ld_impl_linux-64-2.3 | 568 KB    | <span class="comment">############################################################################################################################# | 100% </span></span><br><span class="line">openssl-1.1.1i       | 2.5 MB    | <span class="comment">############################################################################################################################# | 100% </span></span><br><span class="line">libedit-3.1.20191231 | 116 KB    | <span class="comment">############################################################################################################################# | 100% </span></span><br><span class="line">ca-certificates-2020 | 121 KB    | <span class="comment">############################################################################################################################# | 100% </span></span><br><span class="line">certifi-2020.12.5    | 141 KB    | <span class="comment">############################################################################################################################# | 100% </span></span><br><span class="line">libffi-3.3           | 50 KB     | <span class="comment">############################################################################################################################# | 100% </span></span><br><span class="line">Preparing transaction: <span class="keyword">done</span></span><br><span class="line">Verifying transaction: <span class="keyword">done</span></span><br><span class="line">Executing transaction: <span class="keyword">done</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># To activate this environment, use</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#     $ conda activate pytorch</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># To deactivate an active environment, use</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#     $ conda deactivate</span></span><br><span class="line"></span><br><span class="line">(base) panchengchang@a-node03:~$ </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>要激活此环境，使用<code>conda activate pytorch</code><br>要停用活动环境，使用<code>conda deactivate</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(base) panchengchang@a-node03:~$ conda activate pytorch</span><br><span class="line">(pytorch) panchengchang@a-node03:~$ conda deactivate</span><br><span class="line">(base) panchengchang@a-node03:~$ </span><br></pre></td></tr></table></figure>
+<h2 id="四、安装pytorch（深度学习框架）"><a href="#四、安装pytorch（深度学习框架）" class="headerlink" title="四、安装pytorch（深度学习框架）"></a>四、安装pytorch（深度学习框架）</h2><p>先进入虚拟环境</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(base) panchengchang@a-node03:~$ conda activate pytorch</span><br><span class="line">(pytorch) panchengchang@a-node03:~$ </span><br></pre></td></tr></table></figure>
+<p>进入安装包路径下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(pytorch) panchengchang@a-node03:~$ <span class="built_in">ls</span>  </span><br><span class="line">anaconda3  envir_packages</span><br><span class="line">(pytorch) panchengchang@a-node03:~$ <span class="built_in">cd</span> envir_packages/</span><br><span class="line">(pytorch) panchengchang@a-node03:~/envir_packages$ <span class="built_in">ls</span></span><br><span class="line">Anaconda3-2019.10-Linux-x86_64.sh                           torch-1.7.0+cu110-cp37-cp37m-linux_x86_64.whl</span><br><span class="line">opencv_python-4.3.0.36-cp37-cp37m-manylinux2014_x86_64.whl  torchvision-0.8.1+cu110-cp37-cp37m-linux_x86_64.whl</span><br><span class="line">(pytorch) panchengchang@a-node03:~/envir_packages$ pip install torch-1.7.0+cu110-cp37-cp37m-linux_x86_64.whl </span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20210115222845145.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3ZwcXR4em16ZXplcWpqOTk3Nw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>安装成功后再装另外一个</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(pytorch) panchengchang@a-node03:~/envir_packages$ pip install torchvision-0.8.1+cu110-cp37-cp37m-linux_x86_64.whl</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20210115223107785.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3ZwcXR4em16ZXplcWpqOTk3Nw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>检查安装的pytorch版本是否能够使用GPU</strong><br>虚拟环境下，输入python，进入python命令行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">(pytorch) panchengchang@a-node03:~/envir_packages$ python</span><br><span class="line">Python 3.7.9 (default, Aug 31 2020, 12:42:55) </span><br><span class="line">[GCC 7.3.0] :: Anaconda, Inc. on linux</span><br><span class="line">Type <span class="string">&quot;help&quot;</span>, <span class="string">&quot;copyright&quot;</span>, <span class="string">&quot;credits&quot;</span> or <span class="string">&quot;license&quot;</span> <span class="keyword">for</span> more information.</span><br><span class="line">&gt;&gt;&gt; import torch</span><br><span class="line">&gt;&gt;&gt; torch.cuda.is_available()</span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; </span><br></pre></td></tr></table></figure>
+<p>返回True则证明pytorch安装已完成。</p>
+<h2 id="五、一些常用的命令（Linux）"><a href="#五、一些常用的命令（Linux）" class="headerlink" title="五、一些常用的命令（Linux）"></a>五、一些常用的命令（Linux）</h2><h4 id="1-查看系统内的GPU使用情况"><a href="#1-查看系统内的GPU使用情况" class="headerlink" title="1.查看系统内的GPU使用情况"></a>1.查看系统内的GPU使用情况</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">(pytorch) panchengchang@a-node03:~$ nvidia-smi</span><br><span class="line">Fri Jan 15 22:44:22 2021       </span><br><span class="line">+-----------------------------------------------------------------------------+</span><br><span class="line">| NVIDIA-SMI 450.51.06    Driver Version: 450.51.06    CUDA Version: 11.0     |</span><br><span class="line">|-------------------------------+----------------------+----------------------+</span><br><span class="line">| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |</span><br><span class="line">| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |</span><br><span class="line">|                               |                      |               MIG M. |</span><br><span class="line">|===============================+======================+======================|</span><br><span class="line">|   0  A100-SXM4-40GB      On   | 00000000:07:00.0 Off |                    0 |</span><br><span class="line">| N/A   40C    P0   313W / 400W |  21142MiB / 40537MiB |    100%      Default |</span><br><span class="line">|                               |                      |             Disabled |</span><br><span class="line">+-------------------------------+----------------------+----------------------+</span><br><span class="line">|   1  A100-SXM4-40GB      On   | 00000000:0F:00.0 Off |                    0 |</span><br><span class="line">| N/A   58C    P0   344W / 400W |  40138MiB / 40537MiB |     99%      Default |</span><br><span class="line">|                               |                      |             Disabled |</span><br><span class="line">+-------------------------------+----------------------+----------------------+</span><br><span class="line">|   2  A100-SXM4-40GB      On   | 00000000:47:00.0 Off |                    0 |</span><br><span class="line">| N/A   52C    P0   340W / 400W |  27628MiB / 40537MiB |    100%      Default |</span><br><span class="line">|                               |                      |             Disabled |</span><br><span class="line">+-------------------------------+----------------------+----------------------+</span><br><span class="line">|   3  A100-SXM4-40GB      On   | 00000000:4E:00.0 Off |                    0 |</span><br><span class="line">| N/A   53C    P0   296W / 400W |  22026MiB / 40537MiB |     93%      Default |</span><br><span class="line">|                               |                      |             Disabled |</span><br><span class="line">+-------------------------------+----------------------+----------------------+</span><br><span class="line">|   4  A100-SXM4-40GB      On   | 00000000:87:00.0 Off |                    0 |</span><br><span class="line">| N/A   30C    P0    59W / 400W |      3MiB / 40537MiB |      0%      Default |</span><br><span class="line">|                               |                      |             Disabled |</span><br><span class="line">+-------------------------------+----------------------+----------------------+</span><br><span class="line">|   5  A100-SXM4-40GB      On   | 00000000:90:00.0 Off |                    0 |</span><br><span class="line">| N/A   42C    P0    71W / 400W |      3MiB / 40537MiB |      0%      Default |</span><br><span class="line">|                               |                      |             Disabled |</span><br><span class="line">+-------------------------------+----------------------+----------------------+</span><br><span class="line">|   6  A100-SXM4-40GB      On   | 00000000:B7:00.0 Off |                    0 |</span><br><span class="line">| N/A   38C    P0    60W / 400W |      3MiB / 40537MiB |      0%      Default |</span><br><span class="line">|                               |                      |             Disabled |</span><br><span class="line">+-------------------------------+----------------------+----------------------+</span><br><span class="line">|   7  A100-SXM4-40GB      On   | 00000000:BD:00.0 Off |                    0 |</span><br><span class="line">| N/A   38C    P0    62W / 400W |      3MiB / 40537MiB |      0%      Default |</span><br><span class="line">|                               |                      |             Disabled |</span><br><span class="line">+-------------------------------+----------------------+----------------------+</span><br><span class="line">                                                                               </span><br><span class="line">+-----------------------------------------------------------------------------+</span><br><span class="line">| Processes:                                                                  |</span><br><span class="line">|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |</span><br><span class="line">|        ID   ID                                                   Usage      |</span><br><span class="line">|=============================================================================|</span><br><span class="line">|    0   N/A  N/A    255273      C   python                          21139MiB |</span><br><span class="line">|    1   N/A  N/A    253640      C   python                          40135MiB |</span><br><span class="line">|    2   N/A  N/A    250479      C   python                          27625MiB |</span><br><span class="line">|    3   N/A  N/A    256275      C   python                          22023MiB |</span><br><span class="line">+-----------------------------------------------------------------------------+</span><br><span class="line">(pytorch) panchengchang@a-node03:~$ </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>上面是静态查看，还可以动态查看：<code>watch -n 0.1 nvidia-smi</code><br>动态查看命令中设置的0.1是指每隔0.1秒动态刷新</p>
+<h4 id="2-在程序中指定GPU"><a href="#2-在程序中指定GPU" class="headerlink" title="2.在程序中指定GPU"></a>2.在程序中指定GPU</h4><p>通常，每个服务器中具有多个GPU，GPU的编号是按照0,1,2…的顺序排列的。<br>在代码中加入：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.environ[<span class="string">&quot;CUDA_VISIBLE_DEVICES&quot;</span>] = <span class="string">&quot;1&quot;</span></span><br></pre></td></tr></table></figure>
+<p>这里的代码指定了使用GPU 1，“1”代表指定的GPU块，可以根据nvidia­-smi显示的结果选择合适的GPU。</p>
+<h4 id="3-根据pid查看进程详情"><a href="#3-根据pid查看进程详情" class="headerlink" title="3.根据pid查看进程详情"></a>3.根据pid查看进程详情</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(pytorch) panchengchang@a-node03:~$ lsof -p 9347</span><br><span class="line">(pytorch) panchengchang@a-node03:~$ ps -ef | grep 9347</span><br></pre></td></tr></table></figure>
+<p>其中9347为已知pid</p>
+
+    </div>
+
+    
+    
+    
+      
+
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.jpg" alt="gzncpcc 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpg" alt="gzncpcc 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>gzncpcc
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://gzncpcc.github.io/2022/02/18/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%EF%BC%9A%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97/" title="深度学习：">https://gzncpcc.github.io/2022/02/18/深度学习：实验室服务器环境配置操作指南/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/username">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://t.me/channel_name">
+            <span class="icon">
+              <i class="fab fa-telegram"></i>
+            </span>
+
+            <span class="label">Telegram</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/wechat_channel.jpg">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="tag"># 深度学习</a>
+          </div>
+
+        
+  <div class="post-widgets">
+    <div class="wp_rating">
+      <div id="wpac-rating"></div>
+    </div>
+  </div>
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/02/18/%E4%B8%80%E5%9C%BA%E8%AF%B4%E8%B5%B0%E5%B0%B1%E8%B5%B0%E7%9A%84%E6%97%85%E8%A1%8C/" rel="prev" title="一场说走就走的旅行">
+      <i class="fa fa-chevron-left"></i> 一场说走就走的旅行
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+    <!--网易云插件-->
+    <!--
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=0&id=7142209432&auto=1&height=90">
+    </iframe>
+    -->
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BD%BF%E7%94%A8Anaconda%E9%85%8D%E7%BD%AEPython%E7%8E%AF%E5%A2%83"><span class="nav-number">1.</span> <span class="nav-text">一、使用Anaconda配置Python环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%BB%99conda%E9%85%8D%E7%BD%AE%E5%9B%BD%E5%86%85%E6%BA%90%EF%BC%8C%E6%8F%90%E5%8D%87%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6"><span class="nav-number">2.</span> <span class="nav-text">二、给conda配置国内源，提升下载速度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E4%BD%BF%E7%94%A8conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="nav-number">3.</span> <span class="nav-text">三、使用conda创建虚拟环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%AE%89%E8%A3%85pytorch%EF%BC%88%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">四、安装pytorch（深度学习框架）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4%EF%BC%88Linux%EF%BC%89"><span class="nav-number">5.</span> <span class="nav-text">五、一些常用的命令（Linux）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E5%86%85%E7%9A%84GPU%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5"><span class="nav-number">5.0.1.</span> <span class="nav-text">1.查看系统内的GPU使用情况</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%9C%A8%E7%A8%8B%E5%BA%8F%E4%B8%AD%E6%8C%87%E5%AE%9AGPU"><span class="nav-number">5.0.2.</span> <span class="nav-text">2.在程序中指定GPU</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E6%A0%B9%E6%8D%AEpid%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B%E8%AF%A6%E6%83%85"><span class="nav-number">5.0.3.</span> <span class="nav-text">3.根据pid查看进程详情</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="gzncpcc"
+      src="/images/1_vpqtxzmzezeqjj9977.jpg">
+  <p class="site-author-name" itemprop="name">gzncpcc</p>
+  <div class="site-description" itemprop="description">绘一纸潇湘，花盏玲珑如妆，雨落弦响，陌上芳华，醉影照天长</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/gzncpcc" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;gzncpcc" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:gzncpcc@gmail.com" title="E-Mail → mailto:gzncpcc@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/gzncpcc" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;gzncpcc" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://youtube.com/gzncpcc" title="YouTube → https:&#x2F;&#x2F;youtube.com&#x2F;gzncpcc" rel="noopener" target="_blank"><i class="fab fa-youtube fa-fw"></i>YouTube</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.baidu.com/" title="https:&#x2F;&#x2F;www.baidu.com&#x2F;" rel="noopener" target="_blank">Baidu</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://github.com/" title="https:&#x2F;&#x2F;github.com&#x2F;" rel="noopener" target="_blank">Github</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://user.qzone.qq.com/237440035?ADUIN=237440035&ADSESSION=1644989167&ADTAG=CLIENT.QQ.5851_MyTip.0&ADPUBNO=27180&source=namecardhoverstar" title="https:&#x2F;&#x2F;user.qzone.qq.com&#x2F;237440035?ADUIN&#x3D;237440035&amp;ADSESSION&#x3D;1644989167&amp;ADTAG&#x3D;CLIENT.QQ.5851_MyTip.0&amp;ADPUBNO&#x3D;27180&amp;source&#x3D;namecardhoverstar" rel="noopener" target="_blank">QQ空间</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.bilibili.com/" title="https:&#x2F;&#x2F;www.bilibili.com&#x2F;" rel="noopener" target="_blank">B站</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">黔ICP备2022001159号-1 </a>
+      <img src="/images/beian.png" style="display: inline-block;">
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">gzncpcc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script color='' opacity='' zIndex='' count='' src="/lib/canvas-nest/canvas-nest-nomobile.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+  <script>
+  if (CONFIG.page.isPost) {
+    wpac_init = window.wpac_init || [];
+    wpac_init.push({
+      widget: 'Rating',
+      id    : ,
+      el    : 'wpac-rating',
+      color : 'fc6423'
+    });
+    (function() {
+      if ('WIDGETPACK_LOADED' in window) return;
+      WIDGETPACK_LOADED = true;
+      var mc = document.createElement('script');
+      mc.type = 'text/javascript';
+      mc.async = true;
+      mc.src = '//embed.widgetpack.com/widget.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+    })();
+  }
+  </script>
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
