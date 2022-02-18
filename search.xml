@@ -3,7 +3,10 @@
   <entry>
     <title>Hexo添加评论功能</title>
     <url>/2022/02/18/Hexo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</url>
-    <content><![CDATA[<h2 id="注册-Leancloud-账号"><a href="#注册-Leancloud-账号" class="headerlink" title="注册 Leancloud 账号"></a>注册 Leancloud 账号</h2><p><a href="https://console.leancloud.cn/login">https://console.leancloud.cn/login</a><br><img src="https://img-blog.csdnimg.cn/79eb4aa82d7346cfb96d0cdd858471c6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>注册完成后进入app控制面板-&gt;创建应用-&gt;创建开发版应用。<br><img src="https://img-blog.csdnimg.cn/470fb229c0f742259d738fc675da9abd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+    <content><![CDATA[<h2 id="注册-Leancloud-账号"><a href="#注册-Leancloud-账号" class="headerlink" title="注册 Leancloud 账号"></a>注册 Leancloud 账号</h2><p><a href="https://console.leancloud.cn/login">https://console.leancloud.cn/login</a><br><img src="https://img-blog.csdnimg.cn/79eb4aa82d7346cfb96d0cdd858471c6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<span id="more"></span>
+
+<p>注册完成后进入app控制面板-&gt;创建应用-&gt;创建开发版应用。<br><img src="https://img-blog.csdnimg.cn/470fb229c0f742259d738fc675da9abd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
 <p><img src="https://img-blog.csdnimg.cn/7685ba8efa0e4516ae7f2e2c1f63e01e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/4355e782abb04d019e62905ff0f69290.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>接下来我们配置一下我们的leancloud。点击设置-&gt;安全中心-&gt;Web 安全域名，输入你的域名来保证其他人就算获取了你的appid也没办法操作你的数据库。<br><img src="https://img-blog.csdnimg.cn/9e745b27966342fcbfd9c2a2efba417d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
 <h2 id="配置hexo"><a href="#配置hexo" class="headerlink" title="配置hexo"></a>配置hexo</h2><p>在next主题中配置valine<br>打开 _config.next.yml，找到comments栏目并开启valine。<br><img src="https://img-blog.csdnimg.cn/f104764748364049873d7f1ad931672d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
 <h2 id="在菜单栏添加留言板"><a href="#在菜单栏添加留言板" class="headerlink" title="在菜单栏添加留言板"></a>在菜单栏添加留言板</h2><p>添加一个新的page</p>
@@ -48,7 +51,7 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure></li>
 <li><p>生成新的SSH公钥并上传至GitHub</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;a237440035&quot;</span><br><span class="line">git config --global user.email &quot;237440035@qq.com&quot;</span><br><span class="line">ssh-keygen -t ed25519 -C &quot;237440035@qq.com&quot;</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/878226dbaf9849fb8528198ef9ad2ac4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_18,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>公钥为：SHA256:57GWXC&#x2F;PLymwxMVw9NoNKMpaoSI71Mum7Y9tPZZbgPI <a href="mailto:&#x32;&#51;&#x37;&#52;&#x34;&#48;&#x30;&#x33;&#53;&#x40;&#x71;&#x71;&#x2e;&#x63;&#111;&#109;">&#x32;&#51;&#x37;&#52;&#x34;&#48;&#x30;&#x33;&#53;&#x40;&#x71;&#x71;&#x2e;&#x63;&#111;&#109;</a><br>也可以在文件<code>C:\Users\Administrator\.ssh\id_ed25519.pub</code>中查看<br>将公钥复制在GitHub中即可使用<code>hexo d</code>命令<br><img src="https://img-blog.csdnimg.cn/018945bae1274b7783e02631b033d741.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/878226dbaf9849fb8528198ef9ad2ac4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_18,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>公钥为：SHA256:57GWXC&#x2F;PLymwxMVw9NoNKMpaoSI71Mum7Y9tPZZbgPI <a href="mailto:&#x32;&#x33;&#55;&#52;&#x34;&#48;&#x30;&#x33;&#x35;&#64;&#x71;&#x71;&#46;&#x63;&#111;&#x6d;">&#x32;&#x33;&#55;&#52;&#x34;&#48;&#x30;&#x33;&#x35;&#64;&#x71;&#x71;&#46;&#x63;&#111;&#x6d;</a><br>也可以在文件<code>C:\Users\Administrator\.ssh\id_ed25519.pub</code>中查看<br>将公钥复制在GitHub中即可使用<code>hexo d</code>命令<br><img src="https://img-blog.csdnimg.cn/018945bae1274b7783e02631b033d741.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
 </li>
 </ol>
 <h4 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h4><blockquote>
@@ -57,27 +60,6 @@
 ]]></content>
       <tags>
         <tag>hexo 学习笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo设置canvas_nest动态背景</title>
-    <url>/2022/02/18/Hexo%E8%AE%BE%E7%BD%AEcanvas-nest%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/</url>
-    <content><![CDATA[<blockquote>
-<p>hexo版本：6.0        查看命令：<code>hexo -v</code></p>
-</blockquote>
-<h2 id="1、下载并重命名"><a href="#1、下载并重命名" class="headerlink" title="1、下载并重命名"></a>1、下载并重命名</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/theme-next/theme-next-canvas-nest</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/313389cba4524a9d888ad3b210ce5fdb.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/8a312c399e414951877d054e7a7d9d09.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<span id="more"></span>
-
-<h2 id="2、设置-config-yml文件"><a href="#2、设置-config-yml文件" class="headerlink" title="2、设置_config.yml文件"></a>2、设置_config.yml文件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 设置canvas_nest动态背景</span><br><span class="line">canvas_nest:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
-<p>没有搜到canvas_nest就复制加进去，重启服务器即可<code>hexo s</code><br><img src="https://img-blog.csdnimg.cn/e10805e958b54d80b16ad3cc02b9d8e4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_19,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<h3 id="看看效果吧"><a href="#看看效果吧" class="headerlink" title="看看效果吧"></a>看看效果吧</h3><p><img src="https://img-blog.csdnimg.cn/2ff0d4a257b34e7c90d3cc9a61e62e21.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<blockquote>
-<p><a href="https://www.cnblogs.com/Luweir/p/14147344.html">新版本NexT 调动态背景、调canvas_nest的解决方案</a></p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -304,6 +286,27 @@
 ]]></content>
       <tags>
         <tag>Nginx</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo设置canvas_nest动态背景</title>
+    <url>/2022/02/18/Hexo%E8%AE%BE%E7%BD%AEcanvas-nest%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/</url>
+    <content><![CDATA[<blockquote>
+<p>hexo版本：6.0        查看命令：<code>hexo -v</code></p>
+</blockquote>
+<h2 id="1、下载并重命名"><a href="#1、下载并重命名" class="headerlink" title="1、下载并重命名"></a>1、下载并重命名</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/theme-next/theme-next-canvas-nest</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/313389cba4524a9d888ad3b210ce5fdb.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/8a312c399e414951877d054e7a7d9d09.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<span id="more"></span>
+
+<h2 id="2、设置-config-yml文件"><a href="#2、设置-config-yml文件" class="headerlink" title="2、设置_config.yml文件"></a>2、设置_config.yml文件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 设置canvas_nest动态背景</span><br><span class="line">canvas_nest:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
+<p>没有搜到canvas_nest就复制加进去，重启服务器即可<code>hexo s</code><br><img src="https://img-blog.csdnimg.cn/e10805e958b54d80b16ad3cc02b9d8e4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_19,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<h3 id="看看效果吧"><a href="#看看效果吧" class="headerlink" title="看看效果吧"></a>看看效果吧</h3><p><img src="https://img-blog.csdnimg.cn/2ff0d4a257b34e7c90d3cc9a61e62e21.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<blockquote>
+<p><a href="https://www.cnblogs.com/Luweir/p/14147344.html">新版本NexT 调动态背景、调canvas_nest的解决方案</a></p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>
