@@ -10,15 +10,15 @@
 <p><img src="https://img-blog.csdnimg.cn/7685ba8efa0e4516ae7f2e2c1f63e01e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/4355e782abb04d019e62905ff0f69290.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>接下来我们配置一下我们的leancloud。点击设置-&gt;安全中心-&gt;Web 安全域名，输入你的域名来保证其他人就算获取了你的appid也没办法操作你的数据库。<br><img src="https://img-blog.csdnimg.cn/9e745b27966342fcbfd9c2a2efba417d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
 <h2 id="配置hexo"><a href="#配置hexo" class="headerlink" title="配置hexo"></a>配置hexo</h2><p>在next主题中配置valine<br>打开 _config.next.yml，找到comments栏目并开启valine。<br><img src="https://img-blog.csdnimg.cn/f104764748364049873d7f1ad931672d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
 <h2 id="在菜单栏添加留言板"><a href="#在菜单栏添加留言板" class="headerlink" title="在菜单栏添加留言板"></a>在菜单栏添加留言板</h2><p>添加一个新的page</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new page &quot;guestbook&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight haxe"><table><tr><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> <span class="type">page</span> <span class="string">&quot;guestbook&quot;</span></span><br></pre></td></tr></table></figure>
 <p>进入 source&#x2F;guestbook&#x2F;index.md。加入你想显示的内容，如：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 给我留言吧</span><br><span class="line">date: 2022-02-18 20:04:25</span><br><span class="line">type: &quot;guestbook&quot;</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"># 欢迎来到我的博客！</span><br><span class="line"></span><br><span class="line">&gt; 欢迎在这里留言！任何问题都可以在这里留言，我会及时回复的，添加email可以获得更快的回复速度，在呢称栏目输入QQ号可以直接获取你的QQ头像噢。</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">给我留言吧</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2022-02-18 20:04:25</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">&quot;guestbook&quot;</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="comment"># 欢迎来到我的博客！</span></span><br><span class="line"></span><br><span class="line"><span class="string">&gt;</span> <span class="string">欢迎在这里留言！任何问题都可以在这里留言，我会及时回复的，添加email可以获得更快的回复速度，在呢称栏目输入QQ号可以直接获取你的QQ头像噢。</span></span><br></pre></td></tr></table></figure>
 <p>进入 _config.next.yml， 找到menu栏目，添加留言板功能：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  guestbook: /guestbook/ || fa fa-book</span><br></pre></td></tr></table></figure>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">menu:</span></span><br><span class="line"><span class="symbol">  guestbook:</span> <span class="keyword">/guestbook/</span> || fa fa-book</span><br></pre></td></tr></table></figure>
 <p><img src="https://img-blog.csdnimg.cn/710d7248cbad4b24bb1a62d20e4af02c.png" alt="在这里插入图片描述"><br>更改 themes&#x2F;next&#x2F;languages 下对应语言的翻译。例如中文的&#96;&#96;&#96;&#96;zh-CN.yml&#96;&#96;&#96;文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  guestbook: 留言板</span><br></pre></td></tr></table></figure>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">menu:</span></span><br><span class="line"><span class="symbol">  guestbook:</span> 留言板</span><br></pre></td></tr></table></figure>
 <p><img src="https://img-blog.csdnimg.cn/9a96355ddd6f4106abf78b40a193f412.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_10,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>重启server搞定</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight sas"><table><tr><td class="code"><pre><span class="line">hexo clean <span class="variable">&amp;&amp;</span> hexo g <span class="variable">&amp;&amp;</span> hexo s</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>技术</category>
       </categories>
@@ -53,8 +53,8 @@
 <li><p>最后使用下面的命令直接运行即可</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure></li>
 <li><p>生成新的SSH公钥并上传至GitHub</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;a237440035&quot;</span><br><span class="line">git config --global user.email &quot;237440035@qq.com&quot;</span><br><span class="line">ssh-keygen -t ed25519 -C &quot;237440035@qq.com&quot;</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/878226dbaf9849fb8528198ef9ad2ac4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_18,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>公钥为：SHA256:57GWXC&#x2F;PLymwxMVw9NoNKMpaoSI71Mum7Y9tPZZbgPI <a href="mailto:&#50;&#51;&#x37;&#52;&#52;&#48;&#48;&#51;&#x35;&#x40;&#113;&#113;&#x2e;&#x63;&#x6f;&#x6d;">&#50;&#51;&#x37;&#52;&#52;&#48;&#48;&#51;&#x35;&#x40;&#113;&#113;&#x2e;&#x63;&#x6f;&#x6d;</a><br>也可以在文件<code>C:\Users\Administrator\.ssh\id_ed25519.pub</code>中查看<br>将公钥复制在GitHub中即可使用<code>hexo d</code>命令<br><img src="https://img-blog.csdnimg.cn/018945bae1274b7783e02631b033d741.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">git config <span class="attr">--global</span> user<span class="selector-class">.name</span> <span class="string">&quot;a237440035&quot;</span></span><br><span class="line">git config <span class="attr">--global</span> user<span class="selector-class">.email</span> <span class="string">&quot;237440035@qq.com&quot;</span></span><br><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;237440035@qq.com&quot;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/878226dbaf9849fb8528198ef9ad2ac4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_18,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>公钥为：SHA256:57GWXC&#x2F;PLymwxMVw9NoNKMpaoSI71Mum7Y9tPZZbgPI <a href="mailto:&#50;&#x33;&#55;&#52;&#52;&#48;&#x30;&#51;&#53;&#64;&#x71;&#113;&#46;&#x63;&#111;&#109;">&#50;&#x33;&#55;&#52;&#52;&#48;&#x30;&#51;&#53;&#64;&#x71;&#113;&#46;&#x63;&#111;&#109;</a><br>也可以在文件<code>C:\Users\Administrator\.ssh\id_ed25519.pub</code>中查看<br>将公钥复制在GitHub中即可使用<code>hexo d</code>命令<br><img src="https://img-blog.csdnimg.cn/018945bae1274b7783e02631b033d741.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
 </li>
 </ol>
 <h4 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h4><blockquote>
@@ -75,11 +75,11 @@
     <content><![CDATA[<blockquote>
 <p>hexo版本：6.0        查看命令：<code>hexo -v</code></p>
 </blockquote>
-<h2 id="1、下载并重命名"><a href="#1、下载并重命名" class="headerlink" title="1、下载并重命名"></a>1、下载并重命名</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/theme-next/theme-next-canvas-nest</span><br></pre></td></tr></table></figure>
+<h2 id="1、下载并重命名"><a href="#1、下载并重命名" class="headerlink" title="1、下载并重命名"></a>1、下载并重命名</h2><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">git clone https:<span class="regexp">//gi</span>thub.com<span class="regexp">/theme-next/</span>theme-<span class="keyword">next</span>-canvas-nest</span><br></pre></td></tr></table></figure>
 <p><img src="https://img-blog.csdnimg.cn/313389cba4524a9d888ad3b210ce5fdb.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/8a312c399e414951877d054e7a7d9d09.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
 <span id="more"></span>
 
-<h2 id="2、设置-config-yml文件"><a href="#2、设置-config-yml文件" class="headerlink" title="2、设置_config.yml文件"></a>2、设置_config.yml文件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 设置canvas_nest动态背景</span><br><span class="line">canvas_nest:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
+<h2 id="2、设置-config-yml文件"><a href="#2、设置-config-yml文件" class="headerlink" title="2、设置_config.yml文件"></a>2、设置_config.yml文件</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 设置canvas_nest动态背景</span></span><br><span class="line"><span class="attr">canvas_nest:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <p>没有搜到canvas_nest就复制加进去，重启服务器即可<code>hexo s</code><br><img src="https://img-blog.csdnimg.cn/e10805e958b54d80b16ad3cc02b9d8e4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_19,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
 <h3 id="看看效果吧"><a href="#看看效果吧" class="headerlink" title="看看效果吧"></a>看看效果吧</h3><p><img src="https://img-blog.csdnimg.cn/2ff0d4a257b34e7c90d3cc9a61e62e21.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
 <blockquote>
@@ -91,42 +91,6 @@
       </categories>
       <tags>
         <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Nginx代理：由http到https</title>
-    <url>/2022/02/16/Nginx%E4%BB%A3%E7%90%86%EF%BC%9A%E7%94%B1http%E5%88%B0https/</url>
-    <content><![CDATA[<blockquote>
-<p>基于 SSL 证书，可将站点由 HTTP（Hypertext Transfer Protocol）切换到 HTTPS（Hyper Text Transfer Protocol over Secure Socket Layer），即基于安全套接字层（SSL）进行安全数据传输的加密版 HTTP 协议。</p>
-</blockquote>
-<p>背景：众所众知，一台服务器开放80端口后我们可以直接IP地址访问到web页面，但ip地址暴露会可能会引起一些莫名的网络攻击。通常采取的策略就是去申请一个域名，经过域名绑定我们的ip就可以实现直接使用域名来访问，但80端口还是开放的，这样就使用到基于SSL的https了，简而言之就是更安全更方便了。可能某些同学会说我们可以改端口号，IP地址都懒得记那无疑会影响到我们装B不是。。。</p>
-<span id="more"></span>
-
-<p><img src="https://img-blog.csdnimg.cn/985b4dadeac648a5993d866cc9a591e4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_19,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>备案也没想象中那么严格，很简单，2天就审核通过了。这里就直接说最后一步了，安装SSL证书，示例的环境是：windows server 2019 + nginx + flask</p>
-<p> 参考官方文档：<a href="https://cloud.tencent.com/document/product/400/47361">https://cloud.tencent.com/document/product/400/47361</a></p>
-<p>ssl.conf文件内容如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">listen 443 ssl; # 监听443端口</span><br><span class="line">server_name gzncpcc.xyz; #你的域名</span><br><span class="line">ssl_certificate C:/gmssl/nginx-1.16.0/conf/ssl/gzncpcc.xyz_bundle.crt; #ssl证书的crt文件路径</span><br><span class="line">ssl_certificate_key c:/gmssl/nginx-1.16.0/conf/ssl/gzncpcc.xyz.key;</span><br><span class="line">ssl_certificate c:/gmssl/nginx-1.16.0/conf/ssl/gzncpcc.xyz_bundle.pem; #ssl证书的pem文件路径</span><br><span class="line">ssl_certificate_key c:/gmssl/nginx-1.16.0/conf/ssl/gzncpcc.xyz.key; </span><br><span class="line">#先配置签名证书，再配置加密证书，签名加密证书私钥 key 为同一个！</span><br><span class="line">ssl_session_timeout 5m; </span><br><span class="line">ssl_protocols TLSv1.2;</span><br><span class="line">ssl_ciphers SM2-WITH-SMS4-SM3:ECDH:AESGCM:HIGH:MEDIUM:!RC4:!DH:!MD5:!aNULL:!eNULL; </span><br><span class="line">ssl_prefer_server_ciphers on;</span><br><span class="line">location / &#123; </span><br><span class="line">        proxy_pass  http://10.0.0.17/; #/内网地址，这样就可以关闭服务器的80端口了</span><br><span class="line">       # proxy_pass  http://gzncpcc.xyz/; #//公网地址:项目端口号;http://gzncpcc.xyz/;</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">listen 443 ssl; # 监听443端口</span><br><span class="line">server_name blog.gzncpcc.xyz; # 对应子域名</span><br><span class="line">ssl_certificate C:/gmssl/nginx-1.16.0/conf/ssl/blog.gzncpcc.xyz_bundle.crt; #ssl证书的crt文件路径</span><br><span class="line">ssl_certificate_key c:/gmssl/nginx-1.16.0/conf/ssl/blog.gzncpcc.xyz.key;</span><br><span class="line">ssl_certificate c:/gmssl/nginx-1.16.0/conf/ssl/blog.gzncpcc.xyz_bundle.pem; #ssl证书的pem文件路径</span><br><span class="line">ssl_certificate_key c:/gmssl/nginx-1.16.0/conf/ssl/blog.gzncpcc.xyz.key; </span><br><span class="line">#先配置签名证书，再配置加密证书，签名加密证书私钥 key 为同一个！</span><br><span class="line">ssl_session_timeout 5m; </span><br><span class="line">ssl_protocols TLSv1.2;</span><br><span class="line">ssl_ciphers SM2-WITH-SMS4-SM3:ECDH:AESGCM:HIGH:MEDIUM:!RC4:!DH:!MD5:!aNULL:!eNULL; </span><br><span class="line">ssl_prefer_server_ciphers on;</span><br><span class="line">location / &#123; </span><br><span class="line">        proxy_pass  http://127.0.0.1:4000/; # 博客项目</span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="踩雷经验"><a href="#踩雷经验" class="headerlink" title="踩雷经验"></a>踩雷经验</h3><ol>
-<li><strong>没事多重启，把nginx关死再运行，把所有进程杀死。</strong> 否则也不会让我一直改到怀疑人生了，几个小时，什么资料都查了，就是反代理不上，改到怀疑人生，一直出现welcome nginx。。。</li>
-<li>如果用了<code>https</code>，HTML页面引用的链接也要使用https的，例如引用<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">+    &lt;script src=&quot;https://libs.baidu.com/jquery/2.1.1/jquery.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">+    &lt;script src=&quot;https://res.wx.qq.com/open/js/jweixin-1.4.0.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">-    &lt;script src=&quot;http://libs.baidu.com/jquery/2.1.1/jquery.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">-    &lt;script src=&quot;http://res.wx.qq.com/open/js/jweixin-1.4.0.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></li>
-</ol>
-<p>下面附上windows上的nginx常用操作指令</p>
-<p>可以杀死名字为nginx.EXE的所有进程：<code>taskkill /fi &quot;imagename eq nginx.EXE&quot; /f</code></p>
-<p>检查： <code>nginx.exe -t</code></p>
-<p>运行：<code>nginx.exe</code></p>
-<p>重载：<code>nginx.exe -s reload</code></p>
-<p>停止：<code>nginx.exe -s stop</code></p>
-<p>查找端口占用情况：<code>netstat -aon | findstr :80 </code></p>
-<p>ps:都是在cmd中执行，其他什么shell、git没有效果。。。</p>
-<p>避免端口冲突，需要将IIS中的80和443端口占用关闭；python程序也可以自定义端口来避免冲突，但相应的ssl.conf中的<code>proxy_pass  http://10.0.0.17/;</code>需要加上端口号。<br><img src="https://img-blog.csdnimg.cn/e613924f820840079f9912c17cf388ef.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>正确的运行顺序：nginx——&gt;python程序</p>
-<p>最后附上网址看<a href="https://gzncpcc.xyz/hmikily">成果</a>：<a href="https://gzncpcc.xyz/">https://gzncpcc.xyz/</a></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Nginx</tag>
       </tags>
   </entry>
   <entry>
@@ -153,18 +117,39 @@
       </categories>
   </entry>
   <entry>
-    <title>hexo分类的正确用法</title>
-    <url>/2022/02/13/hexo%E5%88%86%E7%B1%BB%E7%9A%84%E6%AD%A3%E7%A1%AE%E7%94%A8%E6%B3%95/</url>
-    <content><![CDATA[<p><img src="https://img-blog.csdnimg.cn/4ecf04ca568949b4bc4b2f4becdb1089.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<blockquote>
-<p>hexo中文文档：<a href="https://hexo.io/zh-cn/docs/front-matter">https://hexo.io/zh-cn/docs/front-matter</a></p>
+    <title>Nginx代理：由http到https</title>
+    <url>/2022/02/16/Nginx%E4%BB%A3%E7%90%86%EF%BC%9A%E7%94%B1http%E5%88%B0https/</url>
+    <content><![CDATA[<blockquote>
+<p>基于 SSL 证书，可将站点由 HTTP（Hypertext Transfer Protocol）切换到 HTTPS（Hyper Text Transfer Protocol over Secure Socket Layer），即基于安全套接字层（SSL）进行安全数据传输的加密版 HTTP 协议。</p>
 </blockquote>
+<p>背景：众所众知，一台服务器开放80端口后我们可以直接IP地址访问到web页面，但ip地址暴露会可能会引起一些莫名的网络攻击。通常采取的策略就是去申请一个域名，经过域名绑定我们的ip就可以实现直接使用域名来访问，但80端口还是开放的，这样就使用到基于SSL的https了，简而言之就是更安全更方便了。可能某些同学会说我们可以改端口号，IP地址都懒得记那无疑会影响到我们装B不是。。。</p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/985b4dadeac648a5993d866cc9a591e4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_19,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>备案也没想象中那么严格，很简单，2天就审核通过了。这里就直接说最后一步了，安装SSL证书，示例的环境是：windows server 2019 + nginx + flask</p>
+<p> 参考官方文档：<a href="https://cloud.tencent.com/document/product/400/47361">https://cloud.tencent.com/document/product/400/47361</a></p>
+<p>ssl.conf文件内容如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">listen 443 ssl; # 监听443端口</span><br><span class="line">server_name gzncpcc.xyz; #你的域名</span><br><span class="line">ssl_certificate C:/gmssl/nginx-1.16.0/conf/ssl/gzncpcc.xyz_bundle.crt; #ssl证书的crt文件路径</span><br><span class="line">ssl_certificate_key c:/gmssl/nginx-1.16.0/conf/ssl/gzncpcc.xyz.key;</span><br><span class="line">ssl_certificate c:/gmssl/nginx-1.16.0/conf/ssl/gzncpcc.xyz_bundle.pem; #ssl证书的pem文件路径</span><br><span class="line">ssl_certificate_key c:/gmssl/nginx-1.16.0/conf/ssl/gzncpcc.xyz.key; </span><br><span class="line">#先配置签名证书，再配置加密证书，签名加密证书私钥 key 为同一个！</span><br><span class="line">ssl_session_timeout 5m; </span><br><span class="line">ssl_protocols TLSv1.2;</span><br><span class="line">ssl_ciphers SM2-WITH-SMS4-SM3:ECDH:AESGCM:HIGH:MEDIUM:!RC4:!DH:!MD5:!aNULL:!eNULL; </span><br><span class="line">ssl_prefer_server_ciphers on;</span><br><span class="line">location / &#123; </span><br><span class="line">        proxy_pass  http://10.0.0.17/; #/内网地址，这样就可以关闭服务器的80端口了</span><br><span class="line">       # proxy_pass  http://gzncpcc.xyz/; #//公网地址:项目端口号;http://gzncpcc.xyz/;</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">listen 443 ssl; # 监听443端口</span><br><span class="line">server_name blog.gzncpcc.xyz; # 对应子域名</span><br><span class="line">ssl_certificate C:/gmssl/nginx-1.16.0/conf/ssl/blog.gzncpcc.xyz_bundle.crt; #ssl证书的crt文件路径</span><br><span class="line">ssl_certificate_key c:/gmssl/nginx-1.16.0/conf/ssl/blog.gzncpcc.xyz.key;</span><br><span class="line">ssl_certificate c:/gmssl/nginx-1.16.0/conf/ssl/blog.gzncpcc.xyz_bundle.pem; #ssl证书的pem文件路径</span><br><span class="line">ssl_certificate_key c:/gmssl/nginx-1.16.0/conf/ssl/blog.gzncpcc.xyz.key; </span><br><span class="line">#先配置签名证书，再配置加密证书，签名加密证书私钥 key 为同一个！</span><br><span class="line">ssl_session_timeout 5m; </span><br><span class="line">ssl_protocols TLSv1.2;</span><br><span class="line">ssl_ciphers SM2-WITH-SMS4-SM3:ECDH:AESGCM:HIGH:MEDIUM:!RC4:!DH:!MD5:!aNULL:!eNULL; </span><br><span class="line">ssl_prefer_server_ciphers on;</span><br><span class="line">location / &#123; </span><br><span class="line">        proxy_pass  http://127.0.0.1:4000/; # 博客项目</span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="踩雷经验"><a href="#踩雷经验" class="headerlink" title="踩雷经验"></a>踩雷经验</h3><ol>
+<li><strong>没事多重启，把nginx关死再运行，把所有进程杀死。</strong> 否则也不会让我一直改到怀疑人生了，几个小时，什么资料都查了，就是反代理不上，改到怀疑人生，一直出现welcome nginx。。。</li>
+<li>如果用了<code>https</code>，HTML页面引用的链接也要使用https的，例如引用<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">+    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://libs.baidu.com/jquery/2.1.1/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">+    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://res.wx.qq.com/open/js/jweixin-1.4.0.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">-    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;http://libs.baidu.com/jquery/2.1.1/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">-    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;http://res.wx.qq.com/open/js/jweixin-1.4.0.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>下面附上windows上的nginx常用操作指令</p>
+<p>可以杀死名字为nginx.EXE的所有进程：<code>taskkill /fi &quot;imagename eq nginx.EXE&quot; /f</code></p>
+<p>检查： <code>nginx.exe -t</code></p>
+<p>运行：<code>nginx.exe</code></p>
+<p>重载：<code>nginx.exe -s reload</code></p>
+<p>停止：<code>nginx.exe -s stop</code></p>
+<p>查找端口占用情况：<code>netstat -aon | findstr :80 </code></p>
+<p>ps:都是在cmd中执行，其他什么shell、git没有效果。。。</p>
+<p>避免端口冲突，需要将IIS中的80和443端口占用关闭；python程序也可以自定义端口来避免冲突，但相应的ssl.conf中的<code>proxy_pass  http://10.0.0.17/;</code>需要加上端口号。<br><img src="https://img-blog.csdnimg.cn/e613924f820840079f9912c17cf388ef.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>正确的运行顺序：nginx——&gt;python程序</p>
+<p>最后附上网址看<a href="https://gzncpcc.xyz/hmikily">成果</a>：<a href="https://gzncpcc.xyz/">https://gzncpcc.xyz/</a></p>
 ]]></content>
       <categories>
         <category>技术</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
+        <tag>Nginx</tag>
       </tags>
   </entry>
   <entry>
@@ -202,7 +187,7 @@
 <span id="more"></span>
 
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Do you accept the license terms? [<span class="built_in">yes</span>|no]</span><br><span class="line">[no] &gt;&gt;&gt; <span class="built_in">yes</span></span><br><span class="line"></span><br><span class="line">Anaconda3 will now be installed into this location:</span><br><span class="line">/raid/620/panchengchang_19/anaconda3</span><br><span class="line"></span><br><span class="line">  - Press ENTER to confirm the location</span><br><span class="line">  - Press CTRL-C to abort the installation</span><br><span class="line">  - Or specify a different location below</span><br><span class="line"></span><br><span class="line">[/raid/620/panchengchang_19/anaconda3] &gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-按ENTER确认位置</span><br><span class="line">-按CTRL-C中止安装</span><br><span class="line">-或者在下面指定其他位置</span><br></pre></td></tr></table></figure>
+<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"><span class="deletion">-按ENTER确认位置</span></span><br><span class="line"><span class="deletion">-按CTRL-C中止安装</span></span><br><span class="line"><span class="deletion">-或者在下面指定其他位置</span></span><br></pre></td></tr></table></figure>
 <p>直接回车就进行安装了，后面还需要再输一次yes</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Preparing transaction: <span class="keyword">done</span></span><br><span class="line">Executing transaction: <span class="keyword">done</span></span><br><span class="line">installation finished.</span><br><span class="line">Do you wish the installer to initialize Anaconda3</span><br><span class="line">by running conda init? [<span class="built_in">yes</span>|no]</span><br><span class="line">[no] &gt;&gt;&gt; <span class="built_in">yes</span></span><br><span class="line">no change     /raid/620/panchengchang_19/anaconda3/condabin/conda</span><br><span class="line">no change     /raid/620/panchengchang_19/anaconda3/bin/conda</span><br><span class="line">no change     /raid/620/panchengchang_19/anaconda3/bin/conda-env</span><br><span class="line">no change     /raid/620/panchengchang_19/anaconda3/bin/activate</span><br><span class="line">no change     /raid/620/panchengchang_19/anaconda3/bin/deactivate</span><br><span class="line">no change     /raid/620/panchengchang_19/anaconda3/etc/profile.d/conda.sh</span><br><span class="line">no change     /raid/620/panchengchang_19/anaconda3/etc/fish/conf.d/conda.fish</span><br><span class="line">no change     /raid/620/panchengchang_19/anaconda3/shell/condabin/Conda.psm1</span><br><span class="line">no change     /raid/620/panchengchang_19/anaconda3/shell/condabin/conda-hook.ps1</span><br><span class="line">no change     /raid/620/panchengchang_19/anaconda3/lib/python3.7/site-packages/xontrib/conda.xsh</span><br><span class="line">no change     /raid/620/panchengchang_19/anaconda3/etc/profile.d/conda.csh</span><br><span class="line">modified      /raid/620/panchengchang_19/.bashrc</span><br><span class="line"></span><br><span class="line">==&gt; For changes to take effect, close and re-open your current shell. &lt;==</span><br><span class="line"></span><br><span class="line">If you<span class="string">&#x27;d prefer that conda&#x27;</span>s base environment not be activated on startup, </span><br><span class="line">   <span class="built_in">set</span> the auto_activate_base parameter to <span class="literal">false</span>: </span><br><span class="line"></span><br><span class="line">conda config --<span class="built_in">set</span> auto_activate_base <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">Thank you <span class="keyword">for</span> installing Anaconda3!</span><br><span class="line"></span><br><span class="line">===========================================================================</span><br><span class="line"></span><br><span class="line">Anaconda and JetBrains are working together to bring you Anaconda-powered</span><br><span class="line">environments tightly integrated <span class="keyword">in</span> the PyCharm IDE.</span><br><span class="line"></span><br><span class="line">PyCharm <span class="keyword">for</span> Anaconda is available at:</span><br><span class="line">https://www.anaconda.com/pycharm</span><br><span class="line"></span><br><span class="line">panchengchang@a-node03:~/envir_packages$ </span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><strong>重启终端</strong>，输入conda或pip验证用户环境变量是否可以使用。<br><img src="https://img-blog.csdnimg.cn/20210115220547794.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3ZwcXR4em16ZXplcWpqOTk3Nw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这样anaconda就安装成功了。</p>
@@ -262,6 +247,23 @@
       </tags>
   </entry>
   <entry>
+    <title>hexo分类的正确用法</title>
+    <url>/2022/02/13/hexo%E5%88%86%E7%B1%BB%E7%9A%84%E6%AD%A3%E7%A1%AE%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<p><img src="https://img-blog.csdnimg.cn/4ecf04ca568949b4bc4b2f4becdb1089.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<figure class="highlight isbl"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="title">alert</span>(<span class="string">&#x27;Hello World!&#x27;</span>);</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>hexo中文文档：<a href="https://hexo.io/zh-cn/docs/front-matter">https://hexo.io/zh-cn/docs/front-matter</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《一个人的好天气》读书笔记摘抄</title>
     <url>/2021/04/17/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/</url>
     <content><![CDATA[<p>吟子:”我那时侯整天的哭，非常憎恨这个世界，我好象把一辈子的恨都用完了。”</p>
@@ -286,6 +288,28 @@
       </categories>
       <tags>
         <tag>阅读笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>那些一看就眼前一亮的句子</title>
+    <url>/2022/02/17/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E5%9B%9B%EF%BC%89/</url>
+    <content><![CDATA[<p>1、“如果你觉得你的祖国不好，你就去建设它，如果你觉得政府不好，你就去考公务员去做官，如果你觉得人民没素质，就从你开始做一个高素质的公民，如果你觉得同胞愚昧无知，就从你开始学习并改变身边的人，而不是一昧的谩骂，抱怨，逃离。” ——人民日报</p>
+<p>2、“仰望星空立大志，止于至善明大德，博学笃行成大才，脚踏实地担大任，为中华民族伟大复兴奉献青春力量，在开创多彩贵州新未来中实现人生出彩。”——省委书记谌贻琴</p>
+<p>3、“弱鸟先飞的意识，滴水穿石的精神，马上就办的作风”。——互联网+中心&#x2F;国务委员赵克志</p>
+<p>4、“不以物喜，不以己悲，居庙堂之高则忧其民，处江湖之远则忧其君。是进亦忧，退亦忧。然则何时而乐耶？其必曰先天下之忧而忧，后天下之乐而乐。”——（宋）范仲淹《岳阳楼记》</p>
+<span id="more"></span>
+
+<p>5、“少年智则国智,少年强则国强,少年兴则国兴,少年独立则国独立”——梁起超</p>
+<p>6、做中华民族的脊梁。</p>
+<p>7、“青年要立志做大事，不要立志做大官。”——习近平</p>
+<p>8、权为民所用、情为民所系、利为民所谋</p>
+<p>9、基层工作就像是一块试金石，考验着党员干部的政治品质和道德操守，更考验着我们的坚守与坚韧。</p>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>读书笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -332,28 +356,6 @@
         <tag>学习笔记</tag>
         <tag>阅读笔记</tag>
         <tag>程序员</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>那些一看就眼前一亮的句子</title>
-    <url>/2022/02/17/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E5%9B%9B%EF%BC%89/</url>
-    <content><![CDATA[<p>1、“如果你觉得你的祖国不好，你就去建设它，如果你觉得政府不好，你就去考公务员去做官，如果你觉得人民没素质，就从你开始做一个高素质的公民，如果你觉得同胞愚昧无知，就从你开始学习并改变身边的人，而不是一昧的谩骂，抱怨，逃离。” ——人民日报</p>
-<p>2、“仰望星空立大志，止于至善明大德，博学笃行成大才，脚踏实地担大任，为中华民族伟大复兴奉献青春力量，在开创多彩贵州新未来中实现人生出彩。”——省委书记谌贻琴</p>
-<p>3、“弱鸟先飞的意识，滴水穿石的精神，马上就办的作风”。——互联网+中心&#x2F;国务委员赵克志</p>
-<p>4、“不以物喜，不以己悲，居庙堂之高则忧其民，处江湖之远则忧其君。是进亦忧，退亦忧。然则何时而乐耶？其必曰先天下之忧而忧，后天下之乐而乐。”——（宋）范仲淹《岳阳楼记》</p>
-<span id="more"></span>
-
-<p>5、“少年智则国智,少年强则国强,少年兴则国兴,少年独立则国独立”——梁起超</p>
-<p>6、做中华民族的脊梁。</p>
-<p>7、“青年要立志做大事，不要立志做大官。”——习近平</p>
-<p>8、权为民所用、情为民所系、利为民所谋</p>
-<p>9、基层工作就像是一块试金石，考验着党员干部的政治品质和道德操守，更考验着我们的坚守与坚韧。</p>
-]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>读书笔记</tag>
       </tags>
   </entry>
 </search>
