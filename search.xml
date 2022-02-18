@@ -15,10 +15,22 @@
 <h4 id="（6）删除文章"><a href="#（6）删除文章" class="headerlink" title="（6）删除文章"></a>（6）删除文章</h4><p>只需在本地把<code>source/_posts</code>文件夹下的文章源文件删除后，执行以下命令重新部署即可。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 	// 一定要先 clean，防止灵异事件发生</span><br></pre></td></tr></table></figure>
 
-
-<p>参考文档</p>
-<blockquote>
-<p><a href="https://blog.csdn.net/qq_42889280/article/details/103087433">Hexo博客+Next主题深度优化与定制</a></p>
+<h4 id="（7）备份-x2F-迁移你的Hexo博客"><a href="#（7）备份-x2F-迁移你的Hexo博客" class="headerlink" title="（7）备份&#x2F;迁移你的Hexo博客"></a>（7）备份&#x2F;迁移你的Hexo博客</h4><ol>
+<li><p>备份根目录<img src="https://img-blog.csdnimg.cn/8b7829cea05440408b386a27bc71cade.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+</li>
+<li><p>参考<a href="https://hexoscript.gitbook.io/hexo-script/v/1.3-1/shi-yong-bu-zhou/zhun-bei-gong-ju">文档3：hexo-script使用文档</a>重新安装hexo</p>
+</li>
+<li><p>使用备份的目录覆盖新装的hexo目录<br><img src="https://img-blog.csdnimg.cn/56e7368f24dc4f258cdf2f2141543328.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+</li>
+<li><p>最后使用下面的命令直接运行即可</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure></li>
+<li><p>生成新的SSH公钥并上传至GitHub</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;a237440035&quot;</span><br><span class="line">git config --global user.email &quot;237440035@qq.com&quot;</span><br><span class="line">ssh-keygen -t ed25519 -C &quot;237440035@qq.com&quot;</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/878226dbaf9849fb8528198ef9ad2ac4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_18,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>公钥为：SHA256:57GWXC&#x2F;PLymwxMVw9NoNKMpaoSI71Mum7Y9tPZZbgPI <a href="mailto:&#50;&#51;&#x37;&#x34;&#52;&#48;&#48;&#x33;&#x35;&#x40;&#x71;&#113;&#46;&#x63;&#x6f;&#x6d;">&#50;&#51;&#x37;&#x34;&#52;&#48;&#48;&#x33;&#x35;&#x40;&#x71;&#113;&#46;&#x63;&#x6f;&#x6d;</a><br>也可以在文件<code>C:\Users\Administrator\.ssh\id_ed25519.pub</code>中查看<br>将公钥复制在GitHub中即可使用<code>hexo d</code>命令<br><img src="https://img-blog.csdnimg.cn/018945bae1274b7783e02631b033d741.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+</li>
+</ol>
+<h4 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h4><blockquote>
+<p><a href="https://blog.csdn.net/qq_42889280/article/details/103087433">1、Hexo博客+Next主题深度优化与定制</a><br><a href="https://www.jianshu.com/p/baab04284923">2、备份你的Hexo博客</a><br><a href="https://hexoscript.gitbook.io/hexo-script/v/1.3-1/shi-yong-bu-zhou/zhun-bei-gong-ju">3、hexo-script使用文档</a></p>
 </blockquote>
 ]]></content>
       <tags>
@@ -52,7 +64,7 @@
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/2022/02/17/hello-world/</url>
+    <url>/2019/01/11/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -67,6 +79,27 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>一场说走就走的旅行</title>
+    <url>/2022/02/18/%E4%B8%80%E5%9C%BA%E8%AF%B4%E8%B5%B0%E5%B0%B1%E8%B5%B0%E7%9A%84%E6%97%85%E8%A1%8C/</url>
+    <content><![CDATA[<p><img src="https://img-blog.csdnimg.cn/17132b04fde748109308b76f0f475703.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<blockquote>
+<center> 人生至少要有两次冲动，一为奋不顾身的爱情，一为说走就走的旅行。</center>
+当然，这话不是我说的。
+每次出去都要计划好路线和攻略，希望整个旅行都在自己控制的时间段内完成，事实也确实如此。
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/85a1bda3806f4edaba1a6beeb7e57bbe.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>我们可能在成长中有很多梦想，可是最后实现的有几个？很多人怀抱梦想前进，却将梦想遗落在不知名的角落。梦想往往就是在平淡的生活中消磨殆尽的，我们不要只安于现状，趁着我们还年轻。不走出去，我们永远不知道自己会成长成什么样。没有这一场说走就走的旅行，可能电影中的四个主人公还是过着一年前途未卜的生活，登山社长陈萧还是那个懦弱无能、欺骗自己的胆小鬼；学霸熊波还是那个只知道学习、不懂交际的Low教授；富二代张昊还是那个只知道依靠父母、别无所长的少爷、小跟班李硕也依旧是那个父子关系都处理不好、脑子缺根筋的跟屁虫。他们每个人的身上都有我们的影子，在影片的最后，完美的结局里，他们都变成了不一样的人，或者自己想过或者与之前完全不同的生活，可是我们呢？</p>
+<p><img src="https://img-blog.csdnimg.cn/d19332858b394c3094cb12b605074004.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_17,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>生活不止眼前的苟且，还有诗和远方。生活不是电影里的乌托邦，没有一场说走就走的旅行让我们改变，一切都还要靠自己，改变还是顺其自然，这需要你自己去选择。</p>
+<p><img src="https://img-blog.csdnimg.cn/ac7dcb9af2a849539e27fa4b1635857f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>电影里张昊有一段关于“拿得起，还是放得下”的讨论，鱼和熊掌不可兼得，在生活中这是个复杂的问题。也许对于很多人来说，拿得起比较难，但是放得下，更难。也许有些人，一生中拿得起和放得下都难以做到。就像青春中的我们，会遇到许多心动瞬间，很多人无法做到应对自如。可是电影中很轻易的就解决了这个选择，这也是电影想告诉我们的，拿得起是一种担当，放得下是一种洒脱，人生需要明白什么应该拿得起，什么应该放得下，因为在选择的方向，也许就是命运的方向。就像白举纲为电影创作的同名歌曲《说走就走》中唱的：雨雪夹着浪我们逆风飞翔，疲惫也倔强，幸运的是你在我身旁。</p>
+<p>人生就是一个不断前进的过程，我们不断和曾经熟悉的人说再见，也不断和自己说再见。影片最后，当四个人结束旅途的时候也面临了分别，但是他们没有说再见。其实很多时候，我们不必说再见。</p>
+]]></content>
+      <tags>
+        <tag>生活</tag>
+      </tags>
   </entry>
   <entry>
     <title>Nginx代理：由http到https</title>
