@@ -2,6 +2,7 @@
 <html lang="zh-CN">
 <script type="text/javascript" src="/js/cursor/love.js"></script>
 <script src="/live2d-widget/autoload.js"></script>
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script> -->
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -300,7 +301,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install baidu-aip</span><br></pre></td></tr></table></figure>
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install baidu-aip</span><br></pre></td></tr></table></figure>
 <p><img src="https://img-blog.csdnimg.cn/8d62bb17c7d543cb9e978ead308dc7c2.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
 <p>安装好AipSpeech后就可以直接上代码了，很简单</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> aip <span class="keyword">import</span> AipSpeech</span><br><span class="line"></span><br><span class="line"><span class="string">&quot;&quot;&quot; 你的 APPID AK SK 在百度云控制台中可以获取，目前可以免费体验&quot;&quot;&quot;</span></span><br><span class="line">APP_ID = <span class="string">&#x27;your ID&#x27;</span></span><br><span class="line">API_KEY = <span class="string">&#x27;your KEY&#x27;</span></span><br><span class="line">SECRET_KEY = <span class="string">&#x27;your SECRET_KEY&#x27;</span></span><br><span class="line"></span><br><span class="line">client = AipSpeech(APP_ID, API_KEY, SECRET_KEY)</span><br><span class="line"></span><br><span class="line">text = <span class="string">&#x27;白皮书说，党的十八大以来，中国的核安全事业进入安全高效发展的新时期。在核安全观引领下，中国逐步构建起法律规范、行政监管、行业自律、技术保障、人才支撑、文化引领、社会参与、国际合作等为主体的核安全治理体系，核安全防线更加牢固。&#x27;</span></span><br><span class="line"></span><br><span class="line">result  = client.synthesis(text, <span class="string">&#x27;zh&#x27;</span>, <span class="number">1</span>, &#123;</span><br><span class="line">    <span class="string">&#x27;vol&#x27;</span>: <span class="number">5</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 识别正确返回语音二进制 错误则返回dict 参照下面错误码</span></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> <span class="built_in">isinstance</span>(result, <span class="built_in">dict</span>):</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;audio.mp3&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(result)</span><br></pre></td></tr></table></figure>
@@ -530,20 +531,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-count">23</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-count">35</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -615,12 +616,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">30k</span>
+    <span title="站点总字数">31k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">27 分钟</span>
+    <span title="站点阅读时长">28 分钟</span>
 </div>
 
 
@@ -669,7 +670,6 @@ setInterval("createtime()",250);
       </span>
     </span>
 </div>
-
 
 
 
