@@ -23,19 +23,22 @@
     var CONFIG = {"hostname":"gzncpcc.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="var ap &#x3D; new APlayer({             element: document.getElementById(&quot;aplayer-IFpIFlMu&quot;),             narrow: false,             autoplay: false,">
+  <meta name="description" content="const ap &#x3D; new APlayer({     container: document.getElementById(&#39;aplayer&#39;),     listFolded: false,     mini: false,     fixed: false,     preload: &#39;auto&#39;, &#x2F;&#x2F;预加载，可选值: &#39;none&#39;, &#39;metadata&#39;, &#39;auto&#39;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="睡前故事（二）">
 <meta property="og:url" content="https://gzncpcc.github.io/2022/02/22/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%8C%EF%BC%89/index.html">
 <meta property="og:site_name" content="gzncpcc">
-<meta property="og:description" content="var ap &#x3D; new APlayer({             element: document.getElementById(&quot;aplayer-IFpIFlMu&quot;),             narrow: false,             autoplay: false,">
+<meta property="og:description" content="const ap &#x3D; new APlayer({     container: document.getElementById(&#39;aplayer&#39;),     listFolded: false,     mini: false,     fixed: false,     preload: &#39;auto&#39;, &#x2F;&#x2F;预加载，可选值: &#39;none&#39;, &#39;metadata&#39;, &#39;auto&#39;">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/a7bbef9745ed4c38a62247de3ce032f6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/8d5ba30ee1464984ac967f61e129b7a1.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16">
 <meta property="article:published_time" content="2022-02-22T14:58:44.000Z">
-<meta property="article:modified_time" content="2022-02-23T08:04:38.203Z">
+<meta property="article:modified_time" content="2022-02-24T09:57:30.917Z">
 <meta property="article:author" content="gzncpcc">
 <meta property="article:tag" content="爱情">
 <meta property="article:tag" content="小故事">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/a7bbef9745ed4c38a62247de3ce032f6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16">
 
 <link rel="canonical" href="https://gzncpcc.github.io/2022/02/22/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%8C%EF%BC%89/">
 
@@ -238,7 +241,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-02-23 16:04:38" itemprop="dateModified" datetime="2022-02-23T16:04:38+08:00">2022-02-23</time>
+                <time title="修改时间：2022-02-24 17:57:30" itemprop="dateModified" datetime="2022-02-24T17:57:30+08:00">2022-02-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -298,27 +301,33 @@
       
         <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <div id="aplayer"></div>
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" ></script>
-
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" ></script>-->
+<div id="aplayer"></div>
 <script type="text/javascript">
     const ap = new APlayer({
     container: document.getElementById('aplayer'),
+    listFolded: false,
+    mini: false,
+    fixed: false,
+    preload: 'auto', //预加载，可选值: 'none', 'metadata', 'auto'
+    loop: 'none', //音频循环播放, 可选值: 'all', 'one', 'none'
     audio: [{
         name: '朗读这篇文章',
         artist: 'Azure云希',
-        url: 'shuiqiangushi.wav',
+        url: 'shuiqiangushi.mp3',
         cover: 'picture.png'
     }]
 });
 </script>
- -->
+ 
 
-        <div id="aplayer-IFpIFlMu" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+<!-- 
+        <div id="aplayer-rEOKXqcp" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-IFpIFlMu"),
+            element: document.getElementById("aplayer-rEOKXqcp"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -332,7 +341,7 @@
           });
           window.aplayers || (window.aplayers = []);
           window.aplayers.push(ap);
-        </script>
+        </script> -->
 
 
 <p>夜晚的森林让人感到格外的惬意，偶尔吹来一阵微风，沙沙作响却不带走这片土地一丝神秘和安静。小狐狸将小兔子紧紧搂入怀中，生怕稍微松开一点便失去了这怀抱中的温暖。</p>
@@ -345,12 +354,14 @@
 <p>“软，对不起，是因为我睡着后习惯滚被子，怕小兔子被子被扯走后着凉了，所以才把被子抱住的。”小狐狸松开手臂，一脸愧疚的抓着自己小脑袋。</p>
 <p>“噗，笨狐狸，原来是这样呀，那你把我也卷走吧，我融化后也要黏在你身上，天天黏着你，嘻嘻。”小兔子一边调着被子一边坏笑着冲小狐狸做了个鬼脸。</p>
 <p>等小兔子调好被子后，小狐狸又抱紧小兔子，说：“傻兔子，该睡觉了呢，热的话和我说哦，我的小心肝我当然要抱紧的呀。”</p>
+<p><img src="https://img-blog.csdnimg.cn/a7bbef9745ed4c38a62247de3ce032f6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
 <p>“可是，我怕做噩梦，最近我经常会被噩梦吓醒，然后睡不着。”小兔子委屈的看着小狐狸，不知怎么办才好。</p>
 <p>小狐狸焦急的说道：“啊，怎么不告诉我呢，傻兔子，睡不着一定要告诉我，我会随时随地的做好陪你的准备的呢”</p>
 <p>“可…可是，我怕打扰到你睡觉呢。”小兔子把头缩进被子里，偷偷瞄着小狐狸的脸。</p>
 <p>“傻兔子，怎么会呢，在你害怕的时候能第一时间让我陪着你，我会很开心的呢。“小狐狸宠溺的给小兔子顺着耳朵，眼里映着兔宝宝那半露的脸。</p>
 <p>“真的吗？小狐狸？“小兔子疑惑的问。</p>
 <p>小狐狸坚定的看着小兔子回答道：“真的呢，傻兔子，以后睡不着一定要告诉我哦，我随时准备好陪你。”</p>
+<p><img src="https://img-blog.csdnimg.cn/8d5ba30ee1464984ac967f61e129b7a1.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
 <p>“那如果你不在我身边呢？”</p>
 <p>我听身边的朋友说他们不在一起的时候都用这款叫“微信”的软件，我们可以在里面一起种树，装饰房子，还有自己的农场，也可以写下纪念日和我们的心愿。最重要的是我们可以看到对方的动态，这样我们就可以一直黏在一起了。就算不在身边也可以感觉到你一直在我身边呀。</p>
 <p>真的吗，那真是太好了，这样就不怕感觉到离你很远了。</p>
@@ -368,6 +379,12 @@
   <ul class="popular-posts">
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="\2022\02\22\testAPlayer\" rel="bookmark">睡前温暖小故事</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2022\02\23\睡前故事（三）\" rel="bookmark">睡前故事（三）</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2022\02\24\睡前故事（四）\" rel="bookmark">睡前故事（四）</a></div>
     </li>
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="\2022\02\22\【转载】落俗在所难免，浪漫至死不渝\" rel="bookmark">【转载】落俗在所难免，浪漫至死不渝</a></div>
@@ -555,7 +572,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-count">25</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -640,12 +657,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">31k</span>
+    <span title="站点总字数">33k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">28 分钟</span>
+    <span title="站点阅读时长">30 分钟</span>
 </div>
 
 
