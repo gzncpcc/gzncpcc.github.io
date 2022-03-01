@@ -90,7 +90,7 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure></li>
 <li><p>生成新的SSH公钥并上传至GitHub</p>
 <figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">git config <span class="attr">--global</span> user<span class="selector-class">.name</span> <span class="string">&quot;a237440035&quot;</span></span><br><span class="line">git config <span class="attr">--global</span> user<span class="selector-class">.email</span> <span class="string">&quot;237440035@qq.com&quot;</span></span><br><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;237440035@qq.com&quot;</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/878226dbaf9849fb8528198ef9ad2ac4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_18,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>公钥为：SHA256:57GWXC&#x2F;PLymwxMVw9NoNKMpaoSI71Mum7Y9tPZZbgPI <a href="mailto:&#x32;&#x33;&#55;&#52;&#52;&#x30;&#48;&#x33;&#53;&#64;&#x71;&#x71;&#x2e;&#99;&#x6f;&#x6d;">&#x32;&#x33;&#55;&#52;&#52;&#x30;&#48;&#x33;&#53;&#64;&#x71;&#x71;&#x2e;&#99;&#x6f;&#x6d;</a><br>也可以在文件<code>C:\Users\Administrator\.ssh\id_ed25519.pub</code>中查看<br>将公钥复制在GitHub中即可使用<code>hexo d</code>命令<br><img src="https://img-blog.csdnimg.cn/018945bae1274b7783e02631b033d741.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/878226dbaf9849fb8528198ef9ad2ac4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_18,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>公钥为：SHA256:57GWXC&#x2F;PLymwxMVw9NoNKMpaoSI71Mum7Y9tPZZbgPI <a href="mailto:&#x32;&#51;&#x37;&#52;&#52;&#48;&#x30;&#x33;&#x35;&#x40;&#x71;&#x71;&#46;&#x63;&#111;&#109;">&#x32;&#51;&#x37;&#52;&#52;&#48;&#x30;&#x33;&#x35;&#x40;&#x71;&#x71;&#46;&#x63;&#111;&#109;</a><br>也可以在文件<code>C:\Users\Administrator\.ssh\id_ed25519.pub</code>中查看<br>将公钥复制在GitHub中即可使用<code>hexo d</code>命令<br><img src="https://img-blog.csdnimg.cn/018945bae1274b7783e02631b033d741.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
 </li>
 </ol>
 <h4 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h4><blockquote>
@@ -209,12 +209,12 @@
     <title>睡前温暖小故事</title>
     <url>/2022/02/22/testAPlayer/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-TfiEiVPi" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-stVoQVnH" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-TfiEiVPi"),
+            element: document.getElementById("aplayer-stVoQVnH"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -250,6 +250,28 @@
       <tags>
         <tag>爱情</tag>
         <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【转载】尊重</title>
+    <url>/2022/02/22/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E5%B0%8A%E9%87%8D/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>慎独之人，时刻保持一颗敬畏之心</p>
+</blockquote>
+<p>我小时候非常讨厌我的父母，见到叔叔阿姨，就让我来叫叔叔和阿姨。<br>我后来发现了，慢慢的发现，其实人是很难发自内心地去尊重别人。所以所有的尊重其实都是要去训练的，我的父母这样做是在帮我，在训练我去尊重他人，要按照我们的本性，我们其实是真的不想尊重他人的，我们看到比我们位阶高的我们会嫉妒，看到不如我们的我们会轻视，看到长相较好的时候会激发我们的邪情，所以人的内心是很幽暗的，所以很多时候你是要去装，装多了，你慢慢的就真的会发自内心的去尊重，如果离开了这个装，你可能一辈子都很难尊重他人。</p>
+<span id="more"></span>
+<hr>
+<p>尊重他人是需要训练的，这也是我们人类能够跟动物区别开来的原因。</p>
+<p>装了一辈子仁德的刘皇叔，他就是真的仁德。</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>哲学</tag>
+        <tag>罗翔</tag>
+        <tag>尊重</tag>
+        <tag>敬畏之心</tag>
       </tags>
   </entry>
   <entry>
@@ -294,28 +316,6 @@
       <tags>
         <tag>笔记</tag>
         <tag>人民日报</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【转载】尊重</title>
-    <url>/2022/02/22/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E5%B0%8A%E9%87%8D/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>慎独之人，时刻保持一颗敬畏之心</p>
-</blockquote>
-<p>我小时候非常讨厌我的父母，见到叔叔阿姨，就让我来叫叔叔和阿姨。<br>我后来发现了，慢慢的发现，其实人是很难发自内心地去尊重别人。所以所有的尊重其实都是要去训练的，我的父母这样做是在帮我，在训练我去尊重他人，要按照我们的本性，我们其实是真的不想尊重他人的，我们看到比我们位阶高的我们会嫉妒，看到不如我们的我们会轻视，看到长相较好的时候会激发我们的邪情，所以人的内心是很幽暗的，所以很多时候你是要去装，装多了，你慢慢的就真的会发自内心的去尊重，如果离开了这个装，你可能一辈子都很难尊重他人。</p>
-<span id="more"></span>
-<hr>
-<p>尊重他人是需要训练的，这也是我们人类能够跟动物区别开来的原因。</p>
-<p>装了一辈子仁德的刘皇叔，他就是真的仁德。</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>哲学</tag>
-        <tag>罗翔</tag>
-        <tag>尊重</tag>
-        <tag>敬畏之心</tag>
       </tags>
   </entry>
   <entry>
@@ -525,12 +525,12 @@
     <title>睡前故事（七）</title>
     <url>/2022/02/28/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B8%83%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-xlmLBFkV" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-UucQAIjJ" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-xlmLBFkV"),
+            element: document.getElementById("aplayer-UucQAIjJ"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -573,12 +573,12 @@
     <title>睡前故事（三）</title>
     <url>/2022/02/23/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B8%89%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-UtVwtlHM" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-oGObnMzh" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-UtVwtlHM"),
+            element: document.getElementById("aplayer-oGObnMzh"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -647,12 +647,12 @@
  
 
 <!-- 
-        <div id="aplayer-LcotmJLZ" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-zXgAFBhD" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-LcotmJLZ"),
+            element: document.getElementById("aplayer-zXgAFBhD"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -706,12 +706,12 @@
     <title>睡前故事（五）:想去南极的北极熊</title>
     <url>/2022/02/26/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%94%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-pSNMSbCA" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-rtuzwgId" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-pSNMSbCA"),
+            element: document.getElementById("aplayer-rtuzwgId"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -762,15 +762,49 @@
       </tags>
   </entry>
   <entry>
-    <title>睡前故事（六）:牧星少年</title>
-    <url>/2022/02/27/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%85%AD%EF%BC%89/</url>
+    <title>哄对象的睡前故事（一）</title>
+    <url>/2022/03/01/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%85%AB%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-jpJstLGB" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-IguRXcdn" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-jpJstLGB"),
+            element: document.getElementById("aplayer-IguRXcdn"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "朗读这篇文章",
+              author: "Azure云希",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/03/01/睡前故事（八）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（六）:牧星少年</title>
+    <url>/2022/02/27/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%85%AD%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-bjISTEAv" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-bjISTEAv"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -832,12 +866,12 @@
 });
 </script> -->
 
-        <div id="aplayer-AeDtPxaf" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-BplDZXyG" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-AeDtPxaf"),
+            element: document.getElementById("aplayer-BplDZXyG"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -974,6 +1008,33 @@
       </tags>
   </entry>
   <entry>
+    <title>《一个人的好天气》读书笔记摘抄</title>
+    <url>/2021/04/17/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>吟子:”我那时侯整天的哭，非常憎恨这个世界，我好象把一辈子的恨都用完了。”</p>
+<p>知寿:”我想趁现在把空虚都用光了，老了就不会再空虚了。”</p>
+<p>吟子:”知寿，可不能在年轻时都用光了，要是只留下愉快的事，上了年纪，就怕死了。”</p>
+<p>和吟子面对面吃饭时，我总觉得自己的岁数倒比她大得多。</p>
+<span id="more"></span>
+
+<p>在活到了这个岁数的人面前，恍惚觉得对方不会再继续老化，只有自己朝着前方的苍老飞速地坠落下去。当我在串加极鱼的时候，在剥柚子的时候，我都会不由得焦急起来。</p>
+<p>可是一觉得没希望了，往往就真的变成那样了。怎么也控制不了自己，总爱那么想。</p>
+<p>我觉得自己永远也过不上正常的生活，得到了的东西又扔掉或被扔掉。想扔掉的东西总业仍不干净。我的人生全是由这些组成的。</p>
+<p>我真想切断一切联系，到一个没有人，什么都没有的地方从头开始。</p>
+<p>不过，在那里又会建立起新的关系吧，等自己意识到时，一切又都结束了吧。</p>
+<p>不去思考什么意义，只是不断重复下去的话，就连人生也会结束。</p>
+<p>年轻的时候大家都拼命地伸出手想要什么，到了我这个岁数，想伸手要的越来越少了。</p>
+<p>知寿:”吟子，外面的世界很残酷吧。我这样的人会很快堕落吧。”</p>
+<p>吟子:”世界不分内外的呀，这世界只有一个。”</p>
+<p>就这样，我不断地更换认识的人，也不断地使自己进入不认识的人们之中去。我既不悲观，也不乐观，只是每天早上睁开眼睛迎接新的一天，一个人努力过下去。</p>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>阅读笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>如何成为一名更优秀的程序员</title>
     <url>/2020/12/17/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -1017,33 +1078,6 @@
         <tag>学习笔记</tag>
         <tag>阅读笔记</tag>
         <tag>程序员</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《一个人的好天气》读书笔记摘抄</title>
-    <url>/2021/04/17/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>吟子:”我那时侯整天的哭，非常憎恨这个世界，我好象把一辈子的恨都用完了。”</p>
-<p>知寿:”我想趁现在把空虚都用光了，老了就不会再空虚了。”</p>
-<p>吟子:”知寿，可不能在年轻时都用光了，要是只留下愉快的事，上了年纪，就怕死了。”</p>
-<p>和吟子面对面吃饭时，我总觉得自己的岁数倒比她大得多。</p>
-<span id="more"></span>
-
-<p>在活到了这个岁数的人面前，恍惚觉得对方不会再继续老化，只有自己朝着前方的苍老飞速地坠落下去。当我在串加极鱼的时候，在剥柚子的时候，我都会不由得焦急起来。</p>
-<p>可是一觉得没希望了，往往就真的变成那样了。怎么也控制不了自己，总爱那么想。</p>
-<p>我觉得自己永远也过不上正常的生活，得到了的东西又扔掉或被扔掉。想扔掉的东西总业仍不干净。我的人生全是由这些组成的。</p>
-<p>我真想切断一切联系，到一个没有人，什么都没有的地方从头开始。</p>
-<p>不过，在那里又会建立起新的关系吧，等自己意识到时，一切又都结束了吧。</p>
-<p>不去思考什么意义，只是不断重复下去的话，就连人生也会结束。</p>
-<p>年轻的时候大家都拼命地伸出手想要什么，到了我这个岁数，想伸手要的越来越少了。</p>
-<p>知寿:”吟子，外面的世界很残酷吧。我这样的人会很快堕落吧。”</p>
-<p>吟子:”世界不分内外的呀，这世界只有一个。”</p>
-<p>就这样，我不断地更换认识的人，也不断地使自己进入不认识的人们之中去。我既不悲观，也不乐观，只是每天早上睁开眼睛迎接新的一天，一个人努力过下去。</p>
-]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>阅读笔记</tag>
       </tags>
   </entry>
   <entry>
