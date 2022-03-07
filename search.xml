@@ -90,7 +90,7 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure></li>
 <li><p>生成新的SSH公钥并上传至GitHub</p>
 <figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">git config <span class="attr">--global</span> user<span class="selector-class">.name</span> <span class="string">&quot;a237440035&quot;</span></span><br><span class="line">git config <span class="attr">--global</span> user<span class="selector-class">.email</span> <span class="string">&quot;237440035@qq.com&quot;</span></span><br><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;237440035@qq.com&quot;</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/878226dbaf9849fb8528198ef9ad2ac4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_18,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>公钥为：SHA256:57GWXC&#x2F;PLymwxMVw9NoNKMpaoSI71Mum7Y9tPZZbgPI <a href="mailto:&#x32;&#51;&#55;&#x34;&#52;&#x30;&#48;&#51;&#x35;&#x40;&#x71;&#x71;&#46;&#99;&#111;&#x6d;">&#x32;&#51;&#55;&#x34;&#52;&#x30;&#48;&#51;&#x35;&#x40;&#x71;&#x71;&#46;&#99;&#111;&#x6d;</a><br>也可以在文件<code>C:\Users\Administrator\.ssh\id_ed25519.pub</code>中查看<br>将公钥复制在GitHub中即可使用<code>hexo d</code>命令<br><img src="https://img-blog.csdnimg.cn/018945bae1274b7783e02631b033d741.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/878226dbaf9849fb8528198ef9ad2ac4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_18,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>公钥为：SHA256:57GWXC&#x2F;PLymwxMVw9NoNKMpaoSI71Mum7Y9tPZZbgPI <a href="mailto:&#x32;&#x33;&#x37;&#52;&#52;&#48;&#x30;&#x33;&#53;&#x40;&#x71;&#x71;&#x2e;&#x63;&#x6f;&#109;">&#x32;&#x33;&#x37;&#52;&#52;&#48;&#x30;&#x33;&#53;&#x40;&#x71;&#x71;&#x2e;&#x63;&#x6f;&#109;</a><br>也可以在文件<code>C:\Users\Administrator\.ssh\id_ed25519.pub</code>中查看<br>将公钥复制在GitHub中即可使用<code>hexo d</code>命令<br><img src="https://img-blog.csdnimg.cn/018945bae1274b7783e02631b033d741.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
 </li>
 </ol>
 <h4 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h4><blockquote>
@@ -209,12 +209,12 @@
     <title>睡前温暖小故事</title>
     <url>/2022/02/22/testAPlayer/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-SxmWfbrY" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-teTDlPmV" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-SxmWfbrY"),
+            element: document.getElementById("aplayer-teTDlPmV"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -525,12 +525,12 @@
     <title>睡前故事（七）</title>
     <url>/2022/02/28/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B8%83%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-ZyFsDiiW" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-pMrTGitt" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-ZyFsDiiW"),
+            element: document.getElementById("aplayer-pMrTGitt"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -573,12 +573,12 @@
     <title>睡前故事（三）</title>
     <url>/2022/02/23/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B8%89%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-beymgubp" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-JGXjYhUR" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-beymgubp"),
+            element: document.getElementById("aplayer-JGXjYhUR"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -625,12 +625,12 @@
     <title>哄对象的睡前故事（二）</title>
     <url>/2022/03/02/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B9%9D%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-nvfkqwKj" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-idJQpXxX" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-nvfkqwKj"),
+            element: document.getElementById("aplayer-idJQpXxX"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -655,15 +655,96 @@
       </tags>
   </entry>
   <entry>
-    <title>睡前故事（五）:想去南极的北极熊</title>
-    <url>/2022/02/26/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%94%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-xUWzMggu" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+    <title>睡前故事（二）</title>
+    <url>/2022/02/22/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%8C%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" ></script>-->
+<div id="aplayer"></div>
+<script type="text/javascript">
+    const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+    listFolded: false,
+    mini: false,
+    fixed: false,
+    preload: 'auto', //预加载，可选值: 'none', 'metadata', 'auto'
+    loop: 'none', //音频循环播放, 可选值: 'all', 'one', 'none'
+    audio: [{
+        name: '朗读这篇文章',
+        artist: 'Azure云希',
+        url: 'shuiqiangushi.mp3',
+        cover: 'picture.png'
+    }]
+});
+</script>
+ 
+
+<!-- 
+        <div id="aplayer-HkbnqIIm" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-xUWzMggu"),
+            element: document.getElementById("aplayer-HkbnqIIm"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "朗读这篇文章",
+              author: "Azure云希",
+              url: "shuiqiangushi.wav",
+              pic: "/2022/02/22/睡前故事（二）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script> -->
+
+
+<p>夜晚的森林让人感到格外的惬意，偶尔吹来一阵微风，沙沙作响却不带走这片土地一丝神秘和安静。小狐狸将小兔子紧紧搂入怀中，生怕稍微松开一点便失去了这怀抱中的温暖。</p>
+<p>“晚安，小兔子，该睡觉了呢。”小狐狸把手臂伸出被子，抱紧小兔子。</p>
+<p>小兔子热乎乎的从被子里探出头来，说：“好的呢，笨狐狸，为什么你总是喜欢抱着我睡觉呀。”</p>
+<span id="more"></span>
+
+<p>“因为你是我的小心肝呀，睡觉的样子也能让我心动许久。”小狐狸摸了摸小兔子的头想让小兔子躺好睡觉。</p>
+<p>“就会耍嘴皮子，我热，笨狐狸总是把我和被子一起抱着。”小兔子又探出头来恶狠狠的看着小狐狸，兔耳朵不停拍打着小狐狸的脸。</p>
+<p>“软，对不起，是因为我睡着后习惯滚被子，怕小兔子被子被扯走后着凉了，所以才把被子抱住的。”小狐狸松开手臂，一脸愧疚的抓着自己小脑袋。</p>
+<p>“噗，笨狐狸，原来是这样呀，那你把我也卷走吧，我融化后也要黏在你身上，天天黏着你，嘻嘻。”小兔子一边调着被子一边坏笑着冲小狐狸做了个鬼脸。</p>
+<p>等小兔子调好被子后，小狐狸又抱紧小兔子，说：“傻兔子，该睡觉了呢，热的话和我说哦，我的小心肝我当然要抱紧的呀。”</p>
+<p><img src="https://img-blog.csdnimg.cn/a7bbef9745ed4c38a62247de3ce032f6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>“可是，我怕做噩梦，最近我经常会被噩梦吓醒，然后睡不着。”小兔子委屈的看着小狐狸，不知怎么办才好。</p>
+<p>小狐狸焦急的说道：“啊，怎么不告诉我呢，傻兔子，睡不着一定要告诉我，我会随时随地的做好陪你的准备的呢”</p>
+<p>“可…可是，我怕打扰到你睡觉呢。”小兔子把头缩进被子里，偷偷瞄着小狐狸的脸。</p>
+<p>“傻兔子，怎么会呢，在你害怕的时候能第一时间让我陪着你，我会很开心的呢。“小狐狸宠溺的给小兔子顺着耳朵，眼里映着兔宝宝那半露的脸。</p>
+<p>“真的吗？小狐狸？“小兔子疑惑的问。</p>
+<p>小狐狸坚定的看着小兔子回答道：“真的呢，傻兔子，以后睡不着一定要告诉我哦，我随时准备好陪你。”</p>
+<p><img src="https://img-blog.csdnimg.cn/8d5ba30ee1464984ac967f61e129b7a1.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>“那如果你不在我身边呢？”</p>
+<p>我听身边的朋友说他们不在一起的时候都用这款叫“微信”的软件，我们可以在里面一起种树，装饰房子，还有自己的农场，也可以写下纪念日和我们的心愿。最重要的是我们可以看到对方的动态，这样我们就可以一直黏在一起了。就算不在身边也可以感觉到你一直在我身边呀。</p>
+<p>真的吗，那真是太好了，这样就不怕感觉到离你很远了。</p>
+<p>“我爱你，我们睡觉吧。”小兔子抱住小狐狸，幸福洋溢在脸上，笑眯眯的闭上双眼。</p>
+<p>“盖好被子哦，今晚我也会在你的梦里陪你的呢。”小狐狸轻抚着小兔子，让她渐渐的入睡。。。轻声说道： “晚安，好梦，我亲爱的小公主，我也爱你。”</p>
+<p>晚安</p>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（五）:想去南极的北极熊</title>
+    <url>/2022/02/26/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%94%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-tXyBwpNV" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-tXyBwpNV"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -717,12 +798,12 @@
     <title>哄对象的睡前故事（一）</title>
     <url>/2022/03/01/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%85%AB%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-ZHjSvJwc" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-hsaUSYDZ" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-ZHjSvJwc"),
+            element: document.getElementById("aplayer-hsaUSYDZ"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -751,12 +832,12 @@
     <title>睡前故事（六）:牧星少年</title>
     <url>/2022/02/27/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%85%AD%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-WonRfRRu" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-slNqogXi" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-WonRfRRu"),
+            element: document.getElementById("aplayer-slNqogXi"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -818,12 +899,12 @@
 });
 </script> -->
 
-        <div id="aplayer-QNdRMJnB" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-JbEcNIuX" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-QNdRMJnB"),
+            element: document.getElementById("aplayer-JbEcNIuX"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -1052,87 +1133,6 @@
       </categories>
       <tags>
         <tag>读书笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>睡前故事（二）</title>
-    <url>/2022/02/22/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%8C%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<div id="aplayer"></div>
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" ></script>-->
-<div id="aplayer"></div>
-<script type="text/javascript">
-    const ap = new APlayer({
-    container: document.getElementById('aplayer'),
-    listFolded: false,
-    mini: false,
-    fixed: false,
-    preload: 'auto', //预加载，可选值: 'none', 'metadata', 'auto'
-    loop: 'none', //音频循环播放, 可选值: 'all', 'one', 'none'
-    audio: [{
-        name: '朗读这篇文章',
-        artist: 'Azure云希',
-        url: 'shuiqiangushi.mp3',
-        cover: 'picture.png'
-    }]
-});
-</script>
- 
-
-<!-- 
-        <div id="aplayer-ZJWKbsve" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-ZJWKbsve"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "朗读这篇文章",
-              author: "Azure云希",
-              url: "shuiqiangushi.wav",
-              pic: "/2022/02/22/睡前故事（二）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script> -->
-
-
-<p>夜晚的森林让人感到格外的惬意，偶尔吹来一阵微风，沙沙作响却不带走这片土地一丝神秘和安静。小狐狸将小兔子紧紧搂入怀中，生怕稍微松开一点便失去了这怀抱中的温暖。</p>
-<p>“晚安，小兔子，该睡觉了呢。”小狐狸把手臂伸出被子，抱紧小兔子。</p>
-<p>小兔子热乎乎的从被子里探出头来，说：“好的呢，笨狐狸，为什么你总是喜欢抱着我睡觉呀。”</p>
-<span id="more"></span>
-
-<p>“因为你是我的小心肝呀，睡觉的样子也能让我心动许久。”小狐狸摸了摸小兔子的头想让小兔子躺好睡觉。</p>
-<p>“就会耍嘴皮子，我热，笨狐狸总是把我和被子一起抱着。”小兔子又探出头来恶狠狠的看着小狐狸，兔耳朵不停拍打着小狐狸的脸。</p>
-<p>“软，对不起，是因为我睡着后习惯滚被子，怕小兔子被子被扯走后着凉了，所以才把被子抱住的。”小狐狸松开手臂，一脸愧疚的抓着自己小脑袋。</p>
-<p>“噗，笨狐狸，原来是这样呀，那你把我也卷走吧，我融化后也要黏在你身上，天天黏着你，嘻嘻。”小兔子一边调着被子一边坏笑着冲小狐狸做了个鬼脸。</p>
-<p>等小兔子调好被子后，小狐狸又抱紧小兔子，说：“傻兔子，该睡觉了呢，热的话和我说哦，我的小心肝我当然要抱紧的呀。”</p>
-<p><img src="https://img-blog.csdnimg.cn/a7bbef9745ed4c38a62247de3ce032f6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<p>“可是，我怕做噩梦，最近我经常会被噩梦吓醒，然后睡不着。”小兔子委屈的看着小狐狸，不知怎么办才好。</p>
-<p>小狐狸焦急的说道：“啊，怎么不告诉我呢，傻兔子，睡不着一定要告诉我，我会随时随地的做好陪你的准备的呢”</p>
-<p>“可…可是，我怕打扰到你睡觉呢。”小兔子把头缩进被子里，偷偷瞄着小狐狸的脸。</p>
-<p>“傻兔子，怎么会呢，在你害怕的时候能第一时间让我陪着你，我会很开心的呢。“小狐狸宠溺的给小兔子顺着耳朵，眼里映着兔宝宝那半露的脸。</p>
-<p>“真的吗？小狐狸？“小兔子疑惑的问。</p>
-<p>小狐狸坚定的看着小兔子回答道：“真的呢，傻兔子，以后睡不着一定要告诉我哦，我随时准备好陪你。”</p>
-<p><img src="https://img-blog.csdnimg.cn/8d5ba30ee1464984ac967f61e129b7a1.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<p>“那如果你不在我身边呢？”</p>
-<p>我听身边的朋友说他们不在一起的时候都用这款叫“微信”的软件，我们可以在里面一起种树，装饰房子，还有自己的农场，也可以写下纪念日和我们的心愿。最重要的是我们可以看到对方的动态，这样我们就可以一直黏在一起了。就算不在身边也可以感觉到你一直在我身边呀。</p>
-<p>真的吗，那真是太好了，这样就不怕感觉到离你很远了。</p>
-<p>“我爱你，我们睡觉吧。”小兔子抱住小狐狸，幸福洋溢在脸上，笑眯眯的闭上双眼。</p>
-<p>“盖好被子哦，今晚我也会在你的梦里陪你的呢。”小狐狸轻抚着小兔子，让她渐渐的入睡。。。轻声说道： “晚安，好梦，我亲爱的小公主，我也爱你。”</p>
-<p>晚安</p>
-]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
       </tags>
   </entry>
 </search>
