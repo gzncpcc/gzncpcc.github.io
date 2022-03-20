@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>hexo分类的正确用法</title>
+    <url>/2022/02/13/hexo%E5%88%86%E7%B1%BB%E7%9A%84%E6%AD%A3%E7%A1%AE%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://img-blog.csdnimg.cn/4ecf04ca568949b4bc4b2f4becdb1089.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<figure class="highlight isbl"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="title">alert</span>(<span class="string">&#x27;Hello World!&#x27;</span>);</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>hexo中文文档：<a href="https://hexo.io/zh-cn/docs/front-matter">https://hexo.io/zh-cn/docs/front-matter</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo-tag-aplayer重复载入Aplayer.js 资源脚本问题</title>
     <url>/2022/02/23/Hexo-tag-aplayer%E9%87%8D%E5%A4%8D%E8%BD%BD%E5%85%A5Aplayer-js-%E8%B5%84%E6%BA%90%E8%84%9A%E6%9C%AC%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="背景："><a href="#背景：" class="headerlink" title="背景："></a>背景：</h1><p><font color=#999AAA >hexo-theme-next主题</font></p>
@@ -63,132 +80,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo的常用指令合集</title>
-    <url>/2022/02/17/Hexo%E7%9A%84%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%E5%90%88%E9%9B%86/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>Hexo：一个基于Node.js的静态网页生成器，常将它与Github Page搭配使用，创建个人博客网站。</p>
-</blockquote>
-<p>hexo有许多主题，其实最火爆的是NexT、Matery等，复制关键词到GitHub或者baidu都能搜到。权衡利弊最终我还是选择了大多数人使用的next。</p>
-<h4 id="（1）hexo-g或hexo-generate"><a href="#（1）hexo-g或hexo-generate" class="headerlink" title="（1）hexo g或hexo generate"></a>（1）<code>hexo g</code>或<code>hexo generate</code></h4><p>该命令执行后在hexo站点根目录下生成public文件夹<br><img src="https://img-blog.csdnimg.cn/7683010350d24da995d50c154352b35d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_17,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<h4 id="（2）hexo-clean"><a href="#（2）hexo-clean" class="headerlink" title="（2）hexo clean"></a>（2）<code>hexo clean</code></h4><p>把（1）中的<code>public</code>文件夹删除</p>
-<span id="more"></span>
-
-<h4 id="（3）hexo-s或hexo-server"><a href="#（3）hexo-s或hexo-server" class="headerlink" title="（3）hexo s或hexo server"></a>（3）<code>hexo s</code>或<code>hexo server</code></h4><p>启动服务，默认地址为<a href="http://localhost:4000/%EF%BC%8C4000%E7%AB%AF%E5%8F%A3">http://localhost:4000/，4000端口</a><br><img src="https://img-blog.csdnimg.cn/185e5eec8e4e4769b821f6157468d87d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_17,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<h4 id="（4）hexo-d或hexo-deploy"><a href="#（4）hexo-d或hexo-deploy" class="headerlink" title="（4）hexo d或hexo deploy"></a>（4）<code>hexo d</code>或<code>hexo deploy</code></h4><p>部署站点，在本地生成<code>.deploy_git</code>文件夹，并将编译后的文件上传至 GitHub。</p>
-<h4 id="（5）hexo-new-layout-lt-title-gt"><a href="#（5）hexo-new-layout-lt-title-gt" class="headerlink" title="（5）hexo new [layout] &lt;title&gt;"></a>（5）<code>hexo new [layout] &lt;title&gt;</code></h4><p>例如： <code>hexo new photo “my-first-blog”</code><br>上述指令执行时，Hexo 会尝试在 scaffolds 中寻找photo.md布局，若找到，则根据该布局新建文章；若未找到或指令中未指定该参数，则使用post.md新建文章。新建文章的名称在_config.yml中配置。<br><img src="https://img-blog.csdnimg.cn/35dacad9d318449696f68e6697eab9c7.png" alt="在这里插入图片描述"></p>
-<h4 id="（6）删除文章"><a href="#（6）删除文章" class="headerlink" title="（6）删除文章"></a>（6）删除文章</h4><p>只需在本地把<code>source/_posts</code>文件夹下的文章源文件删除后，执行以下命令重新部署即可。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 	// 一定要先 clean，防止灵异事件发生</span><br></pre></td></tr></table></figure>
-
-<h4 id="（7）备份-x2F-迁移你的Hexo博客"><a href="#（7）备份-x2F-迁移你的Hexo博客" class="headerlink" title="（7）备份&#x2F;迁移你的Hexo博客"></a>（7）备份&#x2F;迁移你的Hexo博客</h4><ol>
-<li><p>备份根目录<img src="https://img-blog.csdnimg.cn/8b7829cea05440408b386a27bc71cade.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-</li>
-<li><p>参考<a href="https://hexoscript.gitbook.io/hexo-script/v/1.3-1/shi-yong-bu-zhou/zhun-bei-gong-ju">文档3：hexo-script使用文档</a>重新安装hexo</p>
-</li>
-<li><p>使用备份的目录覆盖新装的hexo目录<br><img src="https://img-blog.csdnimg.cn/56e7368f24dc4f258cdf2f2141543328.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-</li>
-<li><p>最后使用下面的命令直接运行即可</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure></li>
-<li><p>生成新的SSH公钥并上传至GitHub</p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">git config <span class="attr">--global</span> user<span class="selector-class">.name</span> <span class="string">&quot;a237440035&quot;</span></span><br><span class="line">git config <span class="attr">--global</span> user<span class="selector-class">.email</span> <span class="string">&quot;237440035@qq.com&quot;</span></span><br><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;237440035@qq.com&quot;</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/878226dbaf9849fb8528198ef9ad2ac4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_18,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>公钥为：SHA256:57GWXC&#x2F;PLymwxMVw9NoNKMpaoSI71Mum7Y9tPZZbgPI <a href="mailto:&#50;&#51;&#x37;&#x34;&#52;&#48;&#48;&#51;&#x35;&#64;&#113;&#113;&#46;&#x63;&#111;&#x6d;">&#50;&#51;&#x37;&#x34;&#52;&#48;&#48;&#51;&#x35;&#64;&#113;&#113;&#46;&#x63;&#111;&#x6d;</a><br>也可以在文件<code>C:\Users\Administrator\.ssh\id_ed25519.pub</code>中查看<br>将公钥复制在GitHub中即可使用<code>hexo d</code>命令<br><img src="https://img-blog.csdnimg.cn/018945bae1274b7783e02631b033d741.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-</li>
-</ol>
-<h4 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h4><blockquote>
-<p><a href="https://blog.csdn.net/qq_42889280/article/details/103087433">1、Hexo博客+Next主题深度优化与定制</a><br><a href="https://www.jianshu.com/p/baab04284923">2、备份你的Hexo博客</a><br><a href="https://hexoscript.gitbook.io/hexo-script/v/1.3-1/shi-yong-bu-zhou/zhun-bei-gong-ju">3、hexo-script使用文档</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>学习笔记</tag>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Nginx代理：由http到https</title>
-    <url>/2022/02/16/Nginx%E4%BB%A3%E7%90%86%EF%BC%9A%E7%94%B1http%E5%88%B0https/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>基于 SSL 证书，可将站点由 HTTP（Hypertext Transfer Protocol）切换到 HTTPS（Hyper Text Transfer Protocol over Secure Socket Layer），即基于安全套接字层（SSL）进行安全数据传输的加密版 HTTP 协议。</p>
-</blockquote>
-<p>背景：众所众知，一台服务器开放80端口后我们可以直接IP地址访问到web页面，但ip地址暴露会可能会引起一些莫名的网络攻击。通常采取的策略就是去申请一个域名，经过域名绑定我们的ip就可以实现直接使用域名来访问，但80端口还是开放的，这样就使用到基于SSL的https了，简而言之就是更安全更方便了。可能某些同学会说我们可以改端口号，IP地址都懒得记那无疑会影响到我们装B不是。。。</p>
-<span id="more"></span>
-
-<p><img src="https://img-blog.csdnimg.cn/985b4dadeac648a5993d866cc9a591e4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_19,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>备案也没想象中那么严格，很简单，2天就审核通过了。这里就直接说最后一步了，安装SSL证书，示例的环境是：windows server 2019 + nginx + flask</p>
-<p> 参考官方文档：<a href="https://cloud.tencent.com/document/product/400/47361">https://cloud.tencent.com/document/product/400/47361</a></p>
-<p>ssl.conf文件内容如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">listen 443 ssl; # 监听443端口</span><br><span class="line">server_name gzncpcc.xyz; #你的域名</span><br><span class="line">ssl_certificate C:/gmssl/nginx-1.16.0/conf/ssl/gzncpcc.xyz_bundle.crt; #ssl证书的crt文件路径</span><br><span class="line">ssl_certificate_key c:/gmssl/nginx-1.16.0/conf/ssl/gzncpcc.xyz.key;</span><br><span class="line">ssl_certificate c:/gmssl/nginx-1.16.0/conf/ssl/gzncpcc.xyz_bundle.pem; #ssl证书的pem文件路径</span><br><span class="line">ssl_certificate_key c:/gmssl/nginx-1.16.0/conf/ssl/gzncpcc.xyz.key; </span><br><span class="line">#先配置签名证书，再配置加密证书，签名加密证书私钥 key 为同一个！</span><br><span class="line">ssl_session_timeout 5m; </span><br><span class="line">ssl_protocols TLSv1.2;</span><br><span class="line">ssl_ciphers SM2-WITH-SMS4-SM3:ECDH:AESGCM:HIGH:MEDIUM:!RC4:!DH:!MD5:!aNULL:!eNULL; </span><br><span class="line">ssl_prefer_server_ciphers on;</span><br><span class="line">location / &#123; </span><br><span class="line">        proxy_pass  http://10.0.0.17/; #/内网地址，这样就可以关闭服务器的80端口了</span><br><span class="line">       # proxy_pass  http://gzncpcc.xyz/; #//公网地址:项目端口号;http://gzncpcc.xyz/;</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">listen 443 ssl; # 监听443端口</span><br><span class="line">server_name blog.gzncpcc.xyz; # 对应子域名</span><br><span class="line">ssl_certificate C:/gmssl/nginx-1.16.0/conf/ssl/blog.gzncpcc.xyz_bundle.crt; #ssl证书的crt文件路径</span><br><span class="line">ssl_certificate_key c:/gmssl/nginx-1.16.0/conf/ssl/blog.gzncpcc.xyz.key;</span><br><span class="line">ssl_certificate c:/gmssl/nginx-1.16.0/conf/ssl/blog.gzncpcc.xyz_bundle.pem; #ssl证书的pem文件路径</span><br><span class="line">ssl_certificate_key c:/gmssl/nginx-1.16.0/conf/ssl/blog.gzncpcc.xyz.key; </span><br><span class="line">#先配置签名证书，再配置加密证书，签名加密证书私钥 key 为同一个！</span><br><span class="line">ssl_session_timeout 5m; </span><br><span class="line">ssl_protocols TLSv1.2;</span><br><span class="line">ssl_ciphers SM2-WITH-SMS4-SM3:ECDH:AESGCM:HIGH:MEDIUM:!RC4:!DH:!MD5:!aNULL:!eNULL; </span><br><span class="line">ssl_prefer_server_ciphers on;</span><br><span class="line">location / &#123; </span><br><span class="line">        proxy_pass  http://127.0.0.1:4000/; # 博客项目</span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="踩雷经验"><a href="#踩雷经验" class="headerlink" title="踩雷经验"></a>踩雷经验</h3><ol>
-<li><strong>没事多重启，把nginx关死再运行，把所有进程杀死。</strong> 否则也不会让我一直改到怀疑人生了，几个小时，什么资料都查了，就是反代理不上，改到怀疑人生，一直出现welcome nginx。。。</li>
-<li>如果用了<code>https</code>，HTML页面引用的链接也要使用https的，例如引用<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">+    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://libs.baidu.com/jquery/2.1.1/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">+    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://res.wx.qq.com/open/js/jweixin-1.4.0.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">-    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;http://libs.baidu.com/jquery/2.1.1/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">-    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;http://res.wx.qq.com/open/js/jweixin-1.4.0.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-<p>下面附上windows上的nginx常用操作指令</p>
-<p>可以杀死名字为nginx.EXE的所有进程：<code>taskkill /fi &quot;imagename eq nginx.EXE&quot; /f</code></p>
-<p>检查： <code>nginx.exe -t</code></p>
-<p>运行：<code>nginx.exe</code></p>
-<p>重载：<code>nginx.exe -s reload</code></p>
-<p>停止：<code>nginx.exe -s stop</code></p>
-<p>查找端口占用情况：<code>netstat -aon | findstr :80 </code></p>
-<p>ps:都是在cmd中执行，其他什么shell、git没有效果。。。</p>
-<p>避免端口冲突，需要将IIS中的80和443端口占用关闭；python程序也可以自定义端口来避免冲突，但相应的ssl.conf中的<code>proxy_pass  http://10.0.0.17/;</code>需要加上端口号。<br><img src="https://img-blog.csdnimg.cn/e613924f820840079f9912c17cf388ef.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>正确的运行顺序：nginx——&gt;python程序</p>
-<p>最后附上网址看<a href="https://gzncpcc.xyz/hmikily">成果</a>：<a href="https://gzncpcc.xyz/">https://gzncpcc.xyz/</a></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Nginx</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo设置canvas_nest动态背景</title>
-    <url>/2022/02/18/Hexo%E8%AE%BE%E7%BD%AEcanvas-nest%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>hexo版本：6.0        查看命令：<code>hexo -v</code></p>
-</blockquote>
-<h2 id="1、下载并重命名"><a href="#1、下载并重命名" class="headerlink" title="1、下载并重命名"></a>1、下载并重命名</h2><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">git clone https:<span class="regexp">//gi</span>thub.com<span class="regexp">/theme-next/</span>theme-<span class="keyword">next</span>-canvas-nest</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/313389cba4524a9d888ad3b210ce5fdb.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/8a312c399e414951877d054e7a7d9d09.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<span id="more"></span>
-
-<h2 id="2、设置-config-yml文件"><a href="#2、设置-config-yml文件" class="headerlink" title="2、设置_config.yml文件"></a>2、设置_config.yml文件</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 设置canvas_nest动态背景</span></span><br><span class="line"><span class="attr">canvas_nest:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p>没有搜到canvas_nest就复制加进去，重启服务器即可<code>hexo s</code><br><img src="https://img-blog.csdnimg.cn/e10805e958b54d80b16ad3cc02b9d8e4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_19,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<h3 id="看看效果吧"><a href="#看看效果吧" class="headerlink" title="看看效果吧"></a>看看效果吧</h3><p><img src="https://img-blog.csdnimg.cn/2ff0d4a257b34e7c90d3cc9a61e62e21.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<blockquote>
-<p><a href="https://www.cnblogs.com/Luweir/p/14147344.html">新版本NexT 调动态背景、调canvas_nest的解决方案</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2019/01/11/hello-world/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<span id="more"></span>
-
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-  </entry>
-  <entry>
     <title>【转载】人民日报高级词汇</title>
     <url>/2022/02/22/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E4%BA%BA%E6%B0%91%E6%97%A5%E6%8A%A5%E9%AB%98%E7%BA%A7%E8%AF%8D%E6%B1%87/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><table>
@@ -233,67 +124,67 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo分类的正确用法</title>
-    <url>/2022/02/13/hexo%E5%88%86%E7%B1%BB%E7%9A%84%E6%AD%A3%E7%A1%AE%E7%94%A8%E6%B3%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://img-blog.csdnimg.cn/4ecf04ca568949b4bc4b2f4becdb1089.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<figure class="highlight isbl"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="title">alert</span>(<span class="string">&#x27;Hello World!&#x27;</span>);</span></span><br></pre></td></tr></table></figure>
+    <title>Hello World</title>
+    <url>/2019/01/11/hello-world/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<span id="more"></span>
+
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>一些自己做的小玩意儿</title>
+    <url>/2022/02/18/%E4%B8%80%E4%BA%9B%E8%87%AA%E5%B7%B1%E5%81%9A%E7%9A%84%E5%B0%8F%E7%8E%A9%E6%84%8F%E5%84%BF/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="一个小导航网站"><a href="#一个小导航网站" class="headerlink" title="一个小导航网站"></a><a href="https://gzncpcc.xyz/">一个小导航网站</a></h2><h2 id="看看烟花"><a href="#看看烟花" class="headerlink" title="看看烟花"></a><a href="https://gzncpcc.xyz/fireworks">看看烟花</a></h2><h2 id="玩玩游戏：消消乐"><a href="#玩玩游戏：消消乐" class="headerlink" title="玩玩游戏：消消乐"></a><a href="https://gzncpcc.xyz/game">玩玩游戏：消消乐</a></h2><span id="more"></span>
+
+<h2 id="看看视频"><a href="#看看视频" class="headerlink" title="看看视频"></a><a href="https://gzncpcc.xyz/video">看看视频</a></h2><p>后续有时间再更新吧，先这样。。。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>黑科技</tag>
+        <tag>小心思</tag>
+        <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo设置canvas_nest动态背景</title>
+    <url>/2022/02/18/Hexo%E8%AE%BE%E7%BD%AEcanvas-nest%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>hexo版本：6.0        查看命令：<code>hexo -v</code></p>
+</blockquote>
+<h2 id="1、下载并重命名"><a href="#1、下载并重命名" class="headerlink" title="1、下载并重命名"></a>1、下载并重命名</h2><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">git clone https:<span class="regexp">//gi</span>thub.com<span class="regexp">/theme-next/</span>theme-<span class="keyword">next</span>-canvas-nest</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/313389cba4524a9d888ad3b210ce5fdb.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/8a312c399e414951877d054e7a7d9d09.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<span id="more"></span>
+
+<h2 id="2、设置-config-yml文件"><a href="#2、设置-config-yml文件" class="headerlink" title="2、设置_config.yml文件"></a>2、设置_config.yml文件</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 设置canvas_nest动态背景</span></span><br><span class="line"><span class="attr">canvas_nest:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>没有搜到canvas_nest就复制加进去，重启服务器即可<code>hexo s</code><br><img src="https://img-blog.csdnimg.cn/e10805e958b54d80b16ad3cc02b9d8e4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_19,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<h3 id="看看效果吧"><a href="#看看效果吧" class="headerlink" title="看看效果吧"></a>看看效果吧</h3><p><img src="https://img-blog.csdnimg.cn/2ff0d4a257b34e7c90d3cc9a61e62e21.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
 <blockquote>
-<p>hexo中文文档：<a href="https://hexo.io/zh-cn/docs/front-matter">https://hexo.io/zh-cn/docs/front-matter</a></p>
+<p><a href="https://www.cnblogs.com/Luweir/p/14147344.html">新版本NexT 调动态背景、调canvas_nest的解决方案</a></p>
 </blockquote>
 ]]></content>
       <categories>
         <category>技术</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>睡前温暖小故事</title>
-    <url>/2022/02/22/testAPlayer/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-aahgOAvI" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-aahgOAvI"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "朗读这篇文章",
-              author: "Azure云希",
-              url: "shuiqiangushi.wav",
-              pic: "/2022/02/22/testAPlayer/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-
-<p>从前有个故事王国，在这个王国里面，每个人都有着一本书，书里写满着属于自己的故事。<br>除了他，只有他的书是一片空白的，人们嘲笑着他的同时，称呼他为，无故事先生。</p>
-<p>无故事先生一直很烦恼，在这个国度，每个人都有着自己的故事，有着自己可以回忆，可以治愈在忙碌生活下受伤的故事，只有自己是孤单一个人，什么故事也没有。</p>
-<span id="more"></span>
-
-<p>他曾经去很远的东边的繁华集市，想向商贾购买一个故事，来填补自己书上的空白，尽管集市上有各种商品，但他找遍那里都没发现有人卖故事。</p>
-<p>后来，他去了最南边的河流旁，遇到了热情的牧羊人，牧羊人招待他吃肉喝酒，当提到能不能分享故事的时候，牧羊人只是讪笑了一下，便没有吱声。</p>
-<p>无故事先生这才意识到，这书中的故事，是最为宝贵的，至少不能随便与别人分享，他十分懊恼地回到自己的城市，坐在路边若有所失，感觉到好像被人偷走故事一般的失落，尽管他本来就没有故事。<br>正当他失神的时候，北边传来了一阵喧哗声，有一群蹦蹦跳跳的小孩子在吵闹着。<br>无故事先生挤进人群里，看到最里面有个女孩子，与旁人不同，她的眼睛里闪着奇异的光芒，而风尘仆仆的模样仿佛在阐述旅程的艰辛。</p>
-<p>在她的面前，有着很多很多书。翻开书，她从远古时代巨龙和勇士的争斗讲起，再到中世纪梅林和石中剑°的故事，以及女巫的魔法以及黑猫的调皮，周围的小孩子都听得十分入迷，这些故事，都是他们从未听过的。</p>
-<p>她的目光穿过人群，停留在无故事先生脸上，微微一笑，就自顾自地又开始讲起了故事，他老脸一红，感觉困扰自己多日的问题，也许会在这里得到答案。</p>
-<p>从她到来的那一天开始，每天都会围满人听她讲故事，因为这些故事都太过奇妙，孩子们给她取了个称号，叫奇妙小姐。</p>
-<p>无故事先生每天随着人群来到这里，而每次，奇妙小姐都会对着他莞尔一笑。就这样，日子一天天过去。</p>
-<p>有一天，无故事先生感觉心中一颤，急忙把怀里的书翻开，发现原本空白的纸张上竟然浮现了字，那是奇妙小姐今天所讲的经历。而自己的灵魂，仿佛也得到了治愈，正如其他人所说的那种感觉。<br>他看着奇妙小姐，眼神里满是温柔，轻声地问：“你愿意用你的故事，填满我未来的人生吗?”<br>在人群的起哄声里，奇妙小姐耳垂变得红红的，笑着点了点头：“那，你准备好了么?”</p>
-<p><strong>所以，我可爱的奇妙小姐，你愿意用你的故事，填满我未来的人生吗?</strong></p>
-]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -333,43 +224,56 @@
         <category>笔记</category>
       </categories>
       <tags>
-        <tag>爱情</tag>
         <tag>罗翔</tag>
         <tag>爱情观</tag>
+        <tag>爱情</tag>
       </tags>
   </entry>
   <entry>
-    <title>到底什么才叫谈恋爱</title>
-    <url>/2022/03/10/%E5%88%B0%E5%BA%95%E4%BB%80%E4%B9%88%E6%89%8D%E5%8F%AB%E8%B0%88%E6%81%8B%E7%88%B1/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>“交往这件事，不只是为了休息日能一起去哪玩，那只是附带的东西罢了。互相支撑着对方的生活才是交往的本质。它是让人在工作，学习很辛苦的时候，只要想起对方的脸，就能再努力一把的力量。它是在自己快要败给其他人的诱惑的时候，只要想起对方的脸，就能纠正自己的感情，下定决心。它是能成为在自己房间乱糟糟的时候，只要想起对方的脸，就能决定，还是整理一下吧的原动力的力量。”</p>
+    <title>睡前温暖小故事</title>
+    <url>/2022/02/22/testAPlayer/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-tNNXMQOp" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-tNNXMQOp"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "朗读这篇文章",
+              author: "Azure云希",
+              url: "shuiqiangushi.wav",
+              pic: "/2022/02/22/testAPlayer/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<p>从前有个故事王国，在这个王国里面，每个人都有着一本书，书里写满着属于自己的故事。<br>除了他，只有他的书是一片空白的，人们嘲笑着他的同时，称呼他为，无故事先生。</p>
+<p>无故事先生一直很烦恼，在这个国度，每个人都有着自己的故事，有着自己可以回忆，可以治愈在忙碌生活下受伤的故事，只有自己是孤单一个人，什么故事也没有。</p>
 <span id="more"></span>
-<p>能互相给予对方在看不见的地方让自己的生活变得丰富这样的力量，这才是交往。就算不能时时刻刻在一起，但却能带给自己仿佛在一起时一般的存在感的人，这才是恋人。</p>
+
+<p>他曾经去很远的东边的繁华集市，想向商贾购买一个故事，来填补自己书上的空白，尽管集市上有各种商品，但他找遍那里都没发现有人卖故事。</p>
+<p>后来，他去了最南边的河流旁，遇到了热情的牧羊人，牧羊人招待他吃肉喝酒，当提到能不能分享故事的时候，牧羊人只是讪笑了一下，便没有吱声。</p>
+<p>无故事先生这才意识到，这书中的故事，是最为宝贵的，至少不能随便与别人分享，他十分懊恼地回到自己的城市，坐在路边若有所失，感觉到好像被人偷走故事一般的失落，尽管他本来就没有故事。<br>正当他失神的时候，北边传来了一阵喧哗声，有一群蹦蹦跳跳的小孩子在吵闹着。<br>无故事先生挤进人群里，看到最里面有个女孩子，与旁人不同，她的眼睛里闪着奇异的光芒，而风尘仆仆的模样仿佛在阐述旅程的艰辛。</p>
+<p>在她的面前，有着很多很多书。翻开书，她从远古时代巨龙和勇士的争斗讲起，再到中世纪梅林和石中剑°的故事，以及女巫的魔法以及黑猫的调皮，周围的小孩子都听得十分入迷，这些故事，都是他们从未听过的。</p>
+<p>她的目光穿过人群，停留在无故事先生脸上，微微一笑，就自顾自地又开始讲起了故事，他老脸一红，感觉困扰自己多日的问题，也许会在这里得到答案。</p>
+<p>从她到来的那一天开始，每天都会围满人听她讲故事，因为这些故事都太过奇妙，孩子们给她取了个称号，叫奇妙小姐。</p>
+<p>无故事先生每天随着人群来到这里，而每次，奇妙小姐都会对着他莞尔一笑。就这样，日子一天天过去。</p>
+<p>有一天，无故事先生感觉心中一颤，急忙把怀里的书翻开，发现原本空白的纸张上竟然浮现了字，那是奇妙小姐今天所讲的经历。而自己的灵魂，仿佛也得到了治愈，正如其他人所说的那种感觉。<br>他看着奇妙小姐，眼神里满是温柔，轻声地问：“你愿意用你的故事，填满我未来的人生吗?”<br>在人群的起哄声里，奇妙小姐耳垂变得红红的，笑着点了点头：“那，你准备好了么?”</p>
+<p><strong>所以，我可爱的奇妙小姐，你愿意用你的故事，填满我未来的人生吗?</strong></p>
 ]]></content>
       <categories>
-        <category>生活</category>
-        <category>随笔</category>
+        <category>睡前故事</category>
       </categories>
       <tags>
         <tag>爱情</tag>
-        <tag>爱情观</tag>
-        <tag>小心思</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一些自己做的小玩意儿</title>
-    <url>/2022/02/18/%E4%B8%80%E4%BA%9B%E8%87%AA%E5%B7%B1%E5%81%9A%E7%9A%84%E5%B0%8F%E7%8E%A9%E6%84%8F%E5%84%BF/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="一个小导航网站"><a href="#一个小导航网站" class="headerlink" title="一个小导航网站"></a><a href="https://gzncpcc.xyz/">一个小导航网站</a></h2><h2 id="看看烟花"><a href="#看看烟花" class="headerlink" title="看看烟花"></a><a href="https://gzncpcc.xyz/fireworks">看看烟花</a></h2><h2 id="玩玩游戏：消消乐"><a href="#玩玩游戏：消消乐" class="headerlink" title="玩玩游戏：消消乐"></a><a href="https://gzncpcc.xyz/game">玩玩游戏：消消乐</a></h2><span id="more"></span>
-
-<h2 id="看看视频"><a href="#看看视频" class="headerlink" title="看看视频"></a><a href="https://gzncpcc.xyz/video">看看视频</a></h2><p>后续有时间再更新吧，先这样。。。</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>小心思</tag>
-        <tag>技术</tag>
-        <tag>黑科技</tag>
-        <tag>Web</tag>
+        <tag>小故事</tag>
       </tags>
   </entry>
   <entry>
@@ -539,48 +443,15 @@
       </tags>
   </entry>
   <entry>
-    <title>哄对象的睡前故事（二）</title>
-    <url>/2022/03/02/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B9%9D%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-wKuSwzTt" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-wKuSwzTt"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "欢迎收听",
-              author: "你的专属睡前故事",
-              url: "shuiqiangushi.aac",
-              pic: "/2022/03/02/睡前故事（九）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>睡前故事（七）</title>
     <url>/2022/02/28/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B8%83%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-ccgxeuwO" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-wHvTkEcY" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-ccgxeuwO"),
+            element: document.getElementById("aplayer-wHvTkEcY"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -620,6 +491,174 @@
       </tags>
   </entry>
   <entry>
+    <title>哄对象的睡前故事（二）</title>
+    <url>/2022/03/02/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B9%9D%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-tQaOCwfW" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-tQaOCwfW"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/03/02/睡前故事（九）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>到底什么才叫谈恋爱</title>
+    <url>/2022/03/10/%E5%88%B0%E5%BA%95%E4%BB%80%E4%B9%88%E6%89%8D%E5%8F%AB%E8%B0%88%E6%81%8B%E7%88%B1/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>“交往这件事，不只是为了休息日能一起去哪玩，那只是附带的东西罢了。互相支撑着对方的生活才是交往的本质。它是让人在工作，学习很辛苦的时候，只要想起对方的脸，就能再努力一把的力量。它是在自己快要败给其他人的诱惑的时候，只要想起对方的脸，就能纠正自己的感情，下定决心。它是能成为在自己房间乱糟糟的时候，只要想起对方的脸，就能决定，还是整理一下吧的原动力的力量。”</p>
+<span id="more"></span>
+<p>能互相给予对方在看不见的地方让自己的生活变得丰富这样的力量，这才是交往。就算不能时时刻刻在一起，但却能带给自己仿佛在一起时一般的存在感的人，这才是恋人。</p>
+]]></content>
+      <categories>
+        <category>生活</category>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>小心思</tag>
+        <tag>爱情观</tag>
+        <tag>爱情</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（三）</title>
+    <url>/2022/02/23/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B8%89%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-sodODeDB" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-sodODeDB"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "朗读这篇文章",
+              author: "Azure云希",
+              url: "shuiqiangushi.mp3",
+              pic: "/2022/02/23/睡前故事（三）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<p>小白熊是一个重度熬夜选手。小白熊之所以对熬夜这件事乐此不疲，是因为它觉得不管白天的时光有多长，都像是不属于自己的，白天要做那么多事，说那么多话。只有到了夜晚，可以随心所欲，自由畅想。越到很晚，小白熊越是想多延续一点专属自己的小时光。</p>
+<p>可是时间长了，熬夜的次数越来越多，小白熊的黑眼圈越来越重，据小灰熊说，小白熊越来越像熊猫了。</p>
+<span id="more"></span>
+
+<p>绵长的夜晚，亮着光的手机一次次的刷新，怎么也刷新不到有趣的消息时，眼睛也痛了，没有耐心再去打那一关打了好久都没能通关的游戏。小白熊揉揉眼廓，今晚的钟表指针刚刚到十一，可能真的该早点休息了吧。</p>
+<p>然而，小白熊却失眠了。翻来覆去好久，现在应该是凌晨的几点了呢，小白熊闭紧双眼暗暗猜测。小白熊不敢起来看时间，也不敢再看手机了，继续看手机，刷到的也只是无趣的消息，夜只会熬的更晚。</p>
+<p>第二天，小白熊顶着更重的黑眼圈出门了，它也不清楚自己睡着的具体时间，只知道，失眠比主动熬夜睡着的时间，还要晚的多。</p>
+<p>后来很多次，小白熊总会回忆起那个无趣的夜晚，熬夜仿佛从那一次起就失去了意义。小白熊从那时起，开始抛弃了熬夜的习惯。</p>
+<p>后来，小白熊和小灰熊在一起了，小白熊恪守着十一点必须上床睡觉的新原则，每晚和小灰熊互道晚安后就尽力让自己进入睡眠。</p>
+<p><img src="https://img-blog.csdnimg.cn/504418cbb6cf4d7ca25444a715848c01.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>可大多数时候，小白熊总会失眠，不知道是不是之前总熬夜留下来的“后遗症”。</p>
+<p>小灰熊就把翻来覆去睡不着的小白熊拦在怀里，它也不敢先睡着，不然指定被小白熊以各种手段弄醒，小白熊最常使用的一招就是在小灰熊睡着以后捏住它的鼻子，还不醒的话就开始给怕痒的它挠痒痒了。小白熊如此肆无忌惮，小灰熊的纵容是很大的原因。小灰熊脾气太好了，每次被吵醒都不会生气。用小灰熊的话说就是，我不会对最爱的熊生气哒。</p>
+<p>小灰熊不知道的是，它大多次还是会睡的像死猪一样，小白熊不去吵醒它，只把头倚靠在它的肩膀，细数着时间，再安心睡去。</p>
+<p>后来，小白熊失眠越来越严重了，小灰熊提议，要和它一起熬夜。</p>
+<p>小灰熊跟着小白熊一起看它喜欢看的言情剧，一起讨论剧中的男一男二谁更可能和女主在一起；剧刷完两只熊又一起打游戏，小白熊打游戏太菜啦，小灰熊为了游戏胜利，不肯让它。小白熊假装气鼓鼓，告诉它，虽然你赢了游戏，但是我要让你失去女朋友。然后开始嘻嘻哈哈的和小灰熊打打闹闹。</p>
+<p>小白熊这才发现，原来一只熊熬的才是夜，两只熊在一起度过的夜晚乐趣无穷。它感觉，小灰熊不在的时候，白天和黑夜，是分秒不差二十四小时。而它在时，有时少些，有时多些。</p>
+<p>慢慢地，小白熊不再失眠了。不管窗外是滂沱大雨，还是肆虐的狂风，小白熊倚在小灰熊的臂弯里，总是能安然入睡。</p>
+<p>晚安好梦</p>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>哄对象的睡前故事（一）</title>
+    <url>/2022/03/01/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%85%AB%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-jdhcHBIr" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-jdhcHBIr"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/03/01/睡前故事（八）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（十七）</title>
+    <url>/2022/03/17/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E4%B8%83%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-BFOqhxML" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-BFOqhxML"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/03/17/睡前故事（十七）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>睡前故事（二）</title>
     <url>/2022/02/22/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%8C%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
@@ -645,12 +684,12 @@
  
 
 <!-- 
-        <div id="aplayer-mJsRpZsC" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-VEXptvnn" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-mJsRpZsC"),
+            element: document.getElementById("aplayer-VEXptvnn"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -701,23 +740,98 @@
       </tags>
   </entry>
   <entry>
-    <title>睡前故事（三）</title>
-    <url>/2022/02/23/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B8%89%EF%BC%89/</url>
+    <title>Hexo的常用指令合集</title>
+    <url>/2022/02/17/Hexo%E7%9A%84%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%E5%90%88%E9%9B%86/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>Hexo：一个基于Node.js的静态网页生成器，常将它与Github Page搭配使用，创建个人博客网站。</p>
+</blockquote>
+<p>hexo有许多主题，其实最火爆的是NexT、Matery等，复制关键词到GitHub或者baidu都能搜到。权衡利弊最终我还是选择了大多数人使用的next。</p>
+<h4 id="（1）hexo-g或hexo-generate"><a href="#（1）hexo-g或hexo-generate" class="headerlink" title="（1）hexo g或hexo generate"></a>（1）<code>hexo g</code>或<code>hexo generate</code></h4><p>该命令执行后在hexo站点根目录下生成public文件夹<br><img src="https://img-blog.csdnimg.cn/7683010350d24da995d50c154352b35d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_17,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<h4 id="（2）hexo-clean"><a href="#（2）hexo-clean" class="headerlink" title="（2）hexo clean"></a>（2）<code>hexo clean</code></h4><p>把（1）中的<code>public</code>文件夹删除</p>
+<span id="more"></span>
+
+<h4 id="（3）hexo-s或hexo-server"><a href="#（3）hexo-s或hexo-server" class="headerlink" title="（3）hexo s或hexo server"></a>（3）<code>hexo s</code>或<code>hexo server</code></h4><p>启动服务，默认地址为<a href="http://localhost:4000/%EF%BC%8C4000%E7%AB%AF%E5%8F%A3">http://localhost:4000/，4000端口</a><br><img src="https://img-blog.csdnimg.cn/185e5eec8e4e4769b821f6157468d87d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_17,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<h4 id="（4）hexo-d或hexo-deploy"><a href="#（4）hexo-d或hexo-deploy" class="headerlink" title="（4）hexo d或hexo deploy"></a>（4）<code>hexo d</code>或<code>hexo deploy</code></h4><p>部署站点，在本地生成<code>.deploy_git</code>文件夹，并将编译后的文件上传至 GitHub。</p>
+<h4 id="（5）hexo-new-layout-lt-title-gt"><a href="#（5）hexo-new-layout-lt-title-gt" class="headerlink" title="（5）hexo new [layout] &lt;title&gt;"></a>（5）<code>hexo new [layout] &lt;title&gt;</code></h4><p>例如： <code>hexo new photo “my-first-blog”</code><br>上述指令执行时，Hexo 会尝试在 scaffolds 中寻找photo.md布局，若找到，则根据该布局新建文章；若未找到或指令中未指定该参数，则使用post.md新建文章。新建文章的名称在_config.yml中配置。<br><img src="https://img-blog.csdnimg.cn/35dacad9d318449696f68e6697eab9c7.png" alt="在这里插入图片描述"></p>
+<h4 id="（6）删除文章"><a href="#（6）删除文章" class="headerlink" title="（6）删除文章"></a>（6）删除文章</h4><p>只需在本地把<code>source/_posts</code>文件夹下的文章源文件删除后，执行以下命令重新部署即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 	// 一定要先 clean，防止灵异事件发生</span><br></pre></td></tr></table></figure>
+
+<h4 id="（7）备份-x2F-迁移你的Hexo博客"><a href="#（7）备份-x2F-迁移你的Hexo博客" class="headerlink" title="（7）备份&#x2F;迁移你的Hexo博客"></a>（7）备份&#x2F;迁移你的Hexo博客</h4><ol>
+<li><p>备份根目录<img src="https://img-blog.csdnimg.cn/8b7829cea05440408b386a27bc71cade.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+</li>
+<li><p>参考<a href="https://hexoscript.gitbook.io/hexo-script/v/1.3-1/shi-yong-bu-zhou/zhun-bei-gong-ju">文档3：hexo-script使用文档</a>重新安装hexo</p>
+</li>
+<li><p>使用备份的目录覆盖新装的hexo目录<br><img src="https://img-blog.csdnimg.cn/56e7368f24dc4f258cdf2f2141543328.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+</li>
+<li><p>最后使用下面的命令直接运行即可</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure></li>
+<li><p>生成新的SSH公钥并上传至GitHub</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">git config <span class="attr">--global</span> user<span class="selector-class">.name</span> <span class="string">&quot;a237440035&quot;</span></span><br><span class="line">git config <span class="attr">--global</span> user<span class="selector-class">.email</span> <span class="string">&quot;237440035@qq.com&quot;</span></span><br><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;237440035@qq.com&quot;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/878226dbaf9849fb8528198ef9ad2ac4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_18,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>公钥为：SHA256:57GWXC&#x2F;PLymwxMVw9NoNKMpaoSI71Mum7Y9tPZZbgPI <a href="mailto:&#x32;&#51;&#x37;&#52;&#x34;&#48;&#48;&#51;&#53;&#64;&#113;&#x71;&#x2e;&#99;&#x6f;&#109;">&#x32;&#51;&#x37;&#52;&#x34;&#48;&#48;&#51;&#53;&#64;&#113;&#x71;&#x2e;&#99;&#x6f;&#109;</a><br>也可以在文件<code>C:\Users\Administrator\.ssh\id_ed25519.pub</code>中查看<br>将公钥复制在GitHub中即可使用<code>hexo d</code>命令<br><img src="https://img-blog.csdnimg.cn/018945bae1274b7783e02631b033d741.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+</li>
+</ol>
+<h4 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h4><blockquote>
+<p><a href="https://blog.csdn.net/qq_42889280/article/details/103087433">1、Hexo博客+Next主题深度优化与定制</a><br><a href="https://www.jianshu.com/p/baab04284923">2、备份你的Hexo博客</a><br><a href="https://hexoscript.gitbook.io/hexo-script/v/1.3-1/shi-yong-bu-zhou/zhun-bei-gong-ju">3、hexo-script使用文档</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>哄对象的睡前故事（四）</title>
+    <url>/2022/03/09/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E4%B8%80%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-lSzwyXSh" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-EcMNJhRW" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-lSzwyXSh"),
+            element: document.getElementById("aplayer-EcMNJhRW"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/03/09/睡前故事（十一）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（六）:牧星少年</title>
+    <url>/2022/02/27/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%85%AD%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-eqBVDoCL" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-eqBVDoCL"),
             narrow: false,
             autoplay: false,
             showlrc: false,
             music: {
               title: "朗读这篇文章",
               author: "Azure云希",
-              url: "shuiqiangushi.mp3",
-              pic: "/2022/02/23/睡前故事（三）/picture.png",
+              url: "shuiqiangushi.wav",
+              pic: "/2022/02/27/睡前故事（六）/picture.png",
               lrc: ""
             }
           });
@@ -725,24 +839,21 @@
           window.aplayers.push(ap);
         </script>
 
-<p>小白熊是一个重度熬夜选手。小白熊之所以对熬夜这件事乐此不疲，是因为它觉得不管白天的时光有多长，都像是不属于自己的，白天要做那么多事，说那么多话。只有到了夜晚，可以随心所欲，自由畅想。越到很晚，小白熊越是想多延续一点专属自己的小时光。</p>
-<p>可是时间长了，熬夜的次数越来越多，小白熊的黑眼圈越来越重，据小灰熊说，小白熊越来越像熊猫了。</p>
+<p>天生的星星跟地上的羊群一样，都是有人在放牧的。被驯养的星星发出的光芒，会被收集起来，织成漂亮又温柔的光锦，做成的衣服可以抵御一切寒冷。<br>而那些居住在天上的牧星人，没人都要负责一个星座内的星星，随着时节变化，赶着星星们从夜空的一端去向另一端，不能乱跑乱来。</p>
 <span id="more"></span>
 
-<p>绵长的夜晚，亮着光的手机一次次的刷新，怎么也刷新不到有趣的消息时，眼睛也痛了，没有耐心再去打那一关打了好久都没能通关的游戏。小白熊揉揉眼廓，今晚的钟表指针刚刚到十一，可能真的该早点休息了吧。</p>
-<p>然而，小白熊却失眠了。翻来覆去好久，现在应该是凌晨的几点了呢，小白熊闭紧双眼暗暗猜测。小白熊不敢起来看时间，也不敢再看手机了，继续看手机，刷到的也只是无趣的消息，夜只会熬的更晚。</p>
-<p>第二天，小白熊顶着更重的黑眼圈出门了，它也不清楚自己睡着的具体时间，只知道，失眠比主动熬夜睡着的时间，还要晚的多。</p>
-<p>后来很多次，小白熊总会回忆起那个无趣的夜晚，熬夜仿佛从那一次起就失去了意义。小白熊从那时起，开始抛弃了熬夜的习惯。</p>
-<p>后来，小白熊和小灰熊在一起了，小白熊恪守着十一点必须上床睡觉的新原则，每晚和小灰熊互道晚安后就尽力让自己进入睡眠。</p>
-<p><img src="https://img-blog.csdnimg.cn/504418cbb6cf4d7ca25444a715848c01.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<p>可大多数时候，小白熊总会失眠，不知道是不是之前总熬夜留下来的“后遗症”。</p>
-<p>小灰熊就把翻来覆去睡不着的小白熊拦在怀里，它也不敢先睡着，不然指定被小白熊以各种手段弄醒，小白熊最常使用的一招就是在小灰熊睡着以后捏住它的鼻子，还不醒的话就开始给怕痒的它挠痒痒了。小白熊如此肆无忌惮，小灰熊的纵容是很大的原因。小灰熊脾气太好了，每次被吵醒都不会生气。用小灰熊的话说就是，我不会对最爱的熊生气哒。</p>
-<p>小灰熊不知道的是，它大多次还是会睡的像死猪一样，小白熊不去吵醒它，只把头倚靠在它的肩膀，细数着时间，再安心睡去。</p>
-<p>后来，小白熊失眠越来越严重了，小灰熊提议，要和它一起熬夜。</p>
-<p>小灰熊跟着小白熊一起看它喜欢看的言情剧，一起讨论剧中的男一男二谁更可能和女主在一起；剧刷完两只熊又一起打游戏，小白熊打游戏太菜啦，小灰熊为了游戏胜利，不肯让它。小白熊假装气鼓鼓，告诉它，虽然你赢了游戏，但是我要让你失去女朋友。然后开始嘻嘻哈哈的和小灰熊打打闹闹。</p>
-<p>小白熊这才发现，原来一只熊熬的才是夜，两只熊在一起度过的夜晚乐趣无穷。它感觉，小灰熊不在的时候，白天和黑夜，是分秒不差二十四小时。而它在时，有时少些，有时多些。</p>
-<p>慢慢地，小白熊不再失眠了。不管窗外是滂沱大雨，还是肆虐的狂风，小白熊倚在小灰熊的臂弯里，总是能安然入睡。</p>
-<p>晚安好梦</p>
+<p>这样地上的人才能看见星星们在夜空中有规律地变换着位置，每个星座都有机会露露脸。<br>当然也不是每颗星星都很听话，总有些星星喜欢调皮捣蛋不服管，趁着牧星人松懈时偷偷溜出星群外，若是不及时追回来，就会变成一颗流星，划落夜空，掉到地面，很难再找回来。<br>比如这位少年放牧的星群当中，就有一颗让他很头疼的星星。这是颗刚出生不久的小星星°，见什么都好奇，又贪吃，总想东咬咬西咬咬那些没见过的新奇玩意儿，虽然长得胖乎乎的，却跑的飞快，每次少年稍不留意，它就自顾自地朝离星群很远的地方跑去，差点被弄丢好几次。<br>而这一次，它是真丢了。<br>那条划过夜幕的流星小尾巴，就是它逃跑的证据。<br>少年皱起眉头盯着那颗小流星°最后闪了闪光，融进了地面上那座大城市的灯火通明里，只得打起精神，将星群赶回围栏，自己也乘着风，朝地面飞去。<br>要是今夜这颗星星找不回来，那他明晚就要成为其他伙伴们的笑柄。</p>
+<p>夜色掩护着少年在城市上空缓缓掠过，普通人是看不到他的，就不算违背了天上居民需要遵循的规矩。尽管这是个很大的城市，但少年在天上放牧的领域要远比这里更加广阔，凭着长期放牧练成的搜寻本领，他很快便发现了那颗小星星的踪迹。<br>在—栋顶上标着“XX医院住院部”几个大字的大楼里。<br>大楼其他窗户里都亮着普通的白炽灯光，只有顶层的一扇窗户中，透着淡黄色的光芒，一闪一闪的。<br>那闪烁的频率，少年十分熟悉。<br>他悬停在窗外，凑近了看，窗户里的房间没有开灯，正中央摆着一张床，在床上发光的正是那颗小星星。<br>少年一跃而起翻进房间，跑到窗边，伸手去捉那颗不听话的小星星。<br>没想到这时候有另一只手突然从床上的被子下伸过来，抓住了他的手腕，并伴随着一个略带稚气而骄傲的声音:“又被我抓到一个小偷啦! ”<br>少年愣住，一时忘了反应，只看见被子下那拱起的一团掀开被子，露出了真面目。<br>是个七八岁的可爱小姑娘，圆圆脸，圆眼睛，怀里抱着那颗圆滚滚、光闪闪的小星星。<br>“你这个小偷!”小姑娘还拽着少年的手腕，一双圆眼睛盯着他看，“你干嘛要来偷我的星星?”</p>
+<p>天上来的少年还是第一次跟地面上的人面对面，哪怕对方只是个比自己小的小姑娘，也有点局促，发了会儿呆才回过神来:“可这是我的星星。”<br>“你有什么证据?”小姑娘一副不好糊弄的样子。<br>“证据就是……”少年想了想，用另一只手拨开小星星肚皮上的光芒，露出一个小小的印记。“你看，这上面有印着我的名字，我是天上来的牧星人。”<br>理论上牧星人不该向地面上的居民透露自己的身份，否则就会惹上一堆麻烦事。<br>但这个规矩对于有着单纯心思的小孩子是可以网开一面的。<br>所以少年也很谨慎地做了解释，并比了一个噤声的首饰:“嘘，这个秘密可不能让其他大人知道。”<br>小姑娘眨了眨眼睛，既没有追究少年该怎么证明自己就是叫那个名字，也没有怀疑他的身份，而是笑的有几分狡黠，同时松开了抓住少年的手:“所以这真的是你的星星。”<br>“是啊。”少年松了口气，伸出双手想要把小姑娘怀里的那颗胖星星抱走。“请你把它还给我.….…<br>但小姑娘却机敏地抱着胖星星往后退了退，挡开了少年的手。<br>“怎么了?”少年不明白她的意思。</p>
+<p>“既然确认了是你的星星，那正好。”小姑娘朝床边地板指了一下，“你家的星星刚刚掉到病房里，偷吃了我好多糖果，你得赔我。”<br>少年这才发现地板上摆着一大片剥开的糖纸，许多糖纸上还沾着一点点星光，微微发亮。<br>这倒像是那颗贪吃的胖星星能干出来的事情。<br>少年对着胖星星怒目而视，而它则心虚地将目光移向一边，假装在看天花板。<br>与此同时，小姑娘还在旁边暗搓搓地煽风点火:“这些糖果都是靠我挨医生的针头得来的，花了好长时间才攒了这么多，我平时都舍不得吃的。”<br>说到这里，她还适时地可怜巴巴地抽了抽鼻子，然后满意地看少年露出良心痛的表情。<br>“十分抱歉。”少年是个有担当的好少年，自家星星闯了祸，便不会推脱责任，“那我赔你一些糖果吧?“<br>“不，我不要糖果。”小姑娘摇头道，抱着星星从床上跳下来，上下打量少年一番。“你跟这颗星星—样，也是从天上飞过来的?“<br>少年点点头。<br>小姑娘咧嘴笑了:“那好，你带我从窗户里翻出去玩一晚上，我就把星星还你。”<br>这个要求让少年很为难，他沉默着，思索着该怎么反驳。</p>
+<p>但小姑娘不给他反驳的机会。<br>“你要是不答应，我现在就按呼叫铃，让大人来抓住你和星星。”小姑娘单手搂着小星星，另一只手往床边的呼叫铃上放，摆出威胁的架势。<br>少年语塞，万万没想到自己居然在被一个地面上的小姑娘敲竹杠。<br>而且这小姑娘还懂一边吓唬人一边求同情:“我都被困在这个病房里好久了，从来没机会出去，也没人陪我玩，快无聊死了，求你带我出去玩一会儿嘛，就一小会儿好不好?让我见见外面的世界吧，求你了。”<br>见少年还在迟疑，小姑娘干脆举起那颗胖星星，一本正经地请求道:“这可是流星啊!流星!我现在就要用它许愿，让你带我出去玩!”<br>现在少年知道为什么那颗活泼好动的小星星一直安安静静待在小姑娘的怀里，老实的很。<br>肯定是早就尝到了小姑浪的厉害手段，跑不脱了。<br>少年又考虑了一会儿，走到窗边，伸手出去测了测风，有些无奈又自嘲地叹了口气，转回身来，朝女孩伸出手，笑了:“来吧。”</p>
+<p>小姑娘俯瞰着下方的城市，道路与大楼都变得小小的，被朦脓的星光模糊了，有风温柔的气流从脸颊旁拂过。<br>“跟坐飞机的感觉不一样呢。”小姑娘扭头看向拉着自己手一起飞的少年，语气里充满了惊喜。<br>“那当然了。”少年吹了个口哨，指挥着风将两人和胖星星越托越高，直至穿过云层，来到纯净的星空，将抱着星星的小姑娘放到一朵厚实的云上。<br>小姑娘说她不能沾到城市里的病菌，正好少年也不想被别人发现踪迹，带她来既没有病菌也不会被别人看到的云朵乐园，最合适不过。<br>至于寒冷，不怕的。少年脱了自己身上用光锦做的外套，披在小姑娘身上。<br>可能对她而言有点大，手都套在袖子里，但风都被挡开了，很暖和。<br>这片云朵乐园由无数缠绵不尽的云朵延续而成，朝着夜空的各个方向延伸，是一望无际的洁白平原，广袤无际，像是厚厚的雪地，但踩上去，又是柔软的触感，稍一用力蹬下，甚至会弹跳起来，飞得老远才落下地。<br>小姑娘先是兴奋地甩着袖子在这里跑跳打滚儿了一番，很快便累过了头，停在某处大喘气，但脸蛋却因激动涨的红扑扑的:“这就是云朵乐园?天啦，好棒!“<br>“这不算什么。”回到天上的少年终于找回了自己的主场优势，露出了少年人才有的自信与神气，潇洒地打了个响指，“还有更棒的给你瞧瞧。”</p>
+<p>面前平坦的云层突然涌起，开始堆积幻化成各种各样的形状。<br>看，这边是游乐场，云朵架起了高耸曲折的过山车轨道，让少年带着小姑娘乘着云朵过山车，在天幕中冲刺而过，翻过一个巨大的斜坡，再转一道螺旋的圆环，突然过山车消失了，两人抱着胖星星跌坐在上下跃动的旋转木马里，慢慢悠悠地一起一伏，配着少年轻声哼唱的歌谣，愉快柔和。<br>下一秒，组成旋转木马的云朵散开，新的云层聚拢过来，变成会乌拉叫唤的小火车，冒着白烟，载着他们驶过平原，峡谷，沙丘，再是一片茂密的热带雨林，火车周围，云朵猴子攀援而过，远处的草原上，还有长颈鹿°在奔跑，狮子群在打盹，鸟群从池塘边惊乍而起，铺天盖地。<br>小姑娘还没看够呢，小火车又变了，变成了骑在身下的海豚。这是一整群海豚，在波浪翻滚的云海中跃起坠落，追逐嬉戏，自由快活。在云海的前方有巨轮与帆船同时驶过，再远处，有一头巨大鲸鱼喷出云朵散成的水幕，展开双鱼鳍，从云海中腾空而起，飞向缀满星辰的天际。<br>小姑娘已经完全看呆了，忘记了扶住身下骑着的云朵海豚，连拽着胖流星的手也不知不觉间松开了。<br>但没事的，有坐在她身后的少年在呢。<br>他会护着她的。<br>结束了航海之旅，两人被云朵海浪托到长着椰子树°的沙滩上，听浪花温柔呢喃，看云海海面上腾升起巨大的云朵焰火，有各种各样奇妙的图案，配合着星光夜色，织成连绵而绮丽的梦境，绝妙无双，无边无际。</p>
+<p>小姑娘已经完全看呆了，忘记了扶住身下骑着的云朵海豚，连拽着胖流星的手也不知不觉间松开了。<br>但没事的，有坐在她身后的少年在呢。<br>他会护着她的。<br>结束了航海之旅，两人被云朵海浪托到长着椰子树°的沙滩上，听浪花温柔呢喃，看云海海面上腾升起巨大的云朵焰火，有各种各样奇妙的图案，配合着星光夜色，织成连绵而绮丽的梦境，绝妙无双，无边无际。<br>现在小姑娘知道这云朵公园真正的妙处了。<br>她只是请求少年带她看看外面的世界，哪怕只是一小块碎片也好。<br>而他，却真的让她在这里，看到了整个世界。<br>在小姑娘盯着焰火发呆的时候，少年则微笑着伸手在云沙中转了转，举起一朵洁白轻柔的棉花糖，递到小姑娘面前:“这是我赔你的糖果。”<br>小姑娘难得的脸红了一下，接过棉花糖，小小咬了一口。<br>啊，是云朵的味道。<br>清清凉凉的，化在嘴里，又有一丝微甘。</p>
+<p>她拿棉花糖挡住自己的脸，只露出一双圆眼睛，看向少年，语气是罕见的吞吞吐吐:“呃……谢你。”<br>少年没有回答，只是微笑，伸手将披在她身上的光锦外套拢了拢。<br>而小姑娘则埋下头，偷偷抿着嘴笑。<br>但随即她又跳起来，惊慌地喊道:“糟了，刚刚那个胖星星被我给弄丢了!“<br>“没事没事。”少年歪头大笑，指着云海一角，“在那里呢。”<br>小姑娘顺着他指的方向看去，看见那颗圆滚滚的胖星星正被一群云朵海豚当皮球顶着玩儿呢，上上下下，旋转翻滚，翻着白眼，一副要扑街的痛苦模样。<br>“这样真的没关系吗?”小姑娘回头看向少年。<br>“没关系的。”少年狡黠地眨眨眼。“让它总是乱跑，还偷吃你的糖果，长个教训也好。”<br>接下来，是两个人心照不宣地—起坏笑。<br>苍茫的云海中，两个小小的身影靠坐在一起，那么纯粹，那么美好。</p>
+<p>小姑娘最后是被少年背回病房的。<br>她玩的太累了，从云朵乐园离开时就已经开始打瞌睡了。<br>不过当少年把她放在病床上时，她又清醒过来，抓住少年的手腕，眼神里满是期期艾艾:“那个…..你以后还会再来吗?“<br>少年低头看了看自己抱着的那颗胖流星，诚实地回答她:“我这次是因为要找它才来的。”<br>“哦。”小姑娘期待的表情泄了气，松开拽着少年的手。“好吧。”<br>“不过……”少年突然摸了摸她的头，“你乖乖打针吃药，等以后攒够了糖果，说不定这颗胖星星就又要来偷吃了。”<br>笑容从小姑娘脸上慢慢绽开，她重重点了点头:“嗯!”<br>不过在少年离开之前，她还有最后一个问题需要跟他确认一下。<br>“要怎样才能证明，今天晚上这—切，不是我在做梦呢?“<br>少年想了想，从自己衣兜里掏出一个东西，放在小姑娘手心上:“这是云朵乐园的游玩纪念品，有它在，你总该相信这不是做梦了。”<br>小姑娘打开手心，发现那是一根项链，用光锦编制的项链带，挂着一颗透明的坠子，坠子里面藏着一朵小小的云，一会儿变成烟花，一会儿变成海豚。</p>
+<p>而少年则抱着胖星星往窗边走去，一边走还一边叮嘱:“当你觉得无聊的时候，就看看它吧。”<br>有这个精巧的云朵小世界陪着你，你就再也不会感到无趣。<br>说罢，少年笑着朝她挥挥手，就像来时一样，轻盈地跃出窗户，乘着风朝天空飞去。<br>而病房里的小姑娘到底还是没能忍住，扑到窗边，看着少年与星星的身影都越来越远，直到化作一缕星光，闪烁片刻，消失不见。<br>远处的地平线上，一轮朝阳正在缓缓升起。</p>
+<p>END</p>
 ]]></content>
       <categories>
         <category>睡前故事</category>
@@ -753,15 +864,223 @@
       </tags>
   </entry>
   <entry>
-    <title>睡前故事（五）:想去南极的北极熊</title>
-    <url>/2022/02/26/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%94%EF%BC%89/</url>
+    <title>睡前故事（十三）</title>
+    <url>/2022/03/10/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E4%B8%89%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-eSydvRyT" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-uuTbCzMu" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-eSydvRyT"),
+            element: document.getElementById("aplayer-uuTbCzMu"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.wav",
+              pic: "/2022/03/10/睡前故事（十三）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<p>小熊有一种特殊的能力，他可以看到大家的影子。</p>
+<p>在很久以前的一天，小熊还是一只小小熊，他从没留意过影子的事情，直到某天清晨小熊揉了揉眼睛从床上起来，他突然发现大家的影子变得不一样了。</p>
+<p>小老虎的影子变成了单车，小象的影子变成了蛋糕，而长颈鹿的影子变成了一座大大的房子。</p>
+<p>小熊很苦恼，为什么会这样呢？</p>
+<span id="more"></span>
+
+<p>他偷偷找到其他小动物打探，发现大家看到的影子还是原来的样子。</p>
+<p>一直到很久以后小熊才发现，原来那些影子是动物们的愿望。</p>
+<p>从那时起小熊也拥有了自己的小愿望，他希望可以帮所有的动物实现愿望。</p>
+<p>小熊一直很努力，每帮别人实现一个愿望，他们的影子就会恢复到原来的样子，就这样小熊成为了森林里最受欢迎的小熊，直到他遇到了小松鼠。</p>
+<p>小松鼠的愿望很奇怪，不是松塔不是果子也不是小小的房子，而是一个奇怪的图形，那会是什么愿望呢？小熊躺在床上看着天花板想了很久。</p>
+<p>为了搞清楚这件事，小熊开始每天和小松鼠一起玩，陪她踩果子搭房子捉迷藏，每天都很开心，小熊渐渐的忘了影子的事情，只是每天陪在小松鼠身边，有时候小熊想如果可以一直这样下去也挺不错的。</p>
+<p>就这样，小熊和小松鼠一起度过了夏天和秋天。</p>
+<p>天渐渐冷了起来，小熊知道自己不得不和小松鼠分开了，因为等冬天到了，森林被白雪覆盖的时候小熊就必须要冬眠了。</p>
+<p>小熊有些难过，因为他要有一整个冬天不能陪伴小松鼠，但又有一点开心，因为他发现自己爱上了小松鼠。</p>
+<p>小熊决定要在冬眠前和小松鼠告白，如果小松鼠愿意等他醒过来，他们就又可以在一起生活。</p>
+<p>这天小熊用树枝编织了一个小小的项链藏在身后，等小松鼠一蹦一跳的走过来时他紧张的忘了前一天想了好久的台词，只是磕磕巴巴的说..小松鼠，你愿意等我醒过来么，我是说..我喜欢你。</p>
+<p>小熊懊悔的低着头他觉得自己表现得太差劲了。</p>
+<p>可小松鼠却弯着眼睛蹦到小熊的怀里声音小小的说，我愿意。</p>
+<p>小熊为小松鼠戴上了亲手编织的项链，他看到小松鼠的影子渐渐消失了，变回了原来的样子。</p>
+<p>那一刻，小熊似乎知道了小松鼠的愿望。</p>
+<p><img src="https://img-blog.csdnimg.cn/fb8018b9928d4c089dfcd1aa92cff3a9.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（十八）</title>
+    <url>/2022/03/19/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E5%85%AB%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-RHhbheLT" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-RHhbheLT"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/03/19/睡前故事（十八）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（十五）</title>
+    <url>/2022/03/12/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E4%BA%94%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-xZrRFKVL" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-xZrRFKVL"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.wav",
+              pic: "/2022/03/12/睡前故事（十五）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<p>有四只小兔子，一只是黄的，一只是红的，一只是蓝的，一只是绿的，他们一起出去采蘑菇。<br>他们提着小篮子，到了一片森林里，看到好多好多蘑菇，各种各样的蘑菇，有白白胖胖的“纽扣”蘑菇，有长得像喇叭一样的“喇叭菌”，有撑着一把小伞的“黄伞菌”，有顶着蒜头一样脑袋的“鸡枞”，有穿着蕾丝裙子的“竹荪”，还有松茸、茶树菇什么的，大大小小的蘑菇，既有长在地上的，也有长在树干上的。<br>看到这么多蘑菇，小兔子们乐坏了，就拣自己喜欢的采了起来。</p>
+<span id="more"></span>
+
+<p>黄兔子跑得快，东抓一把，西拔一把，看到新奇的蘑菇就跑过去摘一个闻闻，鼻子底下闻着这个，眼睛已经看着远处另外一丛了，森林里到处晃动着黄兔子的身影，回响着她兴奋的喊声:“快来看!这里有大蘑菇!”“来啊来啊!我发现了竹荪!”“哇!这是什么蘑菇啊?我从来没见过!”她一边采着蘑菇，一边时不时地追追蝴蝶，逗逗蚂蚁，再跟百灵鸟比比歌喉，不明就里的还误以为这森林里跑着三只黄兔子呢。</p>
+<p>红兔子动作快，眼睛尖，下手准，一片一片蘑菇丛挨着个地采摘过去，好像手里有一杆看不见的秤一样，每样蘑菇平均摘上一些个头比较大的，而且把蘑菇按照种类整齐码放。不一会儿，她的篮子就满了。</p>
+<p>绿兔子找到一丛白蘑菇，放下篮子，一边摘一边吃，吃饱了，又愣了一会儿神，才慢悠悠地开始往篮子里放蘑菇。他把每—丛蘑菇都摘干净了，才离开去找下—丛。</p>
+<p>蓝兔子看看这丛蘑菇，觉得个头不够大;再看看那丛蘑菇，又觉得不够新鲜。一边找一边发牢骚:“唉!我说昨天来采蘑菇吧，你们非要找百灵鸟开音乐会!耽误一天，蘑菇就不那么新鲜了。而且，小鹿他们早来过了，把大蘑菇都吃光了，只剩下这些小的给咱们。”嘴里絮絮叨叨的，眼睛仔细地检查着每一丛、每一只蘑菇，对放进篮子里的蘑菇也不放心，时不时地翻出来和其他蘑菇对比一下。</p>
+<p>四只小兔子忙了大半天，都累了，就坐到大树底下休息。树阴下真舒服啊，绿兔子早就躺在这里睡起觉了。这时，黄兔子也躺下来，不一会儿就睡着了。红兔子把篮子码放好，也跟着睡了。蓝兔子翻来覆去睡不着。但是没人跟他玩，只好拉拉耳朵，挠挠尾巴，慢慢地也睡着了。</p>
+<p>过了一会儿，黄兔子睡醒了，红兔子也跟着醒了。黄兔子看着装满蘑菇的四只篮子，怎么也想不起来哪只篮子是谁的了!她抓抓这只篮子觉得是自己的，看看那只篮子觉得也像自己的;本来做好记号的，此时却忘了到底做了什么记号。</p>
+<p>红兔子看黄兔子认不准哪只篮子是自己的，不禁感到不耐烦，抓了一只篮子塞给她，告诉她就是这只。黄兔子不同意，她俩开始吵了起来。蓝兔子刚睡着就被吵醒，躺着不肯起来，听说篮子弄乱了，就哭了。哭声又吵醒了绿兔子，他不知道是怎么回事儿，一个劲地问:“你们在吵什么?</p>
+<p>红兔子一把拿走了装得最满的篮子:“这个一定是我的，因为我采得最多，也码放得最整齐。最乱七八糟的那只才是你的呢，因为你到处跑，采了好多不一样的蘑菇，也没好好码放。”</p>
+<p>蓝兔子赶快起来，把蘑菇最少的篮子递过去:“不对呀，这个应该是你的。”红兔子说:“不对不对，这个应该是你的，你的动作最慢，摘的蘑菇最少!”他们越吵越厉害，蓝兔子又哭起来了:“你欺负我!你不喜欢我就欺负我!”</p>
+<p>红兔子说:“真烦人!有什么可哭的!谁欺负你了?你倒是讲道理呀!”<br>黄兔子劝劝这个:“别哭了别哭了。”劝劝那个:“别吵了别吵了!”绿兔子还没明白是怎么回事:“你们吵什么呢?这到底是怎么回事啊?”怎么办呢?黄兔子灵机一动:“这样吧，把这些蘑菇全倒在一起，然后重新分，每一只篮子都有不同的蘑菇，都有—样多的蘑菇。”</p>
+<p>蓝兔子反对:“噢……不!我怎么知道你们分给我的是不是最差最小的蘑菇!你们都欺负我!呜呜呜..…”绿兔子总算明白了怎么回事:“我觉得这样挺好的嘛，你们来分吧。”</p>
+<p>红兔子开始觉得这样做不公平，因为她认得出所有的篮子，大家却不相信她;她付出最多的努力，摘了最多的蘑菇，却要把成果和大家平分，她不高兴。但大家都同意这个解决方案，黄兔子说她自己采的蘑菇种类最多，却乐意和大家分享，蓝兔子说他采的蘑菇最新鲜，也乐意分出来。这样一来，红兔子也不好太固执了，但要求由她来分，因为她不放心其他兔子，担心会分得不公平。</p>
+<p>她“哗”的把篮子一倒，把里面的蘑菇分成四份，第二只、第三只、第四只，每只篮子都是这样。然后，她又从每只篮子的蘑菇里取一份，重新放进空篮子里。红兔子给四只篮子里都重新装满了蘑菇，她分得公平合理，非常均匀，每只篮子里都有大蘑菇、有松茸、有茶树菇、有竹荪，不多不少，搭配得非常好。</p>
+<p>四只兔子有说有笑地回家了。</p>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>哄对象的睡前故事（五）</title>
+    <url>/2022/03/09/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E4%BA%8C%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-Rymiteyk" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-Rymiteyk"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/03/09/睡前故事（十二）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Nginx代理：由http到https</title>
+    <url>/2022/02/16/Nginx%E4%BB%A3%E7%90%86%EF%BC%9A%E7%94%B1http%E5%88%B0https/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>基于 SSL 证书，可将站点由 HTTP（Hypertext Transfer Protocol）切换到 HTTPS（Hyper Text Transfer Protocol over Secure Socket Layer），即基于安全套接字层（SSL）进行安全数据传输的加密版 HTTP 协议。</p>
+</blockquote>
+<p>背景：众所众知，一台服务器开放80端口后我们可以直接IP地址访问到web页面，但ip地址暴露会可能会引起一些莫名的网络攻击。通常采取的策略就是去申请一个域名，经过域名绑定我们的ip就可以实现直接使用域名来访问，但80端口还是开放的，这样就使用到基于SSL的https了，简而言之就是更安全更方便了。可能某些同学会说我们可以改端口号，IP地址都懒得记那无疑会影响到我们装B不是。。。</p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/985b4dadeac648a5993d866cc9a591e4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_19,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>备案也没想象中那么严格，很简单，2天就审核通过了。这里就直接说最后一步了，安装SSL证书，示例的环境是：windows server 2019 + nginx + flask</p>
+<p> 参考官方文档：<a href="https://cloud.tencent.com/document/product/400/47361">https://cloud.tencent.com/document/product/400/47361</a></p>
+<p>ssl.conf文件内容如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">listen 443 ssl; # 监听443端口</span><br><span class="line">server_name gzncpcc.xyz; #你的域名</span><br><span class="line">ssl_certificate C:/gmssl/nginx-1.16.0/conf/ssl/gzncpcc.xyz_bundle.crt; #ssl证书的crt文件路径</span><br><span class="line">ssl_certificate_key c:/gmssl/nginx-1.16.0/conf/ssl/gzncpcc.xyz.key;</span><br><span class="line">ssl_certificate c:/gmssl/nginx-1.16.0/conf/ssl/gzncpcc.xyz_bundle.pem; #ssl证书的pem文件路径</span><br><span class="line">ssl_certificate_key c:/gmssl/nginx-1.16.0/conf/ssl/gzncpcc.xyz.key; </span><br><span class="line">#先配置签名证书，再配置加密证书，签名加密证书私钥 key 为同一个！</span><br><span class="line">ssl_session_timeout 5m; </span><br><span class="line">ssl_protocols TLSv1.2;</span><br><span class="line">ssl_ciphers SM2-WITH-SMS4-SM3:ECDH:AESGCM:HIGH:MEDIUM:!RC4:!DH:!MD5:!aNULL:!eNULL; </span><br><span class="line">ssl_prefer_server_ciphers on;</span><br><span class="line">location / &#123; </span><br><span class="line">        proxy_pass  http://10.0.0.17/; #/内网地址，这样就可以关闭服务器的80端口了</span><br><span class="line">       # proxy_pass  http://gzncpcc.xyz/; #//公网地址:项目端口号;http://gzncpcc.xyz/;</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">listen 443 ssl; # 监听443端口</span><br><span class="line">server_name blog.gzncpcc.xyz; # 对应子域名</span><br><span class="line">ssl_certificate C:/gmssl/nginx-1.16.0/conf/ssl/blog.gzncpcc.xyz_bundle.crt; #ssl证书的crt文件路径</span><br><span class="line">ssl_certificate_key c:/gmssl/nginx-1.16.0/conf/ssl/blog.gzncpcc.xyz.key;</span><br><span class="line">ssl_certificate c:/gmssl/nginx-1.16.0/conf/ssl/blog.gzncpcc.xyz_bundle.pem; #ssl证书的pem文件路径</span><br><span class="line">ssl_certificate_key c:/gmssl/nginx-1.16.0/conf/ssl/blog.gzncpcc.xyz.key; </span><br><span class="line">#先配置签名证书，再配置加密证书，签名加密证书私钥 key 为同一个！</span><br><span class="line">ssl_session_timeout 5m; </span><br><span class="line">ssl_protocols TLSv1.2;</span><br><span class="line">ssl_ciphers SM2-WITH-SMS4-SM3:ECDH:AESGCM:HIGH:MEDIUM:!RC4:!DH:!MD5:!aNULL:!eNULL; </span><br><span class="line">ssl_prefer_server_ciphers on;</span><br><span class="line">location / &#123; </span><br><span class="line">        proxy_pass  http://127.0.0.1:4000/; # 博客项目</span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="踩雷经验"><a href="#踩雷经验" class="headerlink" title="踩雷经验"></a>踩雷经验</h3><ol>
+<li><strong>没事多重启，把nginx关死再运行，把所有进程杀死。</strong> 否则也不会让我一直改到怀疑人生了，几个小时，什么资料都查了，就是反代理不上，改到怀疑人生，一直出现welcome nginx。。。</li>
+<li>如果用了<code>https</code>，HTML页面引用的链接也要使用https的，例如引用<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">+    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://libs.baidu.com/jquery/2.1.1/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">+    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://res.wx.qq.com/open/js/jweixin-1.4.0.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">-    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;http://libs.baidu.com/jquery/2.1.1/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">-    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;http://res.wx.qq.com/open/js/jweixin-1.4.0.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>下面附上windows上的nginx常用操作指令</p>
+<p>可以杀死名字为nginx.EXE的所有进程：<code>taskkill /fi &quot;imagename eq nginx.EXE&quot; /f</code></p>
+<p>检查： <code>nginx.exe -t</code></p>
+<p>运行：<code>nginx.exe</code></p>
+<p>重载：<code>nginx.exe -s reload</code></p>
+<p>停止：<code>nginx.exe -s stop</code></p>
+<p>查找端口占用情况：<code>netstat -aon | findstr :80 </code></p>
+<p>ps:都是在cmd中执行，其他什么shell、git没有效果。。。</p>
+<p>避免端口冲突，需要将IIS中的80和443端口占用关闭；python程序也可以自定义端口来避免冲突，但相应的ssl.conf中的<code>proxy_pass  http://10.0.0.17/;</code>需要加上端口号。<br><img src="https://img-blog.csdnimg.cn/e613924f820840079f9912c17cf388ef.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>正确的运行顺序：nginx——&gt;python程序</p>
+<p>最后附上网址看<a href="https://gzncpcc.xyz/hmikily">成果</a>：<a href="https://gzncpcc.xyz/">https://gzncpcc.xyz/</a></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Nginx</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（五）:想去南极的北极熊</title>
+    <url>/2022/02/26/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%94%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-lKilLbTg" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-lKilLbTg"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -812,316 +1131,15 @@
       </tags>
   </entry>
   <entry>
-    <title>哄对象的睡前故事（一）</title>
-    <url>/2022/03/01/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%85%AB%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-YoORODIe" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-YoORODIe"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "欢迎收听",
-              author: "你的专属睡前故事",
-              url: "shuiqiangushi.aac",
-              pic: "/2022/03/01/睡前故事（八）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-
-]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>睡前故事（十七）</title>
-    <url>/2022/03/17/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E4%B8%83%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-fpOEIlDy" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-fpOEIlDy"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "欢迎收听",
-              author: "你的专属睡前故事",
-              url: "shuiqiangushi.aac",
-              pic: "/2022/03/17/睡前故事（十七）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>睡前故事（六）:牧星少年</title>
-    <url>/2022/02/27/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%85%AD%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-MPwOorlK" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-MPwOorlK"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "朗读这篇文章",
-              author: "Azure云希",
-              url: "shuiqiangushi.wav",
-              pic: "/2022/02/27/睡前故事（六）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-
-<p>天生的星星跟地上的羊群一样，都是有人在放牧的。被驯养的星星发出的光芒，会被收集起来，织成漂亮又温柔的光锦，做成的衣服可以抵御一切寒冷。<br>而那些居住在天上的牧星人，没人都要负责一个星座内的星星，随着时节变化，赶着星星们从夜空的一端去向另一端，不能乱跑乱来。</p>
-<span id="more"></span>
-
-<p>这样地上的人才能看见星星们在夜空中有规律地变换着位置，每个星座都有机会露露脸。<br>当然也不是每颗星星都很听话，总有些星星喜欢调皮捣蛋不服管，趁着牧星人松懈时偷偷溜出星群外，若是不及时追回来，就会变成一颗流星，划落夜空，掉到地面，很难再找回来。<br>比如这位少年放牧的星群当中，就有一颗让他很头疼的星星。这是颗刚出生不久的小星星°，见什么都好奇，又贪吃，总想东咬咬西咬咬那些没见过的新奇玩意儿，虽然长得胖乎乎的，却跑的飞快，每次少年稍不留意，它就自顾自地朝离星群很远的地方跑去，差点被弄丢好几次。<br>而这一次，它是真丢了。<br>那条划过夜幕的流星小尾巴，就是它逃跑的证据。<br>少年皱起眉头盯着那颗小流星°最后闪了闪光，融进了地面上那座大城市的灯火通明里，只得打起精神，将星群赶回围栏，自己也乘着风，朝地面飞去。<br>要是今夜这颗星星找不回来，那他明晚就要成为其他伙伴们的笑柄。</p>
-<p>夜色掩护着少年在城市上空缓缓掠过，普通人是看不到他的，就不算违背了天上居民需要遵循的规矩。尽管这是个很大的城市，但少年在天上放牧的领域要远比这里更加广阔，凭着长期放牧练成的搜寻本领，他很快便发现了那颗小星星的踪迹。<br>在—栋顶上标着“XX医院住院部”几个大字的大楼里。<br>大楼其他窗户里都亮着普通的白炽灯光，只有顶层的一扇窗户中，透着淡黄色的光芒，一闪一闪的。<br>那闪烁的频率，少年十分熟悉。<br>他悬停在窗外，凑近了看，窗户里的房间没有开灯，正中央摆着一张床，在床上发光的正是那颗小星星。<br>少年一跃而起翻进房间，跑到窗边，伸手去捉那颗不听话的小星星。<br>没想到这时候有另一只手突然从床上的被子下伸过来，抓住了他的手腕，并伴随着一个略带稚气而骄傲的声音:“又被我抓到一个小偷啦! ”<br>少年愣住，一时忘了反应，只看见被子下那拱起的一团掀开被子，露出了真面目。<br>是个七八岁的可爱小姑娘，圆圆脸，圆眼睛，怀里抱着那颗圆滚滚、光闪闪的小星星。<br>“你这个小偷!”小姑娘还拽着少年的手腕，一双圆眼睛盯着他看，“你干嘛要来偷我的星星?”</p>
-<p>天上来的少年还是第一次跟地面上的人面对面，哪怕对方只是个比自己小的小姑娘，也有点局促，发了会儿呆才回过神来:“可这是我的星星。”<br>“你有什么证据?”小姑娘一副不好糊弄的样子。<br>“证据就是……”少年想了想，用另一只手拨开小星星肚皮上的光芒，露出一个小小的印记。“你看，这上面有印着我的名字，我是天上来的牧星人。”<br>理论上牧星人不该向地面上的居民透露自己的身份，否则就会惹上一堆麻烦事。<br>但这个规矩对于有着单纯心思的小孩子是可以网开一面的。<br>所以少年也很谨慎地做了解释，并比了一个噤声的首饰:“嘘，这个秘密可不能让其他大人知道。”<br>小姑娘眨了眨眼睛，既没有追究少年该怎么证明自己就是叫那个名字，也没有怀疑他的身份，而是笑的有几分狡黠，同时松开了抓住少年的手:“所以这真的是你的星星。”<br>“是啊。”少年松了口气，伸出双手想要把小姑娘怀里的那颗胖星星抱走。“请你把它还给我.….…<br>但小姑娘却机敏地抱着胖星星往后退了退，挡开了少年的手。<br>“怎么了?”少年不明白她的意思。</p>
-<p>“既然确认了是你的星星，那正好。”小姑娘朝床边地板指了一下，“你家的星星刚刚掉到病房里，偷吃了我好多糖果，你得赔我。”<br>少年这才发现地板上摆着一大片剥开的糖纸，许多糖纸上还沾着一点点星光，微微发亮。<br>这倒像是那颗贪吃的胖星星能干出来的事情。<br>少年对着胖星星怒目而视，而它则心虚地将目光移向一边，假装在看天花板。<br>与此同时，小姑娘还在旁边暗搓搓地煽风点火:“这些糖果都是靠我挨医生的针头得来的，花了好长时间才攒了这么多，我平时都舍不得吃的。”<br>说到这里，她还适时地可怜巴巴地抽了抽鼻子，然后满意地看少年露出良心痛的表情。<br>“十分抱歉。”少年是个有担当的好少年，自家星星闯了祸，便不会推脱责任，“那我赔你一些糖果吧?“<br>“不，我不要糖果。”小姑娘摇头道，抱着星星从床上跳下来，上下打量少年一番。“你跟这颗星星—样，也是从天上飞过来的?“<br>少年点点头。<br>小姑娘咧嘴笑了:“那好，你带我从窗户里翻出去玩一晚上，我就把星星还你。”<br>这个要求让少年很为难，他沉默着，思索着该怎么反驳。</p>
-<p>但小姑娘不给他反驳的机会。<br>“你要是不答应，我现在就按呼叫铃，让大人来抓住你和星星。”小姑娘单手搂着小星星，另一只手往床边的呼叫铃上放，摆出威胁的架势。<br>少年语塞，万万没想到自己居然在被一个地面上的小姑娘敲竹杠。<br>而且这小姑娘还懂一边吓唬人一边求同情:“我都被困在这个病房里好久了，从来没机会出去，也没人陪我玩，快无聊死了，求你带我出去玩一会儿嘛，就一小会儿好不好?让我见见外面的世界吧，求你了。”<br>见少年还在迟疑，小姑娘干脆举起那颗胖星星，一本正经地请求道:“这可是流星啊!流星!我现在就要用它许愿，让你带我出去玩!”<br>现在少年知道为什么那颗活泼好动的小星星一直安安静静待在小姑娘的怀里，老实的很。<br>肯定是早就尝到了小姑浪的厉害手段，跑不脱了。<br>少年又考虑了一会儿，走到窗边，伸手出去测了测风，有些无奈又自嘲地叹了口气，转回身来，朝女孩伸出手，笑了:“来吧。”</p>
-<p>小姑娘俯瞰着下方的城市，道路与大楼都变得小小的，被朦脓的星光模糊了，有风温柔的气流从脸颊旁拂过。<br>“跟坐飞机的感觉不一样呢。”小姑娘扭头看向拉着自己手一起飞的少年，语气里充满了惊喜。<br>“那当然了。”少年吹了个口哨，指挥着风将两人和胖星星越托越高，直至穿过云层，来到纯净的星空，将抱着星星的小姑娘放到一朵厚实的云上。<br>小姑娘说她不能沾到城市里的病菌，正好少年也不想被别人发现踪迹，带她来既没有病菌也不会被别人看到的云朵乐园，最合适不过。<br>至于寒冷，不怕的。少年脱了自己身上用光锦做的外套，披在小姑娘身上。<br>可能对她而言有点大，手都套在袖子里，但风都被挡开了，很暖和。<br>这片云朵乐园由无数缠绵不尽的云朵延续而成，朝着夜空的各个方向延伸，是一望无际的洁白平原，广袤无际，像是厚厚的雪地，但踩上去，又是柔软的触感，稍一用力蹬下，甚至会弹跳起来，飞得老远才落下地。<br>小姑娘先是兴奋地甩着袖子在这里跑跳打滚儿了一番，很快便累过了头，停在某处大喘气，但脸蛋却因激动涨的红扑扑的:“这就是云朵乐园?天啦，好棒!“<br>“这不算什么。”回到天上的少年终于找回了自己的主场优势，露出了少年人才有的自信与神气，潇洒地打了个响指，“还有更棒的给你瞧瞧。”</p>
-<p>面前平坦的云层突然涌起，开始堆积幻化成各种各样的形状。<br>看，这边是游乐场，云朵架起了高耸曲折的过山车轨道，让少年带着小姑娘乘着云朵过山车，在天幕中冲刺而过，翻过一个巨大的斜坡，再转一道螺旋的圆环，突然过山车消失了，两人抱着胖星星跌坐在上下跃动的旋转木马里，慢慢悠悠地一起一伏，配着少年轻声哼唱的歌谣，愉快柔和。<br>下一秒，组成旋转木马的云朵散开，新的云层聚拢过来，变成会乌拉叫唤的小火车，冒着白烟，载着他们驶过平原，峡谷，沙丘，再是一片茂密的热带雨林，火车周围，云朵猴子攀援而过，远处的草原上，还有长颈鹿°在奔跑，狮子群在打盹，鸟群从池塘边惊乍而起，铺天盖地。<br>小姑娘还没看够呢，小火车又变了，变成了骑在身下的海豚。这是一整群海豚，在波浪翻滚的云海中跃起坠落，追逐嬉戏，自由快活。在云海的前方有巨轮与帆船同时驶过，再远处，有一头巨大鲸鱼喷出云朵散成的水幕，展开双鱼鳍，从云海中腾空而起，飞向缀满星辰的天际。<br>小姑娘已经完全看呆了，忘记了扶住身下骑着的云朵海豚，连拽着胖流星的手也不知不觉间松开了。<br>但没事的，有坐在她身后的少年在呢。<br>他会护着她的。<br>结束了航海之旅，两人被云朵海浪托到长着椰子树°的沙滩上，听浪花温柔呢喃，看云海海面上腾升起巨大的云朵焰火，有各种各样奇妙的图案，配合着星光夜色，织成连绵而绮丽的梦境，绝妙无双，无边无际。</p>
-<p>小姑娘已经完全看呆了，忘记了扶住身下骑着的云朵海豚，连拽着胖流星的手也不知不觉间松开了。<br>但没事的，有坐在她身后的少年在呢。<br>他会护着她的。<br>结束了航海之旅，两人被云朵海浪托到长着椰子树°的沙滩上，听浪花温柔呢喃，看云海海面上腾升起巨大的云朵焰火，有各种各样奇妙的图案，配合着星光夜色，织成连绵而绮丽的梦境，绝妙无双，无边无际。<br>现在小姑娘知道这云朵公园真正的妙处了。<br>她只是请求少年带她看看外面的世界，哪怕只是一小块碎片也好。<br>而他，却真的让她在这里，看到了整个世界。<br>在小姑娘盯着焰火发呆的时候，少年则微笑着伸手在云沙中转了转，举起一朵洁白轻柔的棉花糖，递到小姑娘面前:“这是我赔你的糖果。”<br>小姑娘难得的脸红了一下，接过棉花糖，小小咬了一口。<br>啊，是云朵的味道。<br>清清凉凉的，化在嘴里，又有一丝微甘。</p>
-<p>她拿棉花糖挡住自己的脸，只露出一双圆眼睛，看向少年，语气是罕见的吞吞吐吐:“呃……谢你。”<br>少年没有回答，只是微笑，伸手将披在她身上的光锦外套拢了拢。<br>而小姑娘则埋下头，偷偷抿着嘴笑。<br>但随即她又跳起来，惊慌地喊道:“糟了，刚刚那个胖星星被我给弄丢了!“<br>“没事没事。”少年歪头大笑，指着云海一角，“在那里呢。”<br>小姑娘顺着他指的方向看去，看见那颗圆滚滚的胖星星正被一群云朵海豚当皮球顶着玩儿呢，上上下下，旋转翻滚，翻着白眼，一副要扑街的痛苦模样。<br>“这样真的没关系吗?”小姑娘回头看向少年。<br>“没关系的。”少年狡黠地眨眨眼。“让它总是乱跑，还偷吃你的糖果，长个教训也好。”<br>接下来，是两个人心照不宣地—起坏笑。<br>苍茫的云海中，两个小小的身影靠坐在一起，那么纯粹，那么美好。</p>
-<p>小姑娘最后是被少年背回病房的。<br>她玩的太累了，从云朵乐园离开时就已经开始打瞌睡了。<br>不过当少年把她放在病床上时，她又清醒过来，抓住少年的手腕，眼神里满是期期艾艾:“那个…..你以后还会再来吗?“<br>少年低头看了看自己抱着的那颗胖流星，诚实地回答她:“我这次是因为要找它才来的。”<br>“哦。”小姑娘期待的表情泄了气，松开拽着少年的手。“好吧。”<br>“不过……”少年突然摸了摸她的头，“你乖乖打针吃药，等以后攒够了糖果，说不定这颗胖星星就又要来偷吃了。”<br>笑容从小姑娘脸上慢慢绽开，她重重点了点头:“嗯!”<br>不过在少年离开之前，她还有最后一个问题需要跟他确认一下。<br>“要怎样才能证明，今天晚上这—切，不是我在做梦呢?“<br>少年想了想，从自己衣兜里掏出一个东西，放在小姑娘手心上:“这是云朵乐园的游玩纪念品，有它在，你总该相信这不是做梦了。”<br>小姑娘打开手心，发现那是一根项链，用光锦编制的项链带，挂着一颗透明的坠子，坠子里面藏着一朵小小的云，一会儿变成烟花，一会儿变成海豚。</p>
-<p>而少年则抱着胖星星往窗边走去，一边走还一边叮嘱:“当你觉得无聊的时候，就看看它吧。”<br>有这个精巧的云朵小世界陪着你，你就再也不会感到无趣。<br>说罢，少年笑着朝她挥挥手，就像来时一样，轻盈地跃出窗户，乘着风朝天空飞去。<br>而病房里的小姑娘到底还是没能忍住，扑到窗边，看着少年与星星的身影都越来越远，直到化作一缕星光，闪烁片刻，消失不见。<br>远处的地平线上，一轮朝阳正在缓缓升起。</p>
-<p>END</p>
-]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>哄对象的睡前故事（四）</title>
-    <url>/2022/03/09/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E4%B8%80%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-fNSSkMzs" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-fNSSkMzs"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "欢迎收听",
-              author: "你的专属睡前故事",
-              url: "shuiqiangushi.aac",
-              pic: "/2022/03/09/睡前故事（十一）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>睡前故事（十三）</title>
-    <url>/2022/03/10/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E4%B8%89%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-BYYYsNUN" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-BYYYsNUN"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "欢迎收听",
-              author: "你的专属睡前故事",
-              url: "shuiqiangushi.wav",
-              pic: "/2022/03/10/睡前故事（十三）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-
-<p>小熊有一种特殊的能力，他可以看到大家的影子。</p>
-<p>在很久以前的一天，小熊还是一只小小熊，他从没留意过影子的事情，直到某天清晨小熊揉了揉眼睛从床上起来，他突然发现大家的影子变得不一样了。</p>
-<p>小老虎的影子变成了单车，小象的影子变成了蛋糕，而长颈鹿的影子变成了一座大大的房子。</p>
-<p>小熊很苦恼，为什么会这样呢？</p>
-<span id="more"></span>
-
-<p>他偷偷找到其他小动物打探，发现大家看到的影子还是原来的样子。</p>
-<p>一直到很久以后小熊才发现，原来那些影子是动物们的愿望。</p>
-<p>从那时起小熊也拥有了自己的小愿望，他希望可以帮所有的动物实现愿望。</p>
-<p>小熊一直很努力，每帮别人实现一个愿望，他们的影子就会恢复到原来的样子，就这样小熊成为了森林里最受欢迎的小熊，直到他遇到了小松鼠。</p>
-<p>小松鼠的愿望很奇怪，不是松塔不是果子也不是小小的房子，而是一个奇怪的图形，那会是什么愿望呢？小熊躺在床上看着天花板想了很久。</p>
-<p>为了搞清楚这件事，小熊开始每天和小松鼠一起玩，陪她踩果子搭房子捉迷藏，每天都很开心，小熊渐渐的忘了影子的事情，只是每天陪在小松鼠身边，有时候小熊想如果可以一直这样下去也挺不错的。</p>
-<p>就这样，小熊和小松鼠一起度过了夏天和秋天。</p>
-<p>天渐渐冷了起来，小熊知道自己不得不和小松鼠分开了，因为等冬天到了，森林被白雪覆盖的时候小熊就必须要冬眠了。</p>
-<p>小熊有些难过，因为他要有一整个冬天不能陪伴小松鼠，但又有一点开心，因为他发现自己爱上了小松鼠。</p>
-<p>小熊决定要在冬眠前和小松鼠告白，如果小松鼠愿意等他醒过来，他们就又可以在一起生活。</p>
-<p>这天小熊用树枝编织了一个小小的项链藏在身后，等小松鼠一蹦一跳的走过来时他紧张的忘了前一天想了好久的台词，只是磕磕巴巴的说..小松鼠，你愿意等我醒过来么，我是说..我喜欢你。</p>
-<p>小熊懊悔的低着头他觉得自己表现得太差劲了。</p>
-<p>可小松鼠却弯着眼睛蹦到小熊的怀里声音小小的说，我愿意。</p>
-<p>小熊为小松鼠戴上了亲手编织的项链，他看到小松鼠的影子渐渐消失了，变回了原来的样子。</p>
-<p>那一刻，小熊似乎知道了小松鼠的愿望。</p>
-<p><img src="https://img-blog.csdnimg.cn/fb8018b9928d4c089dfcd1aa92cff3a9.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>哄对象的睡前故事（五）</title>
-    <url>/2022/03/09/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E4%BA%8C%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-iLYKoVka" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-iLYKoVka"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "欢迎收听",
-              author: "你的专属睡前故事",
-              url: "shuiqiangushi.aac",
-              pic: "/2022/03/09/睡前故事（十二）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>睡前故事（十八）</title>
-    <url>/2022/03/19/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E5%85%AB%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-qEUxKcsN" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-qEUxKcsN"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "欢迎收听",
-              author: "你的专属睡前故事",
-              url: "shuiqiangushi.aac",
-              pic: "/2022/03/19/睡前故事（十八）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>睡前故事（十六）</title>
-    <url>/2022/03/14/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E5%85%AD%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-UUmBREcp" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-UUmBREcp"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "欢迎收听",
-              author: "你的专属睡前故事",
-              url: "shuiqiangushi.aac",
-              pic: "/2022/03/14/睡前故事（十六）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>睡前故事（十四）</title>
     <url>/2022/03/11/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E5%9B%9B%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-gkQdSNGb" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-fKkMbXjV" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-gkQdSNGb"),
+            element: document.getElementById("aplayer-fKkMbXjV"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -1152,117 +1170,15 @@
       </tags>
   </entry>
   <entry>
-    <title>睡前故事（十五）</title>
-    <url>/2022/03/12/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E4%BA%94%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-yatpADnM" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-yatpADnM"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "欢迎收听",
-              author: "你的专属睡前故事",
-              url: "shuiqiangushi.wav",
-              pic: "/2022/03/12/睡前故事（十五）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-
-<p>有四只小兔子，一只是黄的，一只是红的，一只是蓝的，一只是绿的，他们一起出去采蘑菇。<br>他们提着小篮子，到了一片森林里，看到好多好多蘑菇，各种各样的蘑菇，有白白胖胖的“纽扣”蘑菇，有长得像喇叭一样的“喇叭菌”，有撑着一把小伞的“黄伞菌”，有顶着蒜头一样脑袋的“鸡枞”，有穿着蕾丝裙子的“竹荪”，还有松茸、茶树菇什么的，大大小小的蘑菇，既有长在地上的，也有长在树干上的。<br>看到这么多蘑菇，小兔子们乐坏了，就拣自己喜欢的采了起来。</p>
-<span id="more"></span>
-
-<p>黄兔子跑得快，东抓一把，西拔一把，看到新奇的蘑菇就跑过去摘一个闻闻，鼻子底下闻着这个，眼睛已经看着远处另外一丛了，森林里到处晃动着黄兔子的身影，回响着她兴奋的喊声:“快来看!这里有大蘑菇!”“来啊来啊!我发现了竹荪!”“哇!这是什么蘑菇啊?我从来没见过!”她一边采着蘑菇，一边时不时地追追蝴蝶，逗逗蚂蚁，再跟百灵鸟比比歌喉，不明就里的还误以为这森林里跑着三只黄兔子呢。</p>
-<p>红兔子动作快，眼睛尖，下手准，一片一片蘑菇丛挨着个地采摘过去，好像手里有一杆看不见的秤一样，每样蘑菇平均摘上一些个头比较大的，而且把蘑菇按照种类整齐码放。不一会儿，她的篮子就满了。</p>
-<p>绿兔子找到一丛白蘑菇，放下篮子，一边摘一边吃，吃饱了，又愣了一会儿神，才慢悠悠地开始往篮子里放蘑菇。他把每—丛蘑菇都摘干净了，才离开去找下—丛。</p>
-<p>蓝兔子看看这丛蘑菇，觉得个头不够大;再看看那丛蘑菇，又觉得不够新鲜。一边找一边发牢骚:“唉!我说昨天来采蘑菇吧，你们非要找百灵鸟开音乐会!耽误一天，蘑菇就不那么新鲜了。而且，小鹿他们早来过了，把大蘑菇都吃光了，只剩下这些小的给咱们。”嘴里絮絮叨叨的，眼睛仔细地检查着每一丛、每一只蘑菇，对放进篮子里的蘑菇也不放心，时不时地翻出来和其他蘑菇对比一下。</p>
-<p>四只小兔子忙了大半天，都累了，就坐到大树底下休息。树阴下真舒服啊，绿兔子早就躺在这里睡起觉了。这时，黄兔子也躺下来，不一会儿就睡着了。红兔子把篮子码放好，也跟着睡了。蓝兔子翻来覆去睡不着。但是没人跟他玩，只好拉拉耳朵，挠挠尾巴，慢慢地也睡着了。</p>
-<p>过了一会儿，黄兔子睡醒了，红兔子也跟着醒了。黄兔子看着装满蘑菇的四只篮子，怎么也想不起来哪只篮子是谁的了!她抓抓这只篮子觉得是自己的，看看那只篮子觉得也像自己的;本来做好记号的，此时却忘了到底做了什么记号。</p>
-<p>红兔子看黄兔子认不准哪只篮子是自己的，不禁感到不耐烦，抓了一只篮子塞给她，告诉她就是这只。黄兔子不同意，她俩开始吵了起来。蓝兔子刚睡着就被吵醒，躺着不肯起来，听说篮子弄乱了，就哭了。哭声又吵醒了绿兔子，他不知道是怎么回事儿，一个劲地问:“你们在吵什么?</p>
-<p>红兔子一把拿走了装得最满的篮子:“这个一定是我的，因为我采得最多，也码放得最整齐。最乱七八糟的那只才是你的呢，因为你到处跑，采了好多不一样的蘑菇，也没好好码放。”</p>
-<p>蓝兔子赶快起来，把蘑菇最少的篮子递过去:“不对呀，这个应该是你的。”红兔子说:“不对不对，这个应该是你的，你的动作最慢，摘的蘑菇最少!”他们越吵越厉害，蓝兔子又哭起来了:“你欺负我!你不喜欢我就欺负我!”</p>
-<p>红兔子说:“真烦人!有什么可哭的!谁欺负你了?你倒是讲道理呀!”<br>黄兔子劝劝这个:“别哭了别哭了。”劝劝那个:“别吵了别吵了!”绿兔子还没明白是怎么回事:“你们吵什么呢?这到底是怎么回事啊?”怎么办呢?黄兔子灵机一动:“这样吧，把这些蘑菇全倒在一起，然后重新分，每一只篮子都有不同的蘑菇，都有—样多的蘑菇。”</p>
-<p>蓝兔子反对:“噢……不!我怎么知道你们分给我的是不是最差最小的蘑菇!你们都欺负我!呜呜呜..…”绿兔子总算明白了怎么回事:“我觉得这样挺好的嘛，你们来分吧。”</p>
-<p>红兔子开始觉得这样做不公平，因为她认得出所有的篮子，大家却不相信她;她付出最多的努力，摘了最多的蘑菇，却要把成果和大家平分，她不高兴。但大家都同意这个解决方案，黄兔子说她自己采的蘑菇种类最多，却乐意和大家分享，蓝兔子说他采的蘑菇最新鲜，也乐意分出来。这样一来，红兔子也不好太固执了，但要求由她来分，因为她不放心其他兔子，担心会分得不公平。</p>
-<p>她“哗”的把篮子一倒，把里面的蘑菇分成四份，第二只、第三只、第四只，每只篮子都是这样。然后，她又从每只篮子的蘑菇里取一份，重新放进空篮子里。红兔子给四只篮子里都重新装满了蘑菇，她分得公平合理，非常均匀，每只篮子里都有大蘑菇、有松茸、有茶树菇、有竹荪，不多不少，搭配得非常好。</p>
-<p>四只兔子有说有笑地回家了。</p>
-]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>考上编制就实现阶级跃层了吗</title>
-    <url>/2022/03/10/%E8%80%83%E4%B8%8A%E7%BC%96%E5%88%B6%E5%B0%B1%E5%AE%9E%E7%8E%B0%E9%98%B6%E7%BA%A7%E8%B7%83%E5%B1%82%E4%BA%86%E5%90%97/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>考上编制,你会发现身边的同事,最多的是那些父母本来就是体制内的人，他们本身车房不缺,无需养老过得安逸。</p>
-<span id="more"></span>
-
-<p>而来自普通家庭的孩子，需要通过这个工作买车买房,肩挑父母重担,自然会活得拧巴。但是也不要就此沮丧，他们背后有他们上代人的努力，而且已经突破了父母的阶层,正在改变后代的生活。</p>
-<p>其实想要实现阶级跃层并不容易，对于我们很多普通人来说，需要一代代人不懈的努力才能实现，我们这代人过得比我们的父辈好一点，我们的下一代过得比我们好一点…慢慢的整个家族自然而然也就越来越好了。</p>
-<p>都说穷人的孩子早当家，其实普通家庭的孩子很多仅仅只学习到了生存技能,并没有掌握这个社会运行的逻辑,也不懂得去研究人性,所以会在社会上吃很多亏。</p>
-]]></content>
-      <categories>
-        <category>生活</category>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>哲学</tag>
-        <tag>闲谈</tag>
-        <tag>价值观</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>语音合成：Azure+Python+SSML实现</title>
-    <url>/2022/02/21/%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%EF%BC%9AAzure-Python-SSML%E5%AE%9E%E7%8E%B0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>采用的策略是微软云服务的Python SDK + SSML</p>
-</blockquote>
-<p>Azure上，语音部分的文档写的较为详细，包含各种功能，如文本转语音 REST API，TTS SDK，自定义语音模型进行文本转语音等。但是没有整体的、提纲般的介绍，看完文档极有不知如何下手。本文将一步步地介绍，如何从0开始使用Azure SDK的使用方法。我们希望实现的效果是，输入一段文本，调用SDK后，返回给我们一段wav格式的音频，播放后，即为之前输入的文本。</p>
-<h1 id="1、注册账号"><a href="#1、注册账号" class="headerlink" title="1、注册账号"></a>1、注册账号</h1><p>注册微软Azure账号看这里：<a href="https://zhuanlan.zhihu.com/p/49711377">https://zhuanlan.zhihu.com/p/49711377</a><br>需要一张vasa信用卡，也可以是虚拟卡。对于国内用户，这是极不友好的。不过也有一些其他优惠，比如学生的，自行获取国外edu教育有效了，据说GitHub学生认证也可以，不过都比较麻烦。注册的时候最好使用非大陆的IP，比如香港的IP+香港的地址</p>
-<span id="more"></span>
-
-<h1 id="2、创建资源"><a href="#2、创建资源" class="headerlink" title="2、创建资源"></a>2、创建资源</h1><p><img src="https://img-blog.csdnimg.cn/5efe55a747ce419a8582e87b03b8e0e3.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_13,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>都选择白嫖免费使用的就完事，注意要选择美国东部的服务，eastus<br>其他的名称只要是不重复就可以随便填，填写好就可以看到自己的key了<br><img src="https://img-blog.csdnimg.cn/1357477975bb43ac86fd1e98255cf6f4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<h1 id="3、使用SDK"><a href="#3、使用SDK" class="headerlink" title="3、使用SDK"></a>3、使用SDK</h1><p>使用之前先安装SDK，Python就一条命令，很简单</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">pip install azure-cognitiveservices-speech</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/cae3e16fae004d91bebc9b1af5e68966.png" alt="在这里插入图片描述"></p>
-<p>安装好就可以上代码了，有注释</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Copyright (c) Microsoft. All rights reserved.</span></span><br><span class="line"><span class="comment"># Licensed under the MIT license. See LICENSE.md file in the project root for full license information.</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># &lt;code&gt;</span></span><br><span class="line"><span class="comment">## 输入文件text.txt/ssml文件</span></span><br><span class="line"><span class="comment">## 输出文件file.wav</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> azure.cognitiveservices.speech <span class="keyword">import</span> AudioDataStream, SpeechSynthesizer</span><br><span class="line"><span class="keyword">from</span> azure.cognitiveservices.speech.audio <span class="keyword">import</span> AudioOutputConfig</span><br><span class="line"><span class="keyword">import</span> azure.cognitiveservices.speech <span class="keyword">as</span> speechsdk</span><br><span class="line"></span><br><span class="line">speech_key, service_region = <span class="string">&quot;your key&quot;</span>, <span class="string">&quot;eastus&quot;</span></span><br><span class="line">speech_config = speechsdk.SpeechConfig(subscription=speech_key, region=service_region)</span><br><span class="line"></span><br><span class="line">synthesizer = SpeechSynthesizer(speech_config=speech_config)</span><br><span class="line"></span><br><span class="line"><span class="comment"># text = &quot;你吃饭了吗？我现在声音自然多了吧&quot;</span></span><br><span class="line"><span class="comment"># with open(&#x27;text.txt&#x27;, &#x27;r&#x27;,encoding=&#x27;utf-8&#x27;,errors=&#x27;ignore&#x27;) as f:</span></span><br><span class="line">   <span class="comment"># text = f.read()</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># SSML中需要书签标签，例如。</span></span><br><span class="line">ssml = <span class="string">&quot;&lt;speak version=&#x27;1.0&#x27; xml:lang=&#x27;zh-CN&#x27; xmlns=&#x27;http://www.w3.org/2001/10/synthesis&#x27; xmlns:mstts=&#x27;http://www.w3.org/2001/mstts&#x27;&gt;&lt;voice name=&#x27;zh-CN-YunxiNeural&#x27;&gt;&lt;bookmark mark=&#x27;bookmark_one&#x27;/&gt; 你吃饭了吗？我现在声音自然多了吧&lt;/voice&gt;&lt;/speak&gt;&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment"># result = synthesizer.speak_text_async(text).get() #这个是普通文本</span></span><br><span class="line">result = synthesizer.speak_ssml_async(ssml).get() <span class="comment">#这个是SSML文本</span></span><br><span class="line">stream = AudioDataStream(result)</span><br><span class="line">stream.save_to_wav_file(<span class="string">&quot;file.wav&quot;</span>)</span><br></pre></td></tr></table></figure>
-<p>SSML格式和列表看<a href="https://docs.azure.cn/zh-cn/cognitive-services/speech-service/speech-synthesis-markup?tabs=csharp">官方文档</a><br><a href="https://www.azure.cn/pricing/details/cognitive-services/">定价</a><br><img src="https://img-blog.csdnimg.cn/51628ea9c5bc40bc9a59b6957d86d2b7.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><blockquote>
-<p><a href="https://github.com/Azure-Samples/cognitive-services-speech-sdk/blob/master/samples/python/console/speech_synthesis_sample.py">https://github.com/Azure-Samples/cognitive-services-speech-sdk/blob/master/samples/python/console/speech_synthesis_sample.py</a><br><a href="https://zhuanlan.zhihu.com/p/437580699">https://zhuanlan.zhihu.com/p/437580699</a><br><a href="https://www.bilibili.com/video/BV15a4y1W7re">https://www.bilibili.com/video/BV15a4y1W7re</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>TTS</tag>
-        <tag>python</tag>
-        <tag>Azure</tag>
-        <tag>SSML</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>哄对象的睡前故事（三）</title>
     <url>/2022/03/07/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-BZlBExUK" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-bAKJInlV" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-BZlBExUK"),
+            element: document.getElementById("aplayer-bAKJInlV"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -1283,77 +1199,6 @@
       <tags>
         <tag>爱情</tag>
         <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>选择了一段旅程，就放弃了另一段旅程</title>
-    <url>/2022/03/02/%E9%80%89%E6%8B%A9%E4%BA%86%E4%B8%80%E6%AE%B5%E6%97%85%E7%A8%8B%EF%BC%8C%E5%B0%B1%E6%94%BE%E5%BC%83%E4%BA%86%E5%8F%A6%E4%B8%80%E6%AE%B5%E6%97%85%E7%A8%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
-<p>年轻人应该选择在大城市奋斗还是回小城市生活?</p>
-<ul>
-<li>优秀的企业更多的就业机会</li>
-<li>前沿的科技发展</li>
-<li>繁华的都市，更快的网速</li>
-<li>教育医疗资源、人脉</li>
-<li>更高的工资<br>离开大城市的理由似乎只有一个——压力</li>
-</ul>
-]]></content>
-      <categories>
-        <category>生活</category>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>旅行</tag>
-        <tag>选择</tag>
-        <tag>生活</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>阅读笔记（一）</title>
-    <url>/2019/02/17/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://img-blog.csdnimg.cn/1fbc958e9b5240bba3d2999bdf9cd498.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_19,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<p>旅行的真义之一不过就是“想象他者的生活”</p>
-<span id="more"></span>
-
-<p>我读着书本，有时候我循书中线索走进陌生城市的僻巷酒店或黑暗城区餐厅，并不特别感到害怕，因为我知道我有“某位知识丰富的友人”与我相伴，我其实并不孤单。 每一本书的存在，就意味着一位“前行者”的存在，你并不是一位“冒险者”，你只是一位“追随者”。所以说，岂止是读书“防身”，我几乎可以说，“have book，will travel”。</p>
-<p>关于旅行地的阅读，我们是从旅行结束之后才真正开始的。在旅行之前，我们对旅行地的阅读是一种“想象”；在旅行之际，我们对旅行的阅读则是一种“摸象”；只有在旅行完之后，或者“一再完成”之后，才是我们真正对旅行地了解的开始。</p>
-<p>世事常常如此，真实与美丽两难全。</p>
-<p>自然大地的巨大尺幅让你心情既开朗又悲伤，开朗是因为领悟到尘世之上其实无事值得争执，悲伤是因为意识到个人存在的微不足道与蜉蝣人生的短暂局促。</p>
-<p>不怕折腾的体力和不着急回家的时间，我现在两者都缺。</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>旅行</tag>
-        <tag>读书笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《一个人的好天气》读书笔记摘抄</title>
-    <url>/2021/04/17/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>吟子:”我那时侯整天的哭，非常憎恨这个世界，我好象把一辈子的恨都用完了。”</p>
-<p>知寿:”我想趁现在把空虚都用光了，老了就不会再空虚了。”</p>
-<p>吟子:”知寿，可不能在年轻时都用光了，要是只留下愉快的事，上了年纪，就怕死了。”</p>
-<p>和吟子面对面吃饭时，我总觉得自己的岁数倒比她大得多。</p>
-<span id="more"></span>
-
-<p>在活到了这个岁数的人面前，恍惚觉得对方不会再继续老化，只有自己朝着前方的苍老飞速地坠落下去。当我在串加极鱼的时候，在剥柚子的时候，我都会不由得焦急起来。</p>
-<p>可是一觉得没希望了，往往就真的变成那样了。怎么也控制不了自己，总爱那么想。</p>
-<p>我觉得自己永远也过不上正常的生活，得到了的东西又扔掉或被扔掉。想扔掉的东西总业仍不干净。我的人生全是由这些组成的。</p>
-<p>我真想切断一切联系，到一个没有人，什么都没有的地方从头开始。</p>
-<p>不过，在那里又会建立起新的关系吧，等自己意识到时，一切又都结束了吧。</p>
-<p>不去思考什么意义，只是不断重复下去的话，就连人生也会结束。</p>
-<p>年轻的时候大家都拼命地伸出手想要什么，到了我这个岁数，想伸手要的越来越少了。</p>
-<p>知寿:”吟子，外面的世界很残酷吧。我这样的人会很快堕落吧。”</p>
-<p>吟子:”世界不分内外的呀，这世界只有一个。”</p>
-<p>就这样，我不断地更换认识的人，也不断地使自己进入不认识的人们之中去。我既不悲观，也不乐观，只是每天早上睁开眼睛迎接新的一天，一个人努力过下去。</p>
-]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>阅读笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -1378,12 +1223,12 @@
 });
 </script> -->
 
-        <div id="aplayer-AxjWubvT" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-yYDNBAma" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-AxjWubvT"),
+            element: document.getElementById("aplayer-yYDNBAma"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -1438,6 +1283,141 @@
       </tags>
   </entry>
   <entry>
+    <title>语音合成：Azure+Python+SSML实现</title>
+    <url>/2022/02/21/%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%EF%BC%9AAzure-Python-SSML%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>采用的策略是微软云服务的Python SDK + SSML</p>
+</blockquote>
+<p>Azure上，语音部分的文档写的较为详细，包含各种功能，如文本转语音 REST API，TTS SDK，自定义语音模型进行文本转语音等。但是没有整体的、提纲般的介绍，看完文档极有不知如何下手。本文将一步步地介绍，如何从0开始使用Azure SDK的使用方法。我们希望实现的效果是，输入一段文本，调用SDK后，返回给我们一段wav格式的音频，播放后，即为之前输入的文本。</p>
+<h1 id="1、注册账号"><a href="#1、注册账号" class="headerlink" title="1、注册账号"></a>1、注册账号</h1><p>注册微软Azure账号看这里：<a href="https://zhuanlan.zhihu.com/p/49711377">https://zhuanlan.zhihu.com/p/49711377</a><br>需要一张vasa信用卡，也可以是虚拟卡。对于国内用户，这是极不友好的。不过也有一些其他优惠，比如学生的，自行获取国外edu教育有效了，据说GitHub学生认证也可以，不过都比较麻烦。注册的时候最好使用非大陆的IP，比如香港的IP+香港的地址</p>
+<span id="more"></span>
+
+<h1 id="2、创建资源"><a href="#2、创建资源" class="headerlink" title="2、创建资源"></a>2、创建资源</h1><p><img src="https://img-blog.csdnimg.cn/5efe55a747ce419a8582e87b03b8e0e3.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_13,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>都选择白嫖免费使用的就完事，注意要选择美国东部的服务，eastus<br>其他的名称只要是不重复就可以随便填，填写好就可以看到自己的key了<br><img src="https://img-blog.csdnimg.cn/1357477975bb43ac86fd1e98255cf6f4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<h1 id="3、使用SDK"><a href="#3、使用SDK" class="headerlink" title="3、使用SDK"></a>3、使用SDK</h1><p>使用之前先安装SDK，Python就一条命令，很简单</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">pip install azure-cognitiveservices-speech</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/cae3e16fae004d91bebc9b1af5e68966.png" alt="在这里插入图片描述"></p>
+<p>安装好就可以上代码了，有注释</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Copyright (c) Microsoft. All rights reserved.</span></span><br><span class="line"><span class="comment"># Licensed under the MIT license. See LICENSE.md file in the project root for full license information.</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># &lt;code&gt;</span></span><br><span class="line"><span class="comment">## 输入文件text.txt/ssml文件</span></span><br><span class="line"><span class="comment">## 输出文件file.wav</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> azure.cognitiveservices.speech <span class="keyword">import</span> AudioDataStream, SpeechSynthesizer</span><br><span class="line"><span class="keyword">from</span> azure.cognitiveservices.speech.audio <span class="keyword">import</span> AudioOutputConfig</span><br><span class="line"><span class="keyword">import</span> azure.cognitiveservices.speech <span class="keyword">as</span> speechsdk</span><br><span class="line"></span><br><span class="line">speech_key, service_region = <span class="string">&quot;your key&quot;</span>, <span class="string">&quot;eastus&quot;</span></span><br><span class="line">speech_config = speechsdk.SpeechConfig(subscription=speech_key, region=service_region)</span><br><span class="line"></span><br><span class="line">synthesizer = SpeechSynthesizer(speech_config=speech_config)</span><br><span class="line"></span><br><span class="line"><span class="comment"># text = &quot;你吃饭了吗？我现在声音自然多了吧&quot;</span></span><br><span class="line"><span class="comment"># with open(&#x27;text.txt&#x27;, &#x27;r&#x27;,encoding=&#x27;utf-8&#x27;,errors=&#x27;ignore&#x27;) as f:</span></span><br><span class="line">   <span class="comment"># text = f.read()</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># SSML中需要书签标签，例如。</span></span><br><span class="line">ssml = <span class="string">&quot;&lt;speak version=&#x27;1.0&#x27; xml:lang=&#x27;zh-CN&#x27; xmlns=&#x27;http://www.w3.org/2001/10/synthesis&#x27; xmlns:mstts=&#x27;http://www.w3.org/2001/mstts&#x27;&gt;&lt;voice name=&#x27;zh-CN-YunxiNeural&#x27;&gt;&lt;bookmark mark=&#x27;bookmark_one&#x27;/&gt; 你吃饭了吗？我现在声音自然多了吧&lt;/voice&gt;&lt;/speak&gt;&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment"># result = synthesizer.speak_text_async(text).get() #这个是普通文本</span></span><br><span class="line">result = synthesizer.speak_ssml_async(ssml).get() <span class="comment">#这个是SSML文本</span></span><br><span class="line">stream = AudioDataStream(result)</span><br><span class="line">stream.save_to_wav_file(<span class="string">&quot;file.wav&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>SSML格式和列表看<a href="https://docs.azure.cn/zh-cn/cognitive-services/speech-service/speech-synthesis-markup?tabs=csharp">官方文档</a><br><a href="https://www.azure.cn/pricing/details/cognitive-services/">定价</a><br><img src="https://img-blog.csdnimg.cn/51628ea9c5bc40bc9a59b6957d86d2b7.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><blockquote>
+<p><a href="https://github.com/Azure-Samples/cognitive-services-speech-sdk/blob/master/samples/python/console/speech_synthesis_sample.py">https://github.com/Azure-Samples/cognitive-services-speech-sdk/blob/master/samples/python/console/speech_synthesis_sample.py</a><br><a href="https://zhuanlan.zhihu.com/p/437580699">https://zhuanlan.zhihu.com/p/437580699</a><br><a href="https://www.bilibili.com/video/BV15a4y1W7re">https://www.bilibili.com/video/BV15a4y1W7re</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>TTS</tag>
+        <tag>python</tag>
+        <tag>Azure</tag>
+        <tag>SSML</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>阅读笔记（一）</title>
+    <url>/2019/02/17/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://img-blog.csdnimg.cn/1fbc958e9b5240bba3d2999bdf9cd498.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_19,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>旅行的真义之一不过就是“想象他者的生活”</p>
+<span id="more"></span>
+
+<p>我读着书本，有时候我循书中线索走进陌生城市的僻巷酒店或黑暗城区餐厅，并不特别感到害怕，因为我知道我有“某位知识丰富的友人”与我相伴，我其实并不孤单。 每一本书的存在，就意味着一位“前行者”的存在，你并不是一位“冒险者”，你只是一位“追随者”。所以说，岂止是读书“防身”，我几乎可以说，“have book，will travel”。</p>
+<p>关于旅行地的阅读，我们是从旅行结束之后才真正开始的。在旅行之前，我们对旅行地的阅读是一种“想象”；在旅行之际，我们对旅行的阅读则是一种“摸象”；只有在旅行完之后，或者“一再完成”之后，才是我们真正对旅行地了解的开始。</p>
+<p>世事常常如此，真实与美丽两难全。</p>
+<p>自然大地的巨大尺幅让你心情既开朗又悲伤，开朗是因为领悟到尘世之上其实无事值得争执，悲伤是因为意识到个人存在的微不足道与蜉蝣人生的短暂局促。</p>
+<p>不怕折腾的体力和不着急回家的时间，我现在两者都缺。</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>旅行</tag>
+        <tag>读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>选择了一段旅程，就放弃了另一段旅程</title>
+    <url>/2022/03/02/%E9%80%89%E6%8B%A9%E4%BA%86%E4%B8%80%E6%AE%B5%E6%97%85%E7%A8%8B%EF%BC%8C%E5%B0%B1%E6%94%BE%E5%BC%83%E4%BA%86%E5%8F%A6%E4%B8%80%E6%AE%B5%E6%97%85%E7%A8%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<p>年轻人应该选择在大城市奋斗还是回小城市生活?</p>
+<ul>
+<li>优秀的企业更多的就业机会</li>
+<li>前沿的科技发展</li>
+<li>繁华的都市，更快的网速</li>
+<li>教育医疗资源、人脉</li>
+<li>更高的工资<br>离开大城市的理由似乎只有一个——压力</li>
+</ul>
+]]></content>
+      <categories>
+        <category>生活</category>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>旅行</tag>
+        <tag>选择</tag>
+        <tag>生活</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（十六）</title>
+    <url>/2022/03/14/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E5%85%AD%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-VQjyqQBq" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-VQjyqQBq"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/03/14/睡前故事（十六）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《一个人的好天气》读书笔记摘抄</title>
+    <url>/2021/04/17/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>吟子:”我那时侯整天的哭，非常憎恨这个世界，我好象把一辈子的恨都用完了。”</p>
+<p>知寿:”我想趁现在把空虚都用光了，老了就不会再空虚了。”</p>
+<p>吟子:”知寿，可不能在年轻时都用光了，要是只留下愉快的事，上了年纪，就怕死了。”</p>
+<p>和吟子面对面吃饭时，我总觉得自己的岁数倒比她大得多。</p>
+<span id="more"></span>
+
+<p>在活到了这个岁数的人面前，恍惚觉得对方不会再继续老化，只有自己朝着前方的苍老飞速地坠落下去。当我在串加极鱼的时候，在剥柚子的时候，我都会不由得焦急起来。</p>
+<p>可是一觉得没希望了，往往就真的变成那样了。怎么也控制不了自己，总爱那么想。</p>
+<p>我觉得自己永远也过不上正常的生活，得到了的东西又扔掉或被扔掉。想扔掉的东西总业仍不干净。我的人生全是由这些组成的。</p>
+<p>我真想切断一切联系，到一个没有人，什么都没有的地方从头开始。</p>
+<p>不过，在那里又会建立起新的关系吧，等自己意识到时，一切又都结束了吧。</p>
+<p>不去思考什么意义，只是不断重复下去的话，就连人生也会结束。</p>
+<p>年轻的时候大家都拼命地伸出手想要什么，到了我这个岁数，想伸手要的越来越少了。</p>
+<p>知寿:”吟子，外面的世界很残酷吧。我这样的人会很快堕落吧。”</p>
+<p>吟子:”世界不分内外的呀，这世界只有一个。”</p>
+<p>就这样，我不断地更换认识的人，也不断地使自己进入不认识的人们之中去。我既不悲观，也不乐观，只是每天早上睁开眼睛迎接新的一天，一个人努力过下去。</p>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>阅读笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>语音合成技术</title>
     <url>/2022/02/19/%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E6%8A%80%E6%9C%AF/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -1465,6 +1445,26 @@
       <tags>
         <tag>TTS</tag>
         <tag>语音合成技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>考上编制就实现阶级跃层了吗</title>
+    <url>/2022/03/10/%E8%80%83%E4%B8%8A%E7%BC%96%E5%88%B6%E5%B0%B1%E5%AE%9E%E7%8E%B0%E9%98%B6%E7%BA%A7%E8%B7%83%E5%B1%82%E4%BA%86%E5%90%97/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>考上编制,你会发现身边的同事,最多的是那些父母本来就是体制内的人，他们本身车房不缺,无需养老过得安逸。</p>
+<span id="more"></span>
+
+<p>而来自普通家庭的孩子，需要通过这个工作买车买房,肩挑父母重担,自然会活得拧巴。但是也不要就此沮丧，他们背后有他们上代人的努力，而且已经突破了父母的阶层,正在改变后代的生活。</p>
+<p>其实想要实现阶级跃层并不容易，对于我们很多普通人来说，需要一代代人不懈的努力才能实现，我们这代人过得比我们的父辈好一点，我们的下一代过得比我们好一点…慢慢的整个家族自然而然也就越来越好了。</p>
+<p>都说穷人的孩子早当家，其实普通家庭的孩子很多仅仅只学习到了生存技能,并没有掌握这个社会运行的逻辑,也不懂得去研究人性,所以会在社会上吃很多亏。</p>
+]]></content>
+      <categories>
+        <category>生活</category>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>哲学</tag>
+        <tag>闲谈</tag>
+        <tag>价值观</tag>
       </tags>
   </entry>
   <entry>
