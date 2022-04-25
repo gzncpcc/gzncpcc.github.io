@@ -1,32 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo添加评论功能</title>
-    <url>/2022/02/18/Hexo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="注册-Leancloud-账号"><a href="#注册-Leancloud-账号" class="headerlink" title="注册 Leancloud 账号"></a>注册 Leancloud 账号</h2><p><a href="https://console.leancloud.cn/login">https://console.leancloud.cn/login</a><br><img src="https://img-blog.csdnimg.cn/79eb4aa82d7346cfb96d0cdd858471c6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<span id="more"></span>
-
-<p>注册完成后进入app控制面板-&gt;创建应用-&gt;创建开发版应用。<br><img src="https://img-blog.csdnimg.cn/470fb229c0f742259d738fc675da9abd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<p><img src="https://img-blog.csdnimg.cn/7685ba8efa0e4516ae7f2e2c1f63e01e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/4355e782abb04d019e62905ff0f69290.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>接下来我们配置一下我们的leancloud。点击设置-&gt;安全中心-&gt;Web 安全域名，输入你的域名来保证其他人就算获取了你的appid也没办法操作你的数据库。<br><img src="https://img-blog.csdnimg.cn/9e745b27966342fcbfd9c2a2efba417d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<h2 id="配置hexo"><a href="#配置hexo" class="headerlink" title="配置hexo"></a>配置hexo</h2><p>在next主题中配置valine<br>打开 _config.next.yml，找到comments栏目并开启valine。<br><img src="https://img-blog.csdnimg.cn/f104764748364049873d7f1ad931672d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<h2 id="在菜单栏添加留言板"><a href="#在菜单栏添加留言板" class="headerlink" title="在菜单栏添加留言板"></a>在菜单栏添加留言板</h2><p>添加一个新的page</p>
-<figure class="highlight haxe"><table><tr><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> <span class="type">page</span> <span class="string">&quot;guestbook&quot;</span></span><br></pre></td></tr></table></figure>
-<p>进入 source&#x2F;guestbook&#x2F;index.md。加入你想显示的内容，如：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">给我留言吧</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2022-02-18 20:04:25</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">&quot;guestbook&quot;</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="comment"># 欢迎来到我的博客！</span></span><br><span class="line"></span><br><span class="line"><span class="string">&gt;</span> <span class="string">欢迎在这里留言！任何问题都可以在这里留言，我会及时回复的，添加email可以获得更快的回复速度，在呢称栏目输入QQ号可以直接获取你的QQ头像噢。</span></span><br></pre></td></tr></table></figure>
-<p>进入 _config.next.yml， 找到menu栏目，添加留言板功能：</p>
-<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">menu:</span></span><br><span class="line"><span class="symbol">  guestbook:</span> <span class="keyword">/guestbook/</span> || fa fa-book</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/710d7248cbad4b24bb1a62d20e4af02c.png" alt="在这里插入图片描述"><br>更改 themes&#x2F;next&#x2F;languages 下对应语言的翻译。例如中文的&#96;&#96;&#96;&#96;zh-CN.yml&#96;&#96;&#96;文件</p>
-<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">menu:</span></span><br><span class="line"><span class="symbol">  guestbook:</span> 留言板</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/9a96355ddd6f4106abf78b40a193f412.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_10,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>重启server搞定</p>
-<figure class="highlight sas"><table><tr><td class="code"><pre><span class="line">hexo clean <span class="variable">&amp;&amp;</span> hexo g <span class="variable">&amp;&amp;</span> hexo s</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo-tag-aplayer重复载入Aplayer.js 资源脚本问题</title>
     <url>/2022/02/23/Hexo-tag-aplayer%E9%87%8D%E5%A4%8D%E8%BD%BD%E5%85%A5Aplayer-js-%E8%B5%84%E6%BA%90%E8%84%9A%E6%9C%AC%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="背景："><a href="#背景：" class="headerlink" title="背景："></a>背景：</h1><p><font color=#999AAA >hexo-theme-next主题</font></p>
@@ -63,6 +37,32 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo添加评论功能</title>
+    <url>/2022/02/18/Hexo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="注册-Leancloud-账号"><a href="#注册-Leancloud-账号" class="headerlink" title="注册 Leancloud 账号"></a>注册 Leancloud 账号</h2><p><a href="https://console.leancloud.cn/login">https://console.leancloud.cn/login</a><br><img src="https://img-blog.csdnimg.cn/79eb4aa82d7346cfb96d0cdd858471c6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<span id="more"></span>
+
+<p>注册完成后进入app控制面板-&gt;创建应用-&gt;创建开发版应用。<br><img src="https://img-blog.csdnimg.cn/470fb229c0f742259d738fc675da9abd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/7685ba8efa0e4516ae7f2e2c1f63e01e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/4355e782abb04d019e62905ff0f69290.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>接下来我们配置一下我们的leancloud。点击设置-&gt;安全中心-&gt;Web 安全域名，输入你的域名来保证其他人就算获取了你的appid也没办法操作你的数据库。<br><img src="https://img-blog.csdnimg.cn/9e745b27966342fcbfd9c2a2efba417d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<h2 id="配置hexo"><a href="#配置hexo" class="headerlink" title="配置hexo"></a>配置hexo</h2><p>在next主题中配置valine<br>打开 _config.next.yml，找到comments栏目并开启valine。<br><img src="https://img-blog.csdnimg.cn/f104764748364049873d7f1ad931672d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<h2 id="在菜单栏添加留言板"><a href="#在菜单栏添加留言板" class="headerlink" title="在菜单栏添加留言板"></a>在菜单栏添加留言板</h2><p>添加一个新的page</p>
+<figure class="highlight haxe"><table><tr><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> <span class="type">page</span> <span class="string">&quot;guestbook&quot;</span></span><br></pre></td></tr></table></figure>
+<p>进入 source&#x2F;guestbook&#x2F;index.md。加入你想显示的内容，如：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">给我留言吧</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2022-02-18 20:04:25</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">&quot;guestbook&quot;</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="comment"># 欢迎来到我的博客！</span></span><br><span class="line"></span><br><span class="line"><span class="string">&gt;</span> <span class="string">欢迎在这里留言！任何问题都可以在这里留言，我会及时回复的，添加email可以获得更快的回复速度，在呢称栏目输入QQ号可以直接获取你的QQ头像噢。</span></span><br></pre></td></tr></table></figure>
+<p>进入 _config.next.yml， 找到menu栏目，添加留言板功能：</p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">menu:</span></span><br><span class="line"><span class="symbol">  guestbook:</span> <span class="keyword">/guestbook/</span> || fa fa-book</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/710d7248cbad4b24bb1a62d20e4af02c.png" alt="在这里插入图片描述"><br>更改 themes&#x2F;next&#x2F;languages 下对应语言的翻译。例如中文的&#96;&#96;&#96;&#96;zh-CN.yml&#96;&#96;&#96;文件</p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">menu:</span></span><br><span class="line"><span class="symbol">  guestbook:</span> 留言板</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/9a96355ddd6f4106abf78b40a193f412.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_10,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>重启server搞定</p>
+<figure class="highlight sas"><table><tr><td class="code"><pre><span class="line">hexo clean <span class="variable">&amp;&amp;</span> hexo g <span class="variable">&amp;&amp;</span> hexo s</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo的常用指令合集</title>
     <url>/2022/02/17/Hexo%E7%9A%84%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%E5%90%88%E9%9B%86/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -90,7 +90,7 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure></li>
 <li><p>生成新的SSH公钥并上传至GitHub</p>
 <figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">git config <span class="attr">--global</span> user<span class="selector-class">.name</span> <span class="string">&quot;a237440035&quot;</span></span><br><span class="line">git config <span class="attr">--global</span> user<span class="selector-class">.email</span> <span class="string">&quot;237440035@qq.com&quot;</span></span><br><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;237440035@qq.com&quot;</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/878226dbaf9849fb8528198ef9ad2ac4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_18,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>公钥为：SHA256:57GWXC&#x2F;PLymwxMVw9NoNKMpaoSI71Mum7Y9tPZZbgPI <a href="mailto:&#x32;&#51;&#x37;&#52;&#x34;&#x30;&#x30;&#x33;&#53;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#109;">&#x32;&#51;&#x37;&#52;&#x34;&#x30;&#x30;&#x33;&#53;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#109;</a><br>也可以在文件<code>C:\Users\Administrator\.ssh\id_ed25519.pub</code>中查看<br>将公钥复制在GitHub中即可使用<code>hexo d</code>命令<br><img src="https://img-blog.csdnimg.cn/018945bae1274b7783e02631b033d741.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/878226dbaf9849fb8528198ef9ad2ac4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_18,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>公钥为：SHA256:57GWXC&#x2F;PLymwxMVw9NoNKMpaoSI71Mum7Y9tPZZbgPI <a href="mailto:&#x32;&#x33;&#x37;&#x34;&#52;&#x30;&#48;&#51;&#x35;&#64;&#x71;&#113;&#x2e;&#99;&#x6f;&#x6d;">&#x32;&#x33;&#x37;&#x34;&#52;&#x30;&#48;&#51;&#x35;&#64;&#x71;&#113;&#x2e;&#99;&#x6f;&#x6d;</a><br>也可以在文件<code>C:\Users\Administrator\.ssh\id_ed25519.pub</code>中查看<br>将公钥复制在GitHub中即可使用<code>hexo d</code>命令<br><img src="https://img-blog.csdnimg.cn/018945bae1274b7783e02631b033d741.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
 </li>
 </ol>
 <h4 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h4><blockquote>
@@ -166,113 +166,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2019/01/11/hello-world/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<span id="more"></span>
-
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>hexo分类的正确用法</title>
-    <url>/2022/02/13/hexo%E5%88%86%E7%B1%BB%E7%9A%84%E6%AD%A3%E7%A1%AE%E7%94%A8%E6%B3%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://img-blog.csdnimg.cn/4ecf04ca568949b4bc4b2f4becdb1089.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<figure class="highlight isbl"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="title">alert</span>(<span class="string">&#x27;Hello World!&#x27;</span>);</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>hexo中文文档：<a href="https://hexo.io/zh-cn/docs/front-matter">https://hexo.io/zh-cn/docs/front-matter</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>睡前温暖小故事</title>
-    <url>/2022/02/22/testAPlayer/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-PVwOCsqi" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-PVwOCsqi"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "朗读这篇文章",
-              author: "Azure云希",
-              url: "shuiqiangushi.wav",
-              pic: "/2022/02/22/testAPlayer/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-
-<p>从前有个故事王国，在这个王国里面，每个人都有着一本书，书里写满着属于自己的故事。<br>除了他，只有他的书是一片空白的，人们嘲笑着他的同时，称呼他为，无故事先生。</p>
-<p>无故事先生一直很烦恼，在这个国度，每个人都有着自己的故事，有着自己可以回忆，可以治愈在忙碌生活下受伤的故事，只有自己是孤单一个人，什么故事也没有。</p>
-<span id="more"></span>
-
-<p>他曾经去很远的东边的繁华集市，想向商贾购买一个故事，来填补自己书上的空白，尽管集市上有各种商品，但他找遍那里都没发现有人卖故事。</p>
-<p>后来，他去了最南边的河流旁，遇到了热情的牧羊人，牧羊人招待他吃肉喝酒，当提到能不能分享故事的时候，牧羊人只是讪笑了一下，便没有吱声。</p>
-<p>无故事先生这才意识到，这书中的故事，是最为宝贵的，至少不能随便与别人分享，他十分懊恼地回到自己的城市，坐在路边若有所失，感觉到好像被人偷走故事一般的失落，尽管他本来就没有故事。<br>正当他失神的时候，北边传来了一阵喧哗声，有一群蹦蹦跳跳的小孩子在吵闹着。<br>无故事先生挤进人群里，看到最里面有个女孩子，与旁人不同，她的眼睛里闪着奇异的光芒，而风尘仆仆的模样仿佛在阐述旅程的艰辛。</p>
-<p>在她的面前，有着很多很多书。翻开书，她从远古时代巨龙和勇士的争斗讲起，再到中世纪梅林和石中剑°的故事，以及女巫的魔法以及黑猫的调皮，周围的小孩子都听得十分入迷，这些故事，都是他们从未听过的。</p>
-<p>她的目光穿过人群，停留在无故事先生脸上，微微一笑，就自顾自地又开始讲起了故事，他老脸一红，感觉困扰自己多日的问题，也许会在这里得到答案。</p>
-<p>从她到来的那一天开始，每天都会围满人听她讲故事，因为这些故事都太过奇妙，孩子们给她取了个称号，叫奇妙小姐。</p>
-<p>无故事先生每天随着人群来到这里，而每次，奇妙小姐都会对着他莞尔一笑。就这样，日子一天天过去。</p>
-<p>有一天，无故事先生感觉心中一颤，急忙把怀里的书翻开，发现原本空白的纸张上竟然浮现了字，那是奇妙小姐今天所讲的经历。而自己的灵魂，仿佛也得到了治愈，正如其他人所说的那种感觉。<br>他看着奇妙小姐，眼神里满是温柔，轻声地问：“你愿意用你的故事，填满我未来的人生吗?”<br>在人群的起哄声里，奇妙小姐耳垂变得红红的，笑着点了点头：“那，你准备好了么?”</p>
-<p><strong>所以，我可爱的奇妙小姐，你愿意用你的故事，填满我未来的人生吗?</strong></p>
-]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【转载】落俗在所难免，浪漫至死不渝</title>
-    <url>/2022/02/22/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E8%90%BD%E4%BF%97%E5%9C%A8%E6%89%80%E9%9A%BE%E5%85%8D%EF%BC%8C%E6%B5%AA%E6%BC%AB%E8%87%B3%E6%AD%BB%E4%B8%8D%E6%B8%9D/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>真正的爱啊，一定不是瞬间的感动，而必然是恒久的一种委身</p>
-</blockquote>
-<p>如果爱只是一种感觉，那么当他遇到挑战，这种感觉很快就会消除，因为我们很容易不同的人身上获得这种感觉，所以移情别恋最经常的说辞就是：“我没有感觉了。”但真正的爱并非一种感觉，他更多的是一种责任，是一种彼此的牺牲和彼此的成就。</p>
-<span id="more"></span>
-<hr>
-<p>我想见你，但我清楚的知道，唯有你也想见我的时候，我们的见面才有意义！</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>爱情观</tag>
-        <tag>罗翔</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【转载】人民日报高级词汇</title>
     <url>/2022/02/22/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E4%BA%BA%E6%B0%91%E6%97%A5%E6%8A%A5%E9%AB%98%E7%BA%A7%E8%AF%8D%E6%B1%87/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><table>
@@ -317,6 +210,53 @@
       </tags>
   </entry>
   <entry>
+    <title>睡前温暖小故事</title>
+    <url>/2022/02/22/testAPlayer/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-NuLgIDBc" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-NuLgIDBc"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "朗读这篇文章",
+              author: "Azure云希",
+              url: "shuiqiangushi.wav",
+              pic: "/2022/02/22/testAPlayer/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<p>从前有个故事王国，在这个王国里面，每个人都有着一本书，书里写满着属于自己的故事。<br>除了他，只有他的书是一片空白的，人们嘲笑着他的同时，称呼他为，无故事先生。</p>
+<p>无故事先生一直很烦恼，在这个国度，每个人都有着自己的故事，有着自己可以回忆，可以治愈在忙碌生活下受伤的故事，只有自己是孤单一个人，什么故事也没有。</p>
+<span id="more"></span>
+
+<p>他曾经去很远的东边的繁华集市，想向商贾购买一个故事，来填补自己书上的空白，尽管集市上有各种商品，但他找遍那里都没发现有人卖故事。</p>
+<p>后来，他去了最南边的河流旁，遇到了热情的牧羊人，牧羊人招待他吃肉喝酒，当提到能不能分享故事的时候，牧羊人只是讪笑了一下，便没有吱声。</p>
+<p>无故事先生这才意识到，这书中的故事，是最为宝贵的，至少不能随便与别人分享，他十分懊恼地回到自己的城市，坐在路边若有所失，感觉到好像被人偷走故事一般的失落，尽管他本来就没有故事。<br>正当他失神的时候，北边传来了一阵喧哗声，有一群蹦蹦跳跳的小孩子在吵闹着。<br>无故事先生挤进人群里，看到最里面有个女孩子，与旁人不同，她的眼睛里闪着奇异的光芒，而风尘仆仆的模样仿佛在阐述旅程的艰辛。</p>
+<p>在她的面前，有着很多很多书。翻开书，她从远古时代巨龙和勇士的争斗讲起，再到中世纪梅林和石中剑°的故事，以及女巫的魔法以及黑猫的调皮，周围的小孩子都听得十分入迷，这些故事，都是他们从未听过的。</p>
+<p>她的目光穿过人群，停留在无故事先生脸上，微微一笑，就自顾自地又开始讲起了故事，他老脸一红，感觉困扰自己多日的问题，也许会在这里得到答案。</p>
+<p>从她到来的那一天开始，每天都会围满人听她讲故事，因为这些故事都太过奇妙，孩子们给她取了个称号，叫奇妙小姐。</p>
+<p>无故事先生每天随着人群来到这里，而每次，奇妙小姐都会对着他莞尔一笑。就这样，日子一天天过去。</p>
+<p>有一天，无故事先生感觉心中一颤，急忙把怀里的书翻开，发现原本空白的纸张上竟然浮现了字，那是奇妙小姐今天所讲的经历。而自己的灵魂，仿佛也得到了治愈，正如其他人所说的那种感觉。<br>他看着奇妙小姐，眼神里满是温柔，轻声地问：“你愿意用你的故事，填满我未来的人生吗?”<br>在人群的起哄声里，奇妙小姐耳垂变得红红的，笑着点了点头：“那，你准备好了么?”</p>
+<p><strong>所以，我可爱的奇妙小姐，你愿意用你的故事，填满我未来的人生吗?</strong></p>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【转载】尊重</title>
     <url>/2022/02/22/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E5%B0%8A%E9%87%8D/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -332,10 +272,70 @@
         <category>笔记</category>
       </categories>
       <tags>
-        <tag>罗翔</tag>
         <tag>哲学</tag>
+        <tag>罗翔</tag>
         <tag>尊重</tag>
         <tag>敬畏之心</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【转载】落俗在所难免，浪漫至死不渝</title>
+    <url>/2022/02/22/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E8%90%BD%E4%BF%97%E5%9C%A8%E6%89%80%E9%9A%BE%E5%85%8D%EF%BC%8C%E6%B5%AA%E6%BC%AB%E8%87%B3%E6%AD%BB%E4%B8%8D%E6%B8%9D/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>真正的爱啊，一定不是瞬间的感动，而必然是恒久的一种委身</p>
+</blockquote>
+<p>如果爱只是一种感觉，那么当他遇到挑战，这种感觉很快就会消除，因为我们很容易不同的人身上获得这种感觉，所以移情别恋最经常的说辞就是：“我没有感觉了。”但真正的爱并非一种感觉，他更多的是一种责任，是一种彼此的牺牲和彼此的成就。</p>
+<span id="more"></span>
+<hr>
+<p>我想见你，但我清楚的知道，唯有你也想见我的时候，我们的见面才有意义！</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>罗翔</tag>
+        <tag>爱情观</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2019/01/11/hello-world/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<span id="more"></span>
+
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>一些自己做的小玩意儿</title>
+    <url>/2022/02/18/%E4%B8%80%E4%BA%9B%E8%87%AA%E5%B7%B1%E5%81%9A%E7%9A%84%E5%B0%8F%E7%8E%A9%E6%84%8F%E5%84%BF/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="一个小导航网站"><a href="#一个小导航网站" class="headerlink" title="一个小导航网站"></a><a href="https://gzncpcc.xyz/">一个小导航网站</a></h2><h2 id="看看烟花"><a href="#看看烟花" class="headerlink" title="看看烟花"></a><a href="https://gzncpcc.xyz/fireworks">看看烟花</a></h2><h2 id="玩玩游戏：消消乐"><a href="#玩玩游戏：消消乐" class="headerlink" title="玩玩游戏：消消乐"></a><a href="https://gzncpcc.xyz/game">玩玩游戏：消消乐</a></h2><span id="more"></span>
+
+<h2 id="看看视频"><a href="#看看视频" class="headerlink" title="看看视频"></a><a href="https://gzncpcc.xyz/video">看看视频</a></h2><p>后续有时间再更新吧，先这样。。。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>黑科技</tag>
+        <tag>小心思</tag>
+        <tag>Web</tag>
       </tags>
   </entry>
   <entry>
@@ -356,32 +356,15 @@
       </tags>
   </entry>
   <entry>
-    <title>一些自己做的小玩意儿</title>
-    <url>/2022/02/18/%E4%B8%80%E4%BA%9B%E8%87%AA%E5%B7%B1%E5%81%9A%E7%9A%84%E5%B0%8F%E7%8E%A9%E6%84%8F%E5%84%BF/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="一个小导航网站"><a href="#一个小导航网站" class="headerlink" title="一个小导航网站"></a><a href="https://gzncpcc.xyz/">一个小导航网站</a></h2><h2 id="看看烟花"><a href="#看看烟花" class="headerlink" title="看看烟花"></a><a href="https://gzncpcc.xyz/fireworks">看看烟花</a></h2><h2 id="玩玩游戏：消消乐"><a href="#玩玩游戏：消消乐" class="headerlink" title="玩玩游戏：消消乐"></a><a href="https://gzncpcc.xyz/game">玩玩游戏：消消乐</a></h2><span id="more"></span>
-
-<h2 id="看看视频"><a href="#看看视频" class="headerlink" title="看看视频"></a><a href="https://gzncpcc.xyz/video">看看视频</a></h2><p>后续有时间再更新吧，先这样。。。</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>小心思</tag>
-        <tag>技术</tag>
-        <tag>黑科技</tag>
-        <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>没有永远开心的班主任。心态，很重要～</title>
     <url>/2022/03/31/%E5%8F%AA%E6%B8%A1%E6%9C%89%E7%BC%98%E4%BA%BA/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-ptmvlVln" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-fsnizBwf" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-ptmvlVln"),
+            element: document.getElementById("aplayer-fsnizBwf"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -467,6 +450,183 @@
       </tags>
   </entry>
   <entry>
+    <title>成年人的童话</title>
+    <url>/2022/04/09/%E6%88%90%E5%B9%B4%E4%BA%BA%E7%9A%84%E7%AB%A5%E8%AF%9D%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-NNidHIpj" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-NNidHIpj"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/04/09/成年人的童话（一）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<p>原来，千山万水，我所追寻的就是你。而你，就在这里等我，一直一直。</p>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>小故事</tag>
+        <tag>情感</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo分类的正确用法</title>
+    <url>/2022/02/13/hexo%E5%88%86%E7%B1%BB%E7%9A%84%E6%AD%A3%E7%A1%AE%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://img-blog.csdnimg.cn/4ecf04ca568949b4bc4b2f4becdb1089.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<figure class="highlight isbl"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="title">alert</span>(<span class="string">&#x27;Hello World!&#x27;</span>);</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>hexo中文文档：<a href="https://hexo.io/zh-cn/docs/front-matter">https://hexo.io/zh-cn/docs/front-matter</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>成年人的童话（二）</title>
+    <url>/2022/04/10/%E6%88%90%E5%B9%B4%E4%BA%BA%E7%9A%84%E7%AB%A5%E8%AF%9D%EF%BC%88%E4%BA%8C%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-cpdMvgQE" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-cpdMvgQE"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/04/10/成年人的童话（二）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<p>你听过的最老土的搭讪是什么？我听过的是，你长得好像一个人。</p>
+<p>说这句话的是一个八十岁的老头，当时我在一家餐厅打工，上菜的时候看见一个老头正在搭讪一个同龄的老太太。老太太回答他说：那我长得像谁啊？老头说：我老婆。</p>
+<p>我心想这个老不正经的真猥琐。老太太当然也气到了，你别胡说，我可是有老伴的。老太太起身就要走，老头贼心不死。赶紧挡住了老太太说：你先别走，听我给你讲个故事。我们那个年代的故事，老太太出于好奇坐了下来。</p>
+<span id="more"></span>
+
+<p>老头说：我有个发小叫柱子，当时柱子才十五岁。那个年代没有什么吃的，柱子用弹弓打了一只鸽子，回来炖了汤。结果隔壁村的刘小妹跑了过来，慌慌张张的应该是家里出了什么事情。柱子说：大妹子别着急，你先喝口汤吧。刘小妹喝了一口汤终于镇定了一些，然后他对柱子说：你有没有看见我们家的鸽子。柱子吓得一哆嗦，没有把事情的真相告诉她。然后安慰她说：你别担心，鸽子一定是迷路了，过几天就会回来了。第二天刘小妹又过来了，突然看见天上有一个白色的东西飞过。刘小妹惊喜的说：啊，我的鸽子。柱子说：那是我的白裤衩被风吹走了。小妹叹了口气，眼神黯淡了下来，柱子看见她这样，心里就更愧疚了。于是给她烧了一个土豆。接下来的每一天，小妹都会过来找她的鸽子，柱子每次都会给小妹做一些吃的来安抚她，小妹吃了每次都很满足。柱子开始期待给小妹做饭，他喜欢上了小妹，于是他就更愧疚了。</p>
+<p>有一天小妹刚进门，柱子就站在院子里大喊：小妹你看你的鸽子回来了。小妹还没回话，柱子就从身后掏出了一只灰色的鸽子来。小妹说：我的鸽子是白色的。柱子说：你看这几天太阳多毒啊，你的鸽子一定是被晒黑了。小妹大喝：你当我傻呀？柱子只好招了，承认鸽子是被他给吃掉的。柱子说：我愿意补偿你。小妹说：那你一辈子都给我做饭吧。就这样他们俩就开始处对象了。</p>
+<p>结婚几年之后，柱子才知道原来小妹一直在骗他，那只鸽子本来就是拿来吃的。只是还没有来的及杀，它就飞跑了。小妹喝下那碗汤的时候，就知道那是自己的鸽子了。但是柱子的厨艺太好了。后来她每天假装去找鸽子，其实就是想去蹭吃蹭喝的，慢慢的她喜欢上了柱子，她每天假装去找鸽子，其实就是在等柱子对她动心。她等到了。</p>
+<p>老头看着老太太问：我的故事怎么样？老太太说：我听得都馋了。老头笑了说：那我再给你讲一个故事吧！</p>
+<p>五十年前，我有一个工友叫小高，他是厂里最厉害的技术员。他的女朋友叫芳芳，我们厂里一共有五朵金花，芳芳是第六朵。小高在第二车间，芳芳在第三车间，他们两个感情特别好，一分钟见不到都特别难熬。对他们两个来说，隔着一个车间就好像在异地恋。小高下定决心要成为车间主任，这样就能自由的穿梭在两个车间之间了。这样就能每时每刻的见到芳芳了，于是小高开始努力上进，经过了很多个日日夜夜，组织上终于看到了他的努力，派他去西北支援建设去了。这下完了，两个人真的成异地恋了。走的时候小高让芳芳等他两年，两年之后回来我们就结婚。结果刚到西北，刚进职工宿舍，就被组织带进了沙漠，加入了一个保密项目，从此和外界断了联系。</p>
+<p>这一去就是四年，四年之后小高回到宿舍，看到床上堆满了来信，全是芳芳的。</p>
+<p>第一封信：小高同志，我好想你。</p>
+<p>第十九封信：小高同志，我在解放路发现了一家小吃摊，特别好吃，等你回来咱们一起去吃。</p>
+<p>第三十八封信：小高同志，你为什么一直不回我的信，是不是和其她的女同志发展出了战斗友谊，我也要去隔壁车间和小李发展发展。</p>
+<p>第三十九封信：小高同志，上一封信是我意气用事了，都是我骗你的，我根本没有和小李接触。</p>
+<p>小高一封一封的拆着信，看的又哭又笑的，他拿出了最后一封信，小高同志，我妈给我介绍了一个对象，如果今年国庆之前你还回不来，我就得嫁给他了。</p>
+<p>国庆！！！小高惊出了一身冷汗，现在是十月中旬，距离国庆已经过去两个星期了。他立马去赶火车，心急火燎的花了两天的时间才回到了老家。他直接冲到了芳芳家，她不在。是啊！她都已经嫁人了。他失魂落魄的走到了芳芳提过的那家小吃摊，他点了碗面，吃着吃着就哭了起来。这时一个熟悉的身影出现在他的面前，是芳芳，芳芳正微笑的看着他。后来小高才知道，原来芳芳每天都会来这里等他，到了国庆的那天，小高还是没有出现，芳芳发誓她再也不会在这里等他了，结果她还是来了。当他们之间只隔了一堵墙的时候，她熬不过一分一秒；当他们隔了千山万水的时候，她反而熬过了四年，她一直都在等他回来。她等到了。</p>
+<p>老头讲完了之后，老太太点了点头说：真是个好故事，还有吗？老头接着说：那我来讲一对老夫老妻的故事吧！</p>
+<p>男的叫老吴，老吴和老伴结婚四十年，为了庆祝他们的结婚纪念日，儿子给他们报了一个旅行团去国外玩。老吴很兴奋，每天都在练习外语。老伴埋汰他说：学了这么长时间，只学会了几句。他们到了国外，导游带他们到了广场自由活动。老吴特别兴奋，看见外国人就招手，嘴里不停的说着哈喽。他们一路看一路逛，老吴看见什么都问，一路上都在卖弄着他那几句仅会的外语。走着走着就发现老伴不见了，老吴吓坏了。他到处去找，在人来人往的广场，一个瘦小的老头在高大的外国人中东奔西跑，嘴里喊着陌生的语言显得特别突兀。他走遍了他们走过的每一个地方，从剧院到广场，从广场到商场。在一个商场听到了争执声，他往前一看，正是老伴。老伴正在商场中死死地抱住一根柱子不肯撒手，旁边站着几个高壮的保安正在拉她，老吴冲了过去，挡在了老伴面前。他很瘦弱，却又很强壮。老伴抱住了老吴的胳膊，激动地大喊：老吴、老吴。原来走丢了之后，老太太一直站在原地。直到商场关门清场了之后，老太太还一直死抱着那根柱子不肯走。老吴又担心又生气说：你傻站在这里干嘛？老太太说：我不认识路，我只会傻站在这里等你。我知道你一定会找到我的。她一直站在原地，这是最笨的等待，也是最执着的信任。她等到了！</p>
+<p>老太太听完了故事心满意足的就和老头告别回家了。</p>
+<p>我和老头聊天才知道，原来他讲的是他和老太太的故事。故事里的柱子是他、小高是他、老吴也是他。而刚刚走的老太太叫刘芳芳，刘小妹是她、芳芳是她、老伴也是她。她是他的妻子，他们十多岁的时候在农村相识，到了二十来岁一起进入了工厂，后来他们结婚了约定好了要牵手走完这一辈子。但是老太太爽约了，三年前老太太患上了老年痴呆症，到现在谁也不认识了。她口中一直说的老伴，现在每天就坐在她的面前，她却在也认不出了。老太太每天都会来这家餐厅，老头每天都会来这里给她讲故事。讲过去他们之间发生过的事，希望有一天她能够记起来。我小心翼翼的问：那她万一一直记不起来怎么办？老头说：上半辈子都是她在等我，下半辈子换我等她了。</p>
+<p>你长得好像一个人，这句话其实是老太太以前对他说过的。重逢的那天，他在小吃摊上吃着面边吃边哭。突然一个熟悉的声音冒了出来，你长得好像一个人。小高抬起头发现是芳芳哭的更凶了，小高问：像谁？芳芳说：我丈夫。小高一愣，芳芳接着说，我已经向组织请示过了，组织同意我们结婚，明天你就和我去办手续，不许再跑了。</p>
+<p>你长得好像一个人，本来我以为这是最老套的搭讪，可没想到这是最深情的告白。</p>
+<p>有一天老太太照常来到了餐厅坐下，我算着时间，老头也差不多该到了。这时门被推开了，进来的却不是他，是一个年轻人，长得和老头很像，胸前佩戴着一朵白花。年轻人说：奶奶，我给你讲个故事吧！我心里一沉，那个风雨无阻每天坐在同一个位置，面对着同一个人，讲着同样故事的老头，走了！他等了好几年，想等她看着自己露出熟悉的微笑，可他没有等到。</p>
+<p>老太太望着年轻人，看着他的脸出了神，表情困惑道：小伙子，你长得好像一个人。</p>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>小故事</tag>
+        <tag>情感</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一场说走就走的旅行</title>
+    <url>/2022/02/18/%E4%B8%80%E5%9C%BA%E8%AF%B4%E8%B5%B0%E5%B0%B1%E8%B5%B0%E7%9A%84%E6%97%85%E8%A1%8C/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://img-blog.csdnimg.cn/17132b04fde748109308b76f0f475703.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<blockquote>
+<center>  “人生至少要有两次冲动，一为奋不顾身的爱情，一为说走就走的旅行。” </center>
+</blockquote>
+<p>当然，这话不是我说的。<br>每次出去都要计划好路线和攻略，希望整个旅行都在自己控制的时间段内完成，事实也确实如此。</p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/85a1bda3806f4edaba1a6beeb7e57bbe.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>我们可能在成长中有很多梦想，可是最后实现的有几个？很多人怀抱梦想前进，却将梦想遗落在不知名的角落。梦想往往就是在平淡的生活中消磨殆尽的，我们不要只安于现状，趁着我们还年轻。不走出去，我们永远不知道自己会成长成什么样。没有这一场说走就走的旅行，可能电影中的四个主人公还是过着一年前途未卜的生活，登山社长陈萧还是那个懦弱无能、欺骗自己的胆小鬼；学霸熊波还是那个只知道学习、不懂交际的Low教授；富二代张昊还是那个只知道依靠父母、别无所长的少爷、小跟班李硕也依旧是那个父子关系都处理不好、脑子缺根筋的跟屁虫。他们每个人的身上都有我们的影子，在影片的最后，完美的结局里，他们都变成了不一样的人，或者自己想过或者与之前完全不同的生活，可是我们呢？</p>
+<p><img src="https://img-blog.csdnimg.cn/d19332858b394c3094cb12b605074004.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_17,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>生活不止眼前的苟且，还有诗和远方。生活不是电影里的乌托邦，没有一场说走就走的旅行让我们改变，一切都还要靠自己，改变还是顺其自然，这需要你自己去选择。</p>
+<p><img src="https://img-blog.csdnimg.cn/ac7dcb9af2a849539e27fa4b1635857f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>电影里张昊有一段关于“拿得起，还是放得下”的讨论，鱼和熊掌不可兼得，在生活中这是个复杂的问题。也许对于很多人来说，拿得起比较难，但是放得下，更难。也许有些人，一生中拿得起和放得下都难以做到。就像青春中的我们，会遇到许多心动瞬间，很多人无法做到应对自如。可是电影中很轻易的就解决了这个选择，这也是电影想告诉我们的，拿得起是一种担当，放得下是一种洒脱，人生需要明白什么应该拿得起，什么应该放得下，因为在选择的方向，也许就是命运的方向。就像白举纲为电影创作的同名歌曲《说走就走》中唱的：雨雪夹着浪我们逆风飞翔，疲惫也倔强，幸运的是你在我身旁。</p>
+<p>人生就是一个不断前进的过程，我们不断和曾经熟悉的人说再见，也不断和自己说再见。影片最后，当四个人结束旅途的时候也面临了分别，但是他们没有说再见。其实很多时候，我们不必说再见。</p>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>闲谈</tag>
+        <tag>旅行</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>百度云合成Python SDK</title>
+    <url>/2022/02/20/%E7%99%BE%E5%BA%A6%E4%BA%91%E5%90%88%E6%88%90Python-SDK/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">pip install baidu-aip</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/8d62bb17c7d543cb9e978ead308dc7c2.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>安装好AipSpeech后就可以直接上代码了，很简单</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> aip <span class="keyword">import</span> AipSpeech</span><br><span class="line"></span><br><span class="line"><span class="string">&quot;&quot;&quot; 你的 APPID AK SK 在百度云控制台中可以获取，目前可以免费体验&quot;&quot;&quot;</span></span><br><span class="line">APP_ID = <span class="string">&#x27;your ID&#x27;</span></span><br><span class="line">API_KEY = <span class="string">&#x27;your KEY&#x27;</span></span><br><span class="line">SECRET_KEY = <span class="string">&#x27;your SECRET_KEY&#x27;</span></span><br><span class="line"></span><br><span class="line">client = AipSpeech(APP_ID, API_KEY, SECRET_KEY)</span><br><span class="line"></span><br><span class="line">text = <span class="string">&#x27;白皮书说，党的十八大以来，中国的核安全事业进入安全高效发展的新时期。在核安全观引领下，中国逐步构建起法律规范、行政监管、行业自律、技术保障、人才支撑、文化引领、社会参与、国际合作等为主体的核安全治理体系，核安全防线更加牢固。&#x27;</span></span><br><span class="line"></span><br><span class="line">result  = client.synthesis(text, <span class="string">&#x27;zh&#x27;</span>, <span class="number">1</span>, &#123;</span><br><span class="line">    <span class="string">&#x27;vol&#x27;</span>: <span class="number">5</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 识别正确返回语音二进制 错误则返回dict 参照下面错误码</span></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> <span class="built_in">isinstance</span>(result, <span class="built_in">dict</span>):</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;audio.mp3&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(result)</span><br></pre></td></tr></table></figure>
+<p>运行过后会生成一个<code>audio.mp3</code>文件，打开就可以听到文字转语音的内容了。</p>
+<span id="more"></span>
+
+<p>以为这样就完了？不不不<br>我们要实现的终极目标是在微信打字聊天就可以自动转为我们自己的音色语音发送给对方。。。<br>额，也不是很绕口，就是难就难在使用自己的音色，毕竟懒得开口嘛。。。额也许有其他不能开口的客观原因呢。比如：</p>
+<ul>
+<li>在公交车&#x2F;地铁上人多不方便语音</li>
+<li>在图书馆看书不方便回复语音又不想跑外面去</li>
+<li>在你心情不好不想说话又不得不哄的时候|ू･ω･&#96; )</li>
+</ul>
+<p>等等，还有很多实用场景，这里就不一一举例了。至于实现的难点嘛，则有：</p>
+<ul>
+<li>使用自己的音色，自己录制几个小时的甚至更长时间的朗读音频用作训练。。。</li>
+<li>如何嵌入到微信用，毕竟微信没那么大方。。。</li>
+<li>还有就是一些安全问题，自己的独特声线容易泄露被其他人利用。。。</li>
+</ul>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>在网上溜了一圈，就看到这个老哥的一篇，不得不说微软的TTS是真的强。。。</p>
+<blockquote>
+<p><a href="https://zhuanlan.zhihu.com/p/49711377">https://zhuanlan.zhihu.com/p/49711377</a></p>
+</blockquote>
+<p>而我想的解决方案是，在本地生成这个<code>audio.mp3</code>文件后发送一个链接给对方（在微信中），ta打开自动播放也就能听到我们的声音了。鉴于目前没有可以支付美刀的信用卡，不能注册使用Azure，所以只能先用百度这个凑合着用吧，先自己挖一个坑，以后有时间再填。。。over</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> aip <span class="keyword">import</span> AipSpeech</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">TextToSpeech</span>(<span class="params">text</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot; 你的 APPID AK SK &quot;&quot;&quot;</span></span><br><span class="line">	APP_ID = <span class="string">&#x27;your ID&#x27;</span></span><br><span class="line">	API_KEY = <span class="string">&#x27;your KEY&#x27;</span></span><br><span class="line">	SECRET_KEY = <span class="string">&#x27;your SECRET_KEY&#x27;</span></span><br><span class="line"></span><br><span class="line">    client = AipSpeech(APP_ID, API_KEY, SECRET_KEY)</span><br><span class="line"></span><br><span class="line">	result = client.synthesis(</span><br><span class="line">		text,  <span class="comment"># text: 合成的文本，utf-8编码，注意长度须小于1024字节</span></span><br><span class="line">		<span class="string">&#x27;zh&#x27;</span>,             <span class="comment"># lang: 语言，zh代表中文，en代表英文</span></span><br><span class="line">		<span class="number">1</span>,             <span class="comment"># ctp: 客户端信息，这里就写1，写别的不好使，原因后边解释</span></span><br><span class="line">		&#123;</span><br><span class="line">	        <span class="string">&#x27;vol&#x27;</span>:<span class="number">5</span>,   <span class="comment"># 合成音频我呢见的准音量</span></span><br><span class="line">	        <span class="string">&#x27;spd&#x27;</span>:<span class="number">5</span>,   <span class="comment"># 语速，取值0-9，默认为5，中语速</span></span><br><span class="line">	        <span class="string">&#x27;pit&#x27;</span>:<span class="number">5</span>,   <span class="comment"># 语调音调，取值0-9，默认为5，中语调</span></span><br><span class="line">	        <span class="string">&#x27;per&#x27;</span>:<span class="number">5003</span>    <span class="comment"># 发音人选择，0为女声，1为男声，3为情感合成-度逍遥，4为情感合成度丫丫，默认为普通女</span></span><br><span class="line">		&#125;</span><br><span class="line">	)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 保存到指定文件夹+时间戳为文件名</span></span><br><span class="line">    filename = <span class="string">&#x27;static/music/&#x27;</span> + <span class="built_in">str</span>(time.time()) + <span class="string">&#x27;.mp3&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 识别正确返回语音二进制 错误则返回dict 参照下面错误码</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> <span class="built_in">isinstance</span>(result, <span class="built_in">dict</span>):</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(filename, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            f.write(result)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> filename</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    text = <span class="string">&quot;我就是随便测试一下啦&quot;</span></span><br><span class="line">    filenname = TextToSpeech(text)</span><br><span class="line">    <span class="built_in">print</span>(filenname)</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/b0e8c540fef54d37a96676b5b3ac5176.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>TTS</tag>
+        <tag>百度云</tag>
+        <tag>python</tag>
+        <tag>语音合成</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>深度学习：实验室服务器环境配置操作指南</title>
     <url>/2022/02/18/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%EF%BC%9A%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="一、使用Anaconda配置Python环境"><a href="#一、使用Anaconda配置Python环境" class="headerlink" title="一、使用Anaconda配置Python环境"></a>一、使用Anaconda配置Python环境</h2><p>安装anaconda：<code>bash Anaconda3-2019.10-Linux-x86_64.sh </code><br><code>实验室服务器没有挂公网，所以只能用离线方式安装，包括下面的pytorch和TensorFlow都是一样。</code></p>
@@ -514,191 +674,15 @@
       </tags>
   </entry>
   <entry>
-    <title>一场说走就走的旅行</title>
-    <url>/2022/02/18/%E4%B8%80%E5%9C%BA%E8%AF%B4%E8%B5%B0%E5%B0%B1%E8%B5%B0%E7%9A%84%E6%97%85%E8%A1%8C/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://img-blog.csdnimg.cn/17132b04fde748109308b76f0f475703.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<blockquote>
-<center>  “人生至少要有两次冲动，一为奋不顾身的爱情，一为说走就走的旅行。” </center>
-</blockquote>
-<p>当然，这话不是我说的。<br>每次出去都要计划好路线和攻略，希望整个旅行都在自己控制的时间段内完成，事实也确实如此。</p>
-<span id="more"></span>
-
-<p><img src="https://img-blog.csdnimg.cn/85a1bda3806f4edaba1a6beeb7e57bbe.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<p>我们可能在成长中有很多梦想，可是最后实现的有几个？很多人怀抱梦想前进，却将梦想遗落在不知名的角落。梦想往往就是在平淡的生活中消磨殆尽的，我们不要只安于现状，趁着我们还年轻。不走出去，我们永远不知道自己会成长成什么样。没有这一场说走就走的旅行，可能电影中的四个主人公还是过着一年前途未卜的生活，登山社长陈萧还是那个懦弱无能、欺骗自己的胆小鬼；学霸熊波还是那个只知道学习、不懂交际的Low教授；富二代张昊还是那个只知道依靠父母、别无所长的少爷、小跟班李硕也依旧是那个父子关系都处理不好、脑子缺根筋的跟屁虫。他们每个人的身上都有我们的影子，在影片的最后，完美的结局里，他们都变成了不一样的人，或者自己想过或者与之前完全不同的生活，可是我们呢？</p>
-<p><img src="https://img-blog.csdnimg.cn/d19332858b394c3094cb12b605074004.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_17,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<p>生活不止眼前的苟且，还有诗和远方。生活不是电影里的乌托邦，没有一场说走就走的旅行让我们改变，一切都还要靠自己，改变还是顺其自然，这需要你自己去选择。</p>
-<p><img src="https://img-blog.csdnimg.cn/ac7dcb9af2a849539e27fa4b1635857f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<p>电影里张昊有一段关于“拿得起，还是放得下”的讨论，鱼和熊掌不可兼得，在生活中这是个复杂的问题。也许对于很多人来说，拿得起比较难，但是放得下，更难。也许有些人，一生中拿得起和放得下都难以做到。就像青春中的我们，会遇到许多心动瞬间，很多人无法做到应对自如。可是电影中很轻易的就解决了这个选择，这也是电影想告诉我们的，拿得起是一种担当，放得下是一种洒脱，人生需要明白什么应该拿得起，什么应该放得下，因为在选择的方向，也许就是命运的方向。就像白举纲为电影创作的同名歌曲《说走就走》中唱的：雨雪夹着浪我们逆风飞翔，疲惫也倔强，幸运的是你在我身旁。</p>
-<p>人生就是一个不断前进的过程，我们不断和曾经熟悉的人说再见，也不断和自己说再见。影片最后，当四个人结束旅途的时候也面临了分别，但是他们没有说再见。其实很多时候，我们不必说再见。</p>
-]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>闲谈</tag>
-        <tag>旅行</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>睡前故事（三十七）</title>
-    <url>/2022/04/07/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B8%89%E5%8D%81%E4%B8%83%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-wgTgjUyq" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-wgTgjUyq"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "欢迎收听",
-              author: "你的专属睡前故事",
-              url: "shuiqiangushi.aac",
-              pic: "/2022/04/07/睡前故事（三十七）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-
-<p>我对世界说晚安，唯独对你说喜欢</p>
-]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>睡前故事（三十三）</title>
-    <url>/2022/04/03/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B8%89%E5%8D%81%E4%B8%89%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-sjWnoGyN" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-sjWnoGyN"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "欢迎收听",
-              author: "你的专属睡前故事",
-              url: "shuiqiangushi.aac",
-              pic: "/2022/04/03/睡前故事（三十三）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-
-<p>我对世界说晚安，唯独对你说喜欢</p>
-]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>睡前故事（三十九）</title>
-    <url>/2022/04/09/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B8%89%E5%8D%81%E4%B9%9D%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-  </entry>
-  <entry>
-    <title>睡前故事（三十二）</title>
-    <url>/2022/04/02/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B8%89%E5%8D%81%E4%BA%8C%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-qEqVBezD" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-qEqVBezD"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "欢迎收听",
-              author: "你的专属睡前故事",
-              url: "shuiqiangushi.aac",
-              pic: "/2022/04/02/睡前故事（三十二）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-
-<p>我对世界说晚安，唯独对你说喜欢</p>
-]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>百度云合成Python SDK</title>
-    <url>/2022/02/20/%E7%99%BE%E5%BA%A6%E4%BA%91%E5%90%88%E6%88%90Python-SDK/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">pip install baidu-aip</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/8d62bb17c7d543cb9e978ead308dc7c2.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<p>安装好AipSpeech后就可以直接上代码了，很简单</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> aip <span class="keyword">import</span> AipSpeech</span><br><span class="line"></span><br><span class="line"><span class="string">&quot;&quot;&quot; 你的 APPID AK SK 在百度云控制台中可以获取，目前可以免费体验&quot;&quot;&quot;</span></span><br><span class="line">APP_ID = <span class="string">&#x27;your ID&#x27;</span></span><br><span class="line">API_KEY = <span class="string">&#x27;your KEY&#x27;</span></span><br><span class="line">SECRET_KEY = <span class="string">&#x27;your SECRET_KEY&#x27;</span></span><br><span class="line"></span><br><span class="line">client = AipSpeech(APP_ID, API_KEY, SECRET_KEY)</span><br><span class="line"></span><br><span class="line">text = <span class="string">&#x27;白皮书说，党的十八大以来，中国的核安全事业进入安全高效发展的新时期。在核安全观引领下，中国逐步构建起法律规范、行政监管、行业自律、技术保障、人才支撑、文化引领、社会参与、国际合作等为主体的核安全治理体系，核安全防线更加牢固。&#x27;</span></span><br><span class="line"></span><br><span class="line">result  = client.synthesis(text, <span class="string">&#x27;zh&#x27;</span>, <span class="number">1</span>, &#123;</span><br><span class="line">    <span class="string">&#x27;vol&#x27;</span>: <span class="number">5</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 识别正确返回语音二进制 错误则返回dict 参照下面错误码</span></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> <span class="built_in">isinstance</span>(result, <span class="built_in">dict</span>):</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;audio.mp3&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(result)</span><br></pre></td></tr></table></figure>
-<p>运行过后会生成一个<code>audio.mp3</code>文件，打开就可以听到文字转语音的内容了。</p>
-<span id="more"></span>
-
-<p>以为这样就完了？不不不<br>我们要实现的终极目标是在微信打字聊天就可以自动转为我们自己的音色语音发送给对方。。。<br>额，也不是很绕口，就是难就难在使用自己的音色，毕竟懒得开口嘛。。。额也许有其他不能开口的客观原因呢。比如：</p>
-<ul>
-<li>在公交车&#x2F;地铁上人多不方便语音</li>
-<li>在图书馆看书不方便回复语音又不想跑外面去</li>
-<li>在你心情不好不想说话又不得不哄的时候|ू･ω･&#96; )</li>
-</ul>
-<p>等等，还有很多实用场景，这里就不一一举例了。至于实现的难点嘛，则有：</p>
-<ul>
-<li>使用自己的音色，自己录制几个小时的甚至更长时间的朗读音频用作训练。。。</li>
-<li>如何嵌入到微信用，毕竟微信没那么大方。。。</li>
-<li>还有就是一些安全问题，自己的独特声线容易泄露被其他人利用。。。</li>
-</ul>
-<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>在网上溜了一圈，就看到这个老哥的一篇，不得不说微软的TTS是真的强。。。</p>
-<blockquote>
-<p><a href="https://zhuanlan.zhihu.com/p/49711377">https://zhuanlan.zhihu.com/p/49711377</a></p>
-</blockquote>
-<p>而我想的解决方案是，在本地生成这个<code>audio.mp3</code>文件后发送一个链接给对方（在微信中），ta打开自动播放也就能听到我们的声音了。鉴于目前没有可以支付美刀的信用卡，不能注册使用Azure，所以只能先用百度这个凑合着用吧，先自己挖一个坑，以后有时间再填。。。over</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> aip <span class="keyword">import</span> AipSpeech</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">TextToSpeech</span>(<span class="params">text</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot; 你的 APPID AK SK &quot;&quot;&quot;</span></span><br><span class="line">	APP_ID = <span class="string">&#x27;your ID&#x27;</span></span><br><span class="line">	API_KEY = <span class="string">&#x27;your KEY&#x27;</span></span><br><span class="line">	SECRET_KEY = <span class="string">&#x27;your SECRET_KEY&#x27;</span></span><br><span class="line"></span><br><span class="line">    client = AipSpeech(APP_ID, API_KEY, SECRET_KEY)</span><br><span class="line"></span><br><span class="line">	result = client.synthesis(</span><br><span class="line">		text,  <span class="comment"># text: 合成的文本，utf-8编码，注意长度须小于1024字节</span></span><br><span class="line">		<span class="string">&#x27;zh&#x27;</span>,             <span class="comment"># lang: 语言，zh代表中文，en代表英文</span></span><br><span class="line">		<span class="number">1</span>,             <span class="comment"># ctp: 客户端信息，这里就写1，写别的不好使，原因后边解释</span></span><br><span class="line">		&#123;</span><br><span class="line">	        <span class="string">&#x27;vol&#x27;</span>:<span class="number">5</span>,   <span class="comment"># 合成音频我呢见的准音量</span></span><br><span class="line">	        <span class="string">&#x27;spd&#x27;</span>:<span class="number">5</span>,   <span class="comment"># 语速，取值0-9，默认为5，中语速</span></span><br><span class="line">	        <span class="string">&#x27;pit&#x27;</span>:<span class="number">5</span>,   <span class="comment"># 语调音调，取值0-9，默认为5，中语调</span></span><br><span class="line">	        <span class="string">&#x27;per&#x27;</span>:<span class="number">5003</span>    <span class="comment"># 发音人选择，0为女声，1为男声，3为情感合成-度逍遥，4为情感合成度丫丫，默认为普通女</span></span><br><span class="line">		&#125;</span><br><span class="line">	)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 保存到指定文件夹+时间戳为文件名</span></span><br><span class="line">    filename = <span class="string">&#x27;static/music/&#x27;</span> + <span class="built_in">str</span>(time.time()) + <span class="string">&#x27;.mp3&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 识别正确返回语音二进制 错误则返回dict 参照下面错误码</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> <span class="built_in">isinstance</span>(result, <span class="built_in">dict</span>):</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(filename, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            f.write(result)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> filename</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    text = <span class="string">&quot;我就是随便测试一下啦&quot;</span></span><br><span class="line">    filenname = TextToSpeech(text)</span><br><span class="line">    <span class="built_in">print</span>(filenname)</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/b0e8c540fef54d37a96676b5b3ac5176.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6L-e5o6l5pWw5o2u5bqT,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>TTS</tag>
-        <tag>百度云</tag>
-        <tag>python</tag>
-        <tag>语音合成</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>睡前故事（七）</title>
     <url>/2022/02/28/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B8%83%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-mkJRBVsL" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-pPHbOcwa" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-mkJRBVsL"),
+            element: document.getElementById("aplayer-pPHbOcwa"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -738,15 +722,15 @@
       </tags>
   </entry>
   <entry>
-    <title>睡前故事（三十八）</title>
-    <url>/2022/04/08/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B8%89%E5%8D%81%E5%85%AB%EF%BC%89/</url>
+    <title>睡前故事（三十九）</title>
+    <url>/2022/04/11/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B8%89%E5%8D%81%E4%B9%9D%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-uXRIUWDx" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-mYQntEhL" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-uXRIUWDx"),
+            element: document.getElementById("aplayer-mYQntEhL"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -754,7 +738,7 @@
               title: "欢迎收听",
               author: "你的专属睡前故事",
               url: "shuiqiangushi.aac",
-              pic: "/2022/04/08/睡前故事（三十八）/picture.png",
+              pic: "/2022/04/11/睡前故事（三十九）/picture.png",
               lrc: ""
             }
           });
@@ -776,12 +760,12 @@
     <title>睡前故事（三十一）</title>
     <url>/2022/04/01/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B8%89%E5%8D%81%E4%B8%80%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-uJRtvPQl" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-BEPoFapg" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-uJRtvPQl"),
+            element: document.getElementById("aplayer-BEPoFapg"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -808,15 +792,120 @@
       </tags>
   </entry>
   <entry>
-    <title>睡前故事（三十四）</title>
-    <url>/2022/04/04/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B8%89%E5%8D%81%E5%9B%9B%EF%BC%89/</url>
+    <title>睡前故事（三十三）</title>
+    <url>/2022/04/03/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B8%89%E5%8D%81%E4%B8%89%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-cJcUGZUZ" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-PcSYjhGB" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-cJcUGZUZ"),
+            element: document.getElementById("aplayer-PcSYjhGB"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/04/03/睡前故事（三十三）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<p>我对世界说晚安，唯独对你说喜欢</p>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（三十七）</title>
+    <url>/2022/04/07/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B8%89%E5%8D%81%E4%B8%83%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-mjllQdtJ" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-mjllQdtJ"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/04/07/睡前故事（三十七）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<p>我对世界说晚安，唯独对你说喜欢</p>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（三十二）</title>
+    <url>/2022/04/02/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B8%89%E5%8D%81%E4%BA%8C%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-EmialyfM" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-EmialyfM"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/04/02/睡前故事（三十二）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<p>我对世界说晚安，唯独对你说喜欢</p>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（三十四）</title>
+    <url>/2022/04/04/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B8%89%E5%8D%81%E5%9B%9B%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-TeVNmVvS" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-TeVNmVvS"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -846,12 +935,12 @@
     <title>睡前故事（三十）</title>
     <url>/2022/03/31/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B8%89%E5%8D%81%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-BMQsuciz" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-PnZFmwFG" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-BMQsuciz"),
+            element: document.getElementById("aplayer-PnZFmwFG"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -878,15 +967,223 @@
       </tags>
   </entry>
   <entry>
-    <title>睡前故事（三）</title>
-    <url>/2022/02/23/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B8%89%EF%BC%89/</url>
+    <title>睡前故事（三十五）</title>
+    <url>/2022/04/05/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B8%89%E5%8D%81%E4%BA%94%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-MwTjWOAw" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-jNtmKzJS" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-MwTjWOAw"),
+            element: document.getElementById("aplayer-jNtmKzJS"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/04/05/睡前故事（三十五）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<p>我对世界说晚安，唯独对你说喜欢</p>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（三十八）</title>
+    <url>/2022/04/08/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B8%89%E5%8D%81%E5%85%AB%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-XnLvTMhL" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-XnLvTMhL"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/04/08/睡前故事（三十八）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<p>我对世界说晚安，唯独对你说喜欢</p>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>哄对象的睡前故事（二）</title>
+    <url>/2022/03/02/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B9%9D%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-sqalPDgQ" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-sqalPDgQ"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/03/02/睡前故事（九）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（二十一）</title>
+    <url>/2022/03/22/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%8C%E5%8D%81%E4%B8%80%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-vVJGQGRz" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-vVJGQGRz"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/03/22/睡前故事（二十一）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<p>我要把所有的温柔都给你，晚安~·</p>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（二十七）</title>
+    <url>/2022/03/28/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%8C%E5%8D%81%E4%B8%83%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-xqzRfSmc" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-xqzRfSmc"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/03/28/睡前故事（二十七）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<p>我对世界说晚安，唯独对你说喜欢</p>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（三十六）</title>
+    <url>/2022/04/06/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B8%89%E5%8D%81%E5%85%AD%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-FBkknGNG" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-FBkknGNG"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/04/06/睡前故事（三十六）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<p>我对世界说晚安，唯独对你说喜欢</p>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（三）</title>
+    <url>/2022/02/23/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B8%89%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-eyQbjwbd" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-eyQbjwbd"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -930,153 +1227,15 @@
       </tags>
   </entry>
   <entry>
-    <title>睡前故事（三十五）</title>
-    <url>/2022/04/05/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B8%89%E5%8D%81%E4%BA%94%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-swObLHly" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-swObLHly"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "欢迎收听",
-              author: "你的专属睡前故事",
-              url: "shuiqiangushi.aac",
-              pic: "/2022/04/05/睡前故事（三十五）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-
-<p>我对世界说晚安，唯独对你说喜欢</p>
-]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>哄对象的睡前故事（二）</title>
-    <url>/2022/03/02/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B9%9D%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-seRjgSct" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-seRjgSct"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "欢迎收听",
-              author: "你的专属睡前故事",
-              url: "shuiqiangushi.aac",
-              pic: "/2022/03/02/睡前故事（九）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>睡前故事（二十一）</title>
-    <url>/2022/03/22/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%8C%E5%8D%81%E4%B8%80%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-tvtIpgyb" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-tvtIpgyb"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "欢迎收听",
-              author: "你的专属睡前故事",
-              url: "shuiqiangushi.aac",
-              pic: "/2022/03/22/睡前故事（二十一）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-
-<p>我要把所有的温柔都给你，晚安~·</p>
-]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>睡前故事（二十三）</title>
-    <url>/2022/03/24/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%8C%E5%8D%81%E4%B8%89%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-VBzsJPBI" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-VBzsJPBI"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "欢迎收听",
-              author: "你的专属睡前故事",
-              url: "shuiqiangushi.aac",
-              pic: "/2022/03/24/睡前故事（二十三）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-
-<p>晚安~·</p>
-]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>睡前故事（二十二）</title>
     <url>/2022/03/23/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%8C%E5%8D%81%E4%BA%8C%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-OtHjtErF" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-swqrvbje" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-OtHjtErF"),
+            element: document.getElementById("aplayer-swqrvbje"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -1103,50 +1262,15 @@
       </tags>
   </entry>
   <entry>
-    <title>睡前故事（三十六）</title>
-    <url>/2022/04/06/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%B8%89%E5%8D%81%E5%85%AD%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-zohUMuwB" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-zohUMuwB"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "欢迎收听",
-              author: "你的专属睡前故事",
-              url: "shuiqiangushi.aac",
-              pic: "/2022/04/06/睡前故事（三十六）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-
-<p>我对世界说晚安，唯独对你说喜欢</p>
-]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>睡前故事（二十八）</title>
     <url>/2022/03/29/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%8C%E5%8D%81%E5%85%AB%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-lICiJYlY" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-sJUDwiGQ" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-lICiJYlY"),
+            element: document.getElementById("aplayer-sJUDwiGQ"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -1173,120 +1297,15 @@
       </tags>
   </entry>
   <entry>
-    <title>睡前故事（二十五）</title>
-    <url>/2022/03/26/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%8C%E5%8D%81%E4%BA%94%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-eChTzvNr" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-eChTzvNr"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "欢迎收听",
-              author: "你的专属睡前故事",
-              url: "shuiqiangushi.aac",
-              pic: "/2022/03/26/睡前故事（二十五）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-
-<p>晚安~·</p>
-]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>睡前故事（二十六）</title>
-    <url>/2022/03/27/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%8C%E5%8D%81%E5%85%AD%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-RqGiJnUH" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-RqGiJnUH"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "欢迎收听",
-              author: "你的专属睡前故事",
-              url: "shuiqiangushi.aac",
-              pic: "/2022/03/27/睡前故事（二十六）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-
-<p>我对世界说晚安，唯独对你说喜欢</p>
-]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>睡前故事（二十七）</title>
-    <url>/2022/03/28/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%8C%E5%8D%81%E4%B8%83%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-IuWaVeFK" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-IuWaVeFK"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "欢迎收听",
-              author: "你的专属睡前故事",
-              url: "shuiqiangushi.aac",
-              pic: "/2022/03/28/睡前故事（二十七）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-
-<p>我对世界说晚安，唯独对你说喜欢</p>
-]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>睡前故事（二十九）</title>
     <url>/2022/03/30/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%8C%E5%8D%81%E4%B9%9D%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-ofWtjezB" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-HsikplOb" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-ofWtjezB"),
+            element: document.getElementById("aplayer-HsikplOb"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -1313,23 +1332,23 @@
       </tags>
   </entry>
   <entry>
-    <title>睡前故事（五）:想去南极的北极熊</title>
-    <url>/2022/02/26/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%94%EF%BC%89/</url>
+    <title>睡前故事（二十三）</title>
+    <url>/2022/03/24/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%8C%E5%8D%81%E4%B8%89%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-OGBYYPwO" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-sGbzLwLs" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-OGBYYPwO"),
+            element: document.getElementById("aplayer-sGbzLwLs"),
             narrow: false,
             autoplay: false,
             showlrc: false,
             music: {
-              title: "朗读这篇文章",
-              author: "Azure云希",
-              url: "shuiqiangushi.wav",
-              pic: "/2022/02/26/睡前故事（五）/picture.png",
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/03/24/睡前故事（二十三）/picture.png",
               lrc: ""
             }
           });
@@ -1337,31 +1356,7 @@
           window.aplayers.push(ap);
         </script>
 
-<p>作为一只超级宅熊，北极熊先生从来没出过远门。直到它在网上认识了家住南极的企鹅小姐。虽然身处星球两端，但这距离不妨碍它俩在网上聊得很欢，光是同样生活在冰天雪地的环境里，就能给两只动物很多的共同语言。</p>
-<p>有时它们还会玩“拼照片”的游戏。一个在南极，一个在北极，各自在户外摆出特定的动作拍张照片，然后拼在一起，背景里冰雪交融，照片上的北极熊先生和企鹅小姐也就仿佛真的站在一起。</p>
-<p>“好希望有天能真的见到你。”某天，企鹅小姐这么说道。那么，我就去一趟南极好了。莫名而来的勇气让北极熊先生下定了决心。</p>
-<span id="more"></span>
-
-<p>接下来它做了些准备。比如上网查从北极到南极的游记攻略。鉴于以前这么做（且成功)的动物极少，它没查到什么有用的东西。也没有从各家航运公司查到直达的班次。连换乘的信息都不提供。</p>
-<p>算了。北极熊先生淡定地关掉订票网站页面。我自己总能找到路的。</p>
-<p>出发前，北极熊先生给企鹅小姐在网上留了言:我要去南极见你。下一秒，它想了想，把“见你”两个字删掉，又加上一句:给你带了小鱼干。<br>企鹅小姐立即回复了，它很高兴北极熊先生能来。对北极的小鱼干味道也很好奇。于是北极熊先生把自己储蓄的所有小鱼干装成一个大包，就这么踏上了旅途。</p>
-<p>最开始，北极熊先生选择的是冰山航运，虽然这种交通方式很慢，而且路线很随意，容易绕远路。但是便宜。冰山不收它票钱。北极熊先生想多省一点小鱼干带给企鹅小姐。所以它趴在冰山上，随着洋流朝南方漂浮了很久。没出过远门的北极熊先生想当然的以为，既然南极和北极都有冰山，那它们之间的航线必然是联通的。</p>
-<p>但它没想到，身下的冰山会随着气温的上升，越化越小，客舱空间从豪华套间缩水成只够北极熊先生糖起脚尖站立的一小块。最后完全消失了。北极熊先生落水了。</p>
-<p>当然北极熊先生是会游泳的，它带着那包小鱼干，扑腾着爬上一处小海礁，一脸懵逼地茫然四顾，不知道下一步该怎么走。这时候一只胖敦敦的虎鲸出现了。<br>“这位先生，请问你是想搭车吗?”虎鲸很礼貌地问道。<br>北极熊先生点点头，告诉它自己是想去南极。<br>“那可是趟远路。”虎鲸在水中转了个圈儿，笑眯眯地看向北极熊先生，“但我们虎鲸专车就是专门为你们这种长距离旅行的客人提供服务的，安全舒适，使命必达哦!”</p>
-<p>接着虎鲸向北极熊先生热情地演示了一下自己在速度与敏捷程度方面的种族天赋，并表示只需要收取它一半的小鱼干作为旅途费用，就保证能送到南极。<br>“先生，你在别处根本找不到我们这么好的运输服务呀!”虎鲸睁着自己浑圆的大眼睛，里面写的满满的都是真诚，“最近生意不好做，你就行行好，照顾我一单吧!“<br>北极熊先生被说动了。</p>
-<p>它将自己一半的小鱼干付给了虎鲸，搭上了这趟专车。不得不说，这比之前搭冰山航运的滋味好多了，又舒适又快捷，北极熊先生被呼呼的小风吹着，舒服的眼睛都眯了起来。但没过多久，在某座小海岛附近，北极熊先生察觉前进的速度慢了下来。它才发现，有一整群虎鲸不知道什么时候跟在了旁边。其中有些虎鲸的个头还很大个。游在最边缘处的虎鲸在跟一只老海龟鬼鬼祟祟地交头接耳，似乎在做什么见不得人的交易。<br>北极熊先生隐约觉得不太妙。</p>
-<p>情况果然不妙。作为一个人生地不熟的散客，北极熊先生被虎鲸车队以两条小鱼干的价格，转包给了没有合法运营牌照的老海龟小三轮。没办法，外表胖萌的虎鲸们，其实就是这么爱耍流氓的。<br>北极熊先生很想抗议。但看着自己身边那群身强力壮的虎鲸笑的不怀好意，又只能乖乖认怂。小三轮就小三轮吧，凑合着坐呗。</p>
-<p>可是又窄又颠。而且还特别，特别，特别的慢。只能站在老海龟壳上缩成一团的北极熊先生眼看太阳从海的这边升起，再到海的那边落下，身后的小海岛似乎还是跟刚出发时差不多大小。<br>它忍不住开口了:“那个……能请你快点吗?”</p>
-<p>“…..阿?”年迈的老海龟慢吞吞地应了一声，“你……赶…..时….间….吗?”北极熊先生想起了自己和企鹅小姐的约定，便点点头:“我有约会，快迟到了。”<br>“那你怎么不早说啊这不耽误事儿嘛,你们这些年轻人就是这么没轻没重的我都不知道该怎么说你了。”老海龟突然语速就正常了。嗯，是太快了。<br>还没等北极熊先生反应过来，老海龟就一声中气十足的呐喊:“你坐稳了啊!”<br>接着便像脱弓的利箭一般，迅猛地冲了出去。下一秒，北极熊先生又落海里了。车翻了。因为超速。还有超载。</p>
-<p>北极熊先生的旅途还在继续。剩下的路走的也很不轻松。它曾被发疯飙车的旗鱼超跑吓的捂嘴尖叫，也差点被开小巴的海牛暗搓搓地占便宜。还曾被章鱼黑出租和鲨鱼黑摩的当做争夺的客源，看两边打的不可开交，自己只能偷偷摸摸地划水逃跑。</p>
-<p>但除开这些糟心事，旅途中也有快乐。比如在中途躺在孤岛金黄色的沙滩上，看深蓝色的天空中，海鸥鸣叫，繁星闪烁。再或者潜进温暖的海水，看见色彩斑斓的珊瑚随着水流摇曳，旁边有可爱的海星和小虾爬过。这都是北极熊先生以前从来没见过的美景。它看的很仔细，努力想要记得。<br>等我到了南极……,北极熊先生很乐观地想着。我要把这些都告诉企鹅小姐。想到企鹅小姐还在等自己，它就仿佛有了用不完的干劲。</p>
-<p>即使是在越过赤道线，热的快中暑时。北极熊先生想要去到南极的决心，也没有动摇过。托友善的海豚们的福，北极熊先生终于搭上了放心的顺风车。海豚们将它送到了搭乘巨鲸越洋航运的站点。这是由鲸鱼们运营的，这个星球上最正规，最庞大的海上交通组织。</p>
-<p>价格公道，服务上心。但是依然没有直达南极的航线，那实在是太远了。北极熊先生只能继续不停地转乘，把几乎能有的交通方式统统换了个遍。有时是搭稳稳当当的蓝鲸航班，有时是搭上下颠簸的抹香鲸航班，还有时是搭有免费歌声可听的灰鲸航班。</p>
-<p>北极熊先生就这样走啊走啊，一路向南，远离大陆，越过大洋，经过岛屿，独自穿过了整颗星球。只为了去见一面企鹅小姐。从最后—班座头鲸航班上下来，北极熊先生站在了冰封的地面上。<br>这个地方看起来和它的家乡很像。它终于到南极了。</p>
-<p>而企鹅小姐就在这里等着。“你真的来了。”它脸上有掩盖不住的惊喜。还有一点点害羞的意思。“嗯，说了要来的。”北极熊先生突然也跟着害羞起来了。企鹅小姐没接着说话，只是双眼中闪烁的，全是因激动而生的神采奕奕。</p>
-<p>看起来可真美啊。北极熊先生傻傻地盯着它看。对方也微笑着盯着北极熊先生看。命运就是这样难以揣测，两个之前在网上天天畅聊的家伙，在第一次真的见面时，却同时不知道该说什么才好了。这种愉快的沉默持续了有一阵子，北极熊先生才先开口:“抱歉，小鱼干没有了。”</p>
-<p>它积蓄的所有小鱼干，都被花在了路费上，一条也不剩了。“但是…..它们都换成了故事。”北极熊先生最终笑了起来，朝企鹅小姐走过去，“让我慢慢讲给你听。”</p>
-<p>END</p>
+<p>晚安~·</p>
 ]]></content>
       <categories>
         <category>睡前故事</category>
@@ -1372,15 +1367,15 @@
       </tags>
   </entry>
   <entry>
-    <title>哄对象的睡前故事（一）</title>
-    <url>/2022/03/01/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%85%AB%EF%BC%89/</url>
+    <title>睡前故事（二十五）</title>
+    <url>/2022/03/26/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%8C%E5%8D%81%E4%BA%94%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-SshNLfHS" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-KcUubrdc" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-SshNLfHS"),
+            element: document.getElementById("aplayer-KcUubrdc"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -1388,7 +1383,7 @@
               title: "欢迎收听",
               author: "你的专属睡前故事",
               url: "shuiqiangushi.aac",
-              pic: "/2022/03/01/睡前故事（八）/picture.png",
+              pic: "/2022/03/26/睡前故事（二十五）/picture.png",
               lrc: ""
             }
           });
@@ -1396,7 +1391,110 @@
           window.aplayers.push(ap);
         </script>
 
+<p>晚安~·</p>
 ]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（二十四）</title>
+    <url>/2022/03/24/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%8C%E5%8D%81%E5%9B%9B%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-uSpugfDu" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-uSpugfDu"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/03/24/睡前故事（二十四）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<p>晚安~·</p>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（二十六）</title>
+    <url>/2022/03/27/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%8C%E5%8D%81%E5%85%AD%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-UwNEuxHP" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-UwNEuxHP"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/03/27/睡前故事（二十六）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<p>我对世界说晚安，唯独对你说喜欢</p>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（二十）</title>
+    <url>/2022/03/21/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%8C%E5%8D%81%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-DRHSKeai" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-DRHSKeai"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/03/21/睡前故事（二十）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>]]></content>
       <categories>
         <category>睡前故事</category>
       </categories>
@@ -1431,12 +1529,12 @@
  
 
 <!-- 
-        <div id="aplayer-RiuHpCCl" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-qRKeDgVd" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-RiuHpCCl"),
+            element: document.getElementById("aplayer-qRKeDgVd"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -1487,47 +1585,15 @@
       </tags>
   </entry>
   <entry>
-    <title>睡前故事（二十）</title>
-    <url>/2022/03/21/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%8C%E5%8D%81%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-CCLOkdRf" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-CCLOkdRf"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "欢迎收听",
-              author: "你的专属睡前故事",
-              url: "shuiqiangushi.aac",
-              pic: "/2022/03/21/睡前故事（二十）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>睡前故事（六）:牧星少年</title>
     <url>/2022/02/27/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%85%AD%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-YadYUvun" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-rJermcAT" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-YadYUvun"),
+            element: document.getElementById("aplayer-rJermcAT"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -1568,15 +1634,108 @@
       </tags>
   </entry>
   <entry>
-    <title>睡前故事（十七）</title>
-    <url>/2022/03/17/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E4%B8%83%EF%BC%89/</url>
+    <title>哄对象的睡前故事（一）</title>
+    <url>/2022/03/01/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%85%AB%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-UDTTYsus" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-hVmYMvDw" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-UDTTYsus"),
+            element: document.getElementById("aplayer-hVmYMvDw"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/03/01/睡前故事（八）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（五）:想去南极的北极熊</title>
+    <url>/2022/02/26/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%94%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-ShfxLIaN" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-ShfxLIaN"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "朗读这篇文章",
+              author: "Azure云希",
+              url: "shuiqiangushi.wav",
+              pic: "/2022/02/26/睡前故事（五）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<p>作为一只超级宅熊，北极熊先生从来没出过远门。直到它在网上认识了家住南极的企鹅小姐。虽然身处星球两端，但这距离不妨碍它俩在网上聊得很欢，光是同样生活在冰天雪地的环境里，就能给两只动物很多的共同语言。</p>
+<p>有时它们还会玩“拼照片”的游戏。一个在南极，一个在北极，各自在户外摆出特定的动作拍张照片，然后拼在一起，背景里冰雪交融，照片上的北极熊先生和企鹅小姐也就仿佛真的站在一起。</p>
+<p>“好希望有天能真的见到你。”某天，企鹅小姐这么说道。那么，我就去一趟南极好了。莫名而来的勇气让北极熊先生下定了决心。</p>
+<span id="more"></span>
+
+<p>接下来它做了些准备。比如上网查从北极到南极的游记攻略。鉴于以前这么做（且成功)的动物极少，它没查到什么有用的东西。也没有从各家航运公司查到直达的班次。连换乘的信息都不提供。</p>
+<p>算了。北极熊先生淡定地关掉订票网站页面。我自己总能找到路的。</p>
+<p>出发前，北极熊先生给企鹅小姐在网上留了言:我要去南极见你。下一秒，它想了想，把“见你”两个字删掉，又加上一句:给你带了小鱼干。<br>企鹅小姐立即回复了，它很高兴北极熊先生能来。对北极的小鱼干味道也很好奇。于是北极熊先生把自己储蓄的所有小鱼干装成一个大包，就这么踏上了旅途。</p>
+<p>最开始，北极熊先生选择的是冰山航运，虽然这种交通方式很慢，而且路线很随意，容易绕远路。但是便宜。冰山不收它票钱。北极熊先生想多省一点小鱼干带给企鹅小姐。所以它趴在冰山上，随着洋流朝南方漂浮了很久。没出过远门的北极熊先生想当然的以为，既然南极和北极都有冰山，那它们之间的航线必然是联通的。</p>
+<p>但它没想到，身下的冰山会随着气温的上升，越化越小，客舱空间从豪华套间缩水成只够北极熊先生糖起脚尖站立的一小块。最后完全消失了。北极熊先生落水了。</p>
+<p>当然北极熊先生是会游泳的，它带着那包小鱼干，扑腾着爬上一处小海礁，一脸懵逼地茫然四顾，不知道下一步该怎么走。这时候一只胖敦敦的虎鲸出现了。<br>“这位先生，请问你是想搭车吗?”虎鲸很礼貌地问道。<br>北极熊先生点点头，告诉它自己是想去南极。<br>“那可是趟远路。”虎鲸在水中转了个圈儿，笑眯眯地看向北极熊先生，“但我们虎鲸专车就是专门为你们这种长距离旅行的客人提供服务的，安全舒适，使命必达哦!”</p>
+<p>接着虎鲸向北极熊先生热情地演示了一下自己在速度与敏捷程度方面的种族天赋，并表示只需要收取它一半的小鱼干作为旅途费用，就保证能送到南极。<br>“先生，你在别处根本找不到我们这么好的运输服务呀!”虎鲸睁着自己浑圆的大眼睛，里面写的满满的都是真诚，“最近生意不好做，你就行行好，照顾我一单吧!“<br>北极熊先生被说动了。</p>
+<p>它将自己一半的小鱼干付给了虎鲸，搭上了这趟专车。不得不说，这比之前搭冰山航运的滋味好多了，又舒适又快捷，北极熊先生被呼呼的小风吹着，舒服的眼睛都眯了起来。但没过多久，在某座小海岛附近，北极熊先生察觉前进的速度慢了下来。它才发现，有一整群虎鲸不知道什么时候跟在了旁边。其中有些虎鲸的个头还很大个。游在最边缘处的虎鲸在跟一只老海龟鬼鬼祟祟地交头接耳，似乎在做什么见不得人的交易。<br>北极熊先生隐约觉得不太妙。</p>
+<p>情况果然不妙。作为一个人生地不熟的散客，北极熊先生被虎鲸车队以两条小鱼干的价格，转包给了没有合法运营牌照的老海龟小三轮。没办法，外表胖萌的虎鲸们，其实就是这么爱耍流氓的。<br>北极熊先生很想抗议。但看着自己身边那群身强力壮的虎鲸笑的不怀好意，又只能乖乖认怂。小三轮就小三轮吧，凑合着坐呗。</p>
+<p>可是又窄又颠。而且还特别，特别，特别的慢。只能站在老海龟壳上缩成一团的北极熊先生眼看太阳从海的这边升起，再到海的那边落下，身后的小海岛似乎还是跟刚出发时差不多大小。<br>它忍不住开口了:“那个……能请你快点吗?”</p>
+<p>“…..阿?”年迈的老海龟慢吞吞地应了一声，“你……赶…..时….间….吗?”北极熊先生想起了自己和企鹅小姐的约定，便点点头:“我有约会，快迟到了。”<br>“那你怎么不早说啊这不耽误事儿嘛,你们这些年轻人就是这么没轻没重的我都不知道该怎么说你了。”老海龟突然语速就正常了。嗯，是太快了。<br>还没等北极熊先生反应过来，老海龟就一声中气十足的呐喊:“你坐稳了啊!”<br>接着便像脱弓的利箭一般，迅猛地冲了出去。下一秒，北极熊先生又落海里了。车翻了。因为超速。还有超载。</p>
+<p>北极熊先生的旅途还在继续。剩下的路走的也很不轻松。它曾被发疯飙车的旗鱼超跑吓的捂嘴尖叫，也差点被开小巴的海牛暗搓搓地占便宜。还曾被章鱼黑出租和鲨鱼黑摩的当做争夺的客源，看两边打的不可开交，自己只能偷偷摸摸地划水逃跑。</p>
+<p>但除开这些糟心事，旅途中也有快乐。比如在中途躺在孤岛金黄色的沙滩上，看深蓝色的天空中，海鸥鸣叫，繁星闪烁。再或者潜进温暖的海水，看见色彩斑斓的珊瑚随着水流摇曳，旁边有可爱的海星和小虾爬过。这都是北极熊先生以前从来没见过的美景。它看的很仔细，努力想要记得。<br>等我到了南极……,北极熊先生很乐观地想着。我要把这些都告诉企鹅小姐。想到企鹅小姐还在等自己，它就仿佛有了用不完的干劲。</p>
+<p>即使是在越过赤道线，热的快中暑时。北极熊先生想要去到南极的决心，也没有动摇过。托友善的海豚们的福，北极熊先生终于搭上了放心的顺风车。海豚们将它送到了搭乘巨鲸越洋航运的站点。这是由鲸鱼们运营的，这个星球上最正规，最庞大的海上交通组织。</p>
+<p>价格公道，服务上心。但是依然没有直达南极的航线，那实在是太远了。北极熊先生只能继续不停地转乘，把几乎能有的交通方式统统换了个遍。有时是搭稳稳当当的蓝鲸航班，有时是搭上下颠簸的抹香鲸航班，还有时是搭有免费歌声可听的灰鲸航班。</p>
+<p>北极熊先生就这样走啊走啊，一路向南，远离大陆，越过大洋，经过岛屿，独自穿过了整颗星球。只为了去见一面企鹅小姐。从最后—班座头鲸航班上下来，北极熊先生站在了冰封的地面上。<br>这个地方看起来和它的家乡很像。它终于到南极了。</p>
+<p>而企鹅小姐就在这里等着。“你真的来了。”它脸上有掩盖不住的惊喜。还有一点点害羞的意思。“嗯，说了要来的。”北极熊先生突然也跟着害羞起来了。企鹅小姐没接着说话，只是双眼中闪烁的，全是因激动而生的神采奕奕。</p>
+<p>看起来可真美啊。北极熊先生傻傻地盯着它看。对方也微笑着盯着北极熊先生看。命运就是这样难以揣测，两个之前在网上天天畅聊的家伙，在第一次真的见面时，却同时不知道该说什么才好了。这种愉快的沉默持续了有一阵子，北极熊先生才先开口:“抱歉，小鱼干没有了。”</p>
+<p>它积蓄的所有小鱼干，都被花在了路费上，一条也不剩了。“但是…..它们都换成了故事。”北极熊先生最终笑了起来，朝企鹅小姐走过去，“让我慢慢讲给你听。”</p>
+<p>END</p>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（十七）</title>
+    <url>/2022/03/17/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E4%B8%83%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-irqfxLja" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-irqfxLja"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -1603,12 +1762,12 @@
     <title>哄对象的睡前故事（四）</title>
     <url>/2022/03/09/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E4%B8%80%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-KfKsZdLF" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-dkWvRQKc" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-KfKsZdLF"),
+            element: document.getElementById("aplayer-dkWvRQKc"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -1635,12 +1794,12 @@
     <title>睡前故事（十九）</title>
     <url>/2022/03/20/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E4%B9%9D%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-gBKOYFgM" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-UOqtSQZE" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-gBKOYFgM"),
+            element: document.getElementById("aplayer-UOqtSQZE"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -1666,47 +1825,15 @@
       </tags>
   </entry>
   <entry>
-    <title>哄对象的睡前故事（五）</title>
-    <url>/2022/03/09/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E4%BA%8C%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-gQhHkBTh" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-gQhHkBTh"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "欢迎收听",
-              author: "你的专属睡前故事",
-              url: "shuiqiangushi.aac",
-              pic: "/2022/03/09/睡前故事（十二）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>睡前故事（十五）</title>
     <url>/2022/03/12/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E4%BA%94%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-fRPflEjk" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-SJeGiZVI" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-fRPflEjk"),
+            element: document.getElementById("aplayer-SJeGiZVI"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -1749,155 +1876,15 @@
       </tags>
   </entry>
   <entry>
-    <title>睡前故事（十八）</title>
-    <url>/2022/03/19/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E5%85%AB%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-BdzfPMSn" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-BdzfPMSn"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "欢迎收听",
-              author: "你的专属睡前故事",
-              url: "shuiqiangushi.aac",
-              pic: "/2022/03/19/睡前故事（十八）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>睡前故事（十六）</title>
-    <url>/2022/03/14/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E5%85%AD%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-SoqpzPbD" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-SoqpzPbD"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "欢迎收听",
-              author: "你的专属睡前故事",
-              url: "shuiqiangushi.aac",
-              pic: "/2022/03/14/睡前故事（十六）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>睡前故事（二十四）</title>
-    <url>/2022/03/24/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E4%BA%8C%E5%8D%81%E5%9B%9B%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-aRKHjjdC" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-aRKHjjdC"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "欢迎收听",
-              author: "你的专属睡前故事",
-              url: "shuiqiangushi.aac",
-              pic: "/2022/03/24/睡前故事（二十四）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-
-<p>晚安~·</p>
-]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>睡前故事（十四）</title>
-    <url>/2022/03/11/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E5%9B%9B%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-bmYvxJlW" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-bmYvxJlW"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "欢迎收听",
-              author: "你的专属睡前故事",
-              url: "shuiqiangushi.wav",
-              pic: "/2022/03/11/睡前故事（十四）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-
-
-<p>大兔子和小兔子一起吃饭。<br>小兔子捧着饭碗,对大兔子说:”想你.”<br>“我不就在你身边吗?”大兔子说.<br>“可我还是想你.”小兔子咋吧咋吧嘴，<br>“我每吃一口饭都要想你—遍,所以,我的饭又香又甜,哪怕是我最不喜欢的卷心菜.”<br>大兔子不说话,只是低着头继续吃饭.</p>
-<span id="more"></span>
-
-<p>大兔子和小兔子─起散步.<br>小兔子一蹦—跳,对大兔子说:”想你.”<br>“我不就在你身边吗?”大兔子说.<br>“可我还是想你.”小兔子掂起脚尖,<br>“我每走一步路都要想你一遍,所以,再长的路走起来都轻轻松松,哪怕路上满是泥泞.”<br>大兔子不说话,只是慢悠悠地继续走路.<br>大兔子和小兔子坐在一起看月亮.<br>小兔子托着下巴,对大兔子说:”想你.”<br>“我不就在你身边吗?”大兔子说.<br>“可我还是想你.”小兔子歪着脑袋,<br>“我每看一眼月亮都要想你—遍,所以,月亮看上去那么美哪怕乌云遮挡了它的光芒.”<br>大兔子不说话,只是抬起头继续看月亮.<br>大兔子和小兔子该睡觉了.<br>小兔子盖好被子,对大兔子说:”想你.”<br>“我不就在你身边吗.”大兔子说.<br>“可我还是想你.”小兔子闭上眼睛,<br>“我每做一个梦都要想你一遍,所以,每个梦都是那么温暖哪怕梦里出现妖怪我都不会害怕.”<br>大兔子不说话,躺到床上.<br>小兔子睡着了.大兔子轻轻亲吻小兔子的额头.<br>“每天每天,每分每秒,我都在想你,悄悄地想你.”</p>
-]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>睡前故事（十三）</title>
     <url>/2022/03/10/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E4%B8%89%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-cLpcglxq" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-CwRMdCyp" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-cLpcglxq"),
+            element: document.getElementById("aplayer-CwRMdCyp"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -1945,6 +1932,490 @@
       </tags>
   </entry>
   <entry>
+    <title>睡前故事（十八）</title>
+    <url>/2022/03/19/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E5%85%AB%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-NqWuKpRE" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-NqWuKpRE"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/03/19/睡前故事（十八）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（十六）</title>
+    <url>/2022/03/14/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E5%85%AD%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-QgkRHhKm" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-QgkRHhKm"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/03/14/睡前故事（十六）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>哄对象的睡前故事（五）</title>
+    <url>/2022/03/09/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E4%BA%8C%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-uCuSUjKj" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-uCuSUjKj"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/03/09/睡前故事（十二）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（十四）</title>
+    <url>/2022/03/11/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%E5%9B%9B%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-ANlqCXBV" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-ANlqCXBV"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.wav",
+              pic: "/2022/03/11/睡前故事（十四）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+
+<p>大兔子和小兔子一起吃饭。<br>小兔子捧着饭碗,对大兔子说:”想你.”<br>“我不就在你身边吗?”大兔子说.<br>“可我还是想你.”小兔子咋吧咋吧嘴，<br>“我每吃一口饭都要想你—遍,所以,我的饭又香又甜,哪怕是我最不喜欢的卷心菜.”<br>大兔子不说话,只是低着头继续吃饭.</p>
+<span id="more"></span>
+
+<p>大兔子和小兔子─起散步.<br>小兔子一蹦—跳,对大兔子说:”想你.”<br>“我不就在你身边吗?”大兔子说.<br>“可我还是想你.”小兔子掂起脚尖,<br>“我每走一步路都要想你一遍,所以,再长的路走起来都轻轻松松,哪怕路上满是泥泞.”<br>大兔子不说话,只是慢悠悠地继续走路.<br>大兔子和小兔子坐在一起看月亮.<br>小兔子托着下巴,对大兔子说:”想你.”<br>“我不就在你身边吗?”大兔子说.<br>“可我还是想你.”小兔子歪着脑袋,<br>“我每看一眼月亮都要想你—遍,所以,月亮看上去那么美哪怕乌云遮挡了它的光芒.”<br>大兔子不说话,只是抬起头继续看月亮.<br>大兔子和小兔子该睡觉了.<br>小兔子盖好被子,对大兔子说:”想你.”<br>“我不就在你身边吗.”大兔子说.<br>“可我还是想你.”小兔子闭上眼睛,<br>“我每做一个梦都要想你一遍,所以,每个梦都是那么温暖哪怕梦里出现妖怪我都不会害怕.”<br>大兔子不说话,躺到床上.<br>小兔子睡着了.大兔子轻轻亲吻小兔子的额头.<br>“每天每天,每分每秒,我都在想你,悄悄地想你.”</p>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（四十三）</title>
+    <url>/2022/04/15/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%9B%9B%E5%8D%81%E4%B8%89%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-cxwxchne" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-cxwxchne"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/04/15/睡前故事（四十三）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<p>“晚安，記得想我哦”</p>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>哄女朋友睡觉甜甜的小故事 2、龟先生和兔女士</title>
+    <url>/2022/04/25/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%9B%9B%E5%8D%81%E4%B8%83%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-EYxYIoYV" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-EYxYIoYV"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.mp3",
+              pic: "/2022/04/25/睡前故事（四十七）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<p>乌龟先生是个慢性子，这是所有人都知道的事。<br>他迈着慢慢的步子，拖着慢慢的语调，</p>
+<p>过着慢慢的生活，甚至连他院子里的花都慢慢的开放。</p>
+<p>兔子小姐家的蔷薇都谢了，</p>
+<span id="more"></span>
+
+<p>他的才刚刚长出一个小小的花骨朵<br>所以兔子小姐觉得他很有趣，</p>
+<p>尤其是当他站在最宽敞的大路上喊着：</p>
+<p>“我——跑——得——可——是——很——快——的——”</p>
+<p>兔子小姐在这时总是会煮上一壶咖啡，</p>
+<p>拿起没织完的毛衣，伴着乌龟先生悠扬的尾音，</p>
+<p>美滋滋地织好一只袖子，</p>
+<p>然后她会出门抱起乌龟先生，</p>
+<p>走过他家慢慢打开的门，把他放在慢慢陷下去的沙发上，</p>
+<p>打开电视机让屏幕慢慢亮起。<br>直到兔子小姐走出了屋子，</p>
+<p>乌龟先生都没来得及说出第一个谢字。</p>
+<p>有一天，乌龟先生觉得总这样下去有些丢人，</p>
+<p>于是晚上偷偷写了张公告，</p>
+<p>想贴在小镇最显眼的地方。</p>
+<p>但是他太慢了，</p>
+<p>于是在乌龟先生拿着公告慢慢走出家门的时候，</p>
+<p>整个镇子都已经知道了他要和兔子小姐赛跑。</p>
+<p>兔子小姐觉得很委屈，</p>
+<p>她窝在自己的小床上细细回想着这么多年来</p>
+<p>与乌龟先生做邻居的日子，</p>
+<p>觉得自己真是温柔体贴无微不至。<br>除了偶尔去摘两朵他家迟开的花，</p>
+<p>真是做足了邻居的本分，</p>
+<p>”要是因为两朵花就这样，也太小气了吧！“</p>
+<p>兔子小姐嘟囔着，气鼓鼓地将嘴里的薯片咬碎。<br>她决定如果袋子里的薯片是单数，</p>
+<p>她就要快快的跑，</p>
+<p>如果是双数，就给乌龟先生留点面子，</p>
+<p>领先他半天就好啦，</p>
+<p>“单，双，单，双…”</p>
+<p>兔子小姐数着数着很快就睡着了，</p>
+<p>只留下薯片在袋子里静静地躺着，</p>
+<p>没人知道最后的结果</p>
+<p>很快到了赛跑那一天，</p>
+<p>全镇子的人都来参加了这场空前盛大的比赛，</p>
+<p>大家决定把起点定在乌龟先生的家门口，</p>
+<p>不然他很有可能来不及赶到比赛现场。</p>
+<p>乌龟先生为了这场比赛也做了充分的准备，</p>
+<p>房子粉刷上了新漆，</p>
+<p>盛开的蔷薇被修剪的漂漂亮亮，</p>
+<p>院子里弥漫着割过草后的整齐气味。</p>
+<p>甚至有人听说他遇见裁判时偷偷塞过去了一个盒子，</p>
+<p>上面沾满了他紧张的汗水，</p>
+<p>可是裁判总不会把一个被甩开半个地球的人说成赢家，</p>
+<p>那也太蠢了，</p>
+<p>这是许多人共同的想法。</p>
+<p>比赛时间马上就要到了的时候，</p>
+<p>兔子小姐推开家门走了出来，</p>
+<p>她穿上了自己织的漂亮的毛衣，</p>
+<p>把头抬得高高的，</p>
+<p>走到起跑线时看都没看乌龟先生一眼<br>她只想等着发令枪响起，</p>
+<p>一溜烟跑到终点</p>
+<p>“砰！”<br>发令枪响了，</p>
+<p>可是里面没有冒出白烟，</p>
+<p>慢慢冒出的，是一束鲜花。</p>
+<p>兔子小姐有些疑惑地看了看大家，</p>
+<p>可是大家掏出了更多的发令枪，</p>
+<p>砰砰砰砰地冒出更多鲜花<br>玫瑰的香气漫上起点的丝带，</p>
+<p>茉莉的芬芳钻进孩子嘴里咬着的蜂蜜面包，</p>
+<p>百合的味道融进牛奶奶的牛奶里。</p>
+<p>乌龟先生慢慢从裁判手里拿过一个盒子，</p>
+<p>慢慢的单膝跪地，</p>
+<p>盒子里慢慢的闪出一片光芒。</p>
+<p>很多年以后，兔子小姐和人谈起这件事的时候，</p>
+<p>总是一脸得意地说，</p>
+<p>她听到了乌龟先生这辈子说的最快的一次话</p>
+<p>“这世上总有个人注定是要比你慢的，</p>
+<p>他要负责抹去你留在雪上的脚印，</p>
+<p>修补你随手打破的浪花，</p>
+<p>拾起你丢在崖底的记忆，</p>
+<p>还要在你难过的时候从背后给你一个拥抱，</p>
+<p>这是两个人的赛跑，</p>
+<p>可以不用回头，</p>
+<p>他会一直跟在你身边。</p>
+<p>哪怕他跑得很慢，哪怕他跑得很快。”</p>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（四十五）</title>
+    <url>/2022/04/23/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%9B%9B%E5%8D%81%E4%BA%94%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-KzoixJtc" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-KzoixJtc"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/04/23/睡前故事（四十五）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（四十二）</title>
+    <url>/2022/04/14/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%9B%9B%E5%8D%81%E4%BA%8C%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-AjKzmsfA" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-AjKzmsfA"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/04/14/睡前故事（四十二）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<p>“老婆，你最好了，你当时明明那么生我的气，还给我看论文改论文”</p>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（四十）</title>
+    <url>/2022/04/12/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%9B%9B%E5%8D%81%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-iEJnbEFD" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-iEJnbEFD"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/04/12/睡前故事（四十）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<p>我对世界说晚安，唯独对你说喜欢</p>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>哄对象的睡前故事（三）</title>
+    <url>/2022/03/07/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-jiVjBPtV" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-jiVjBPtV"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/03/07/睡前故事（十）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（四十一）</title>
+    <url>/2022/04/13/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%9B%9B%E5%8D%81%E4%B8%80%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-mDHGqkjh" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-mDHGqkjh"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/04/13/睡前故事（四十一）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<p>我对世界说晚安，唯独对你说喜欢</p>
+]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>睡前故事（四十四）</title>
+    <url>/2022/04/22/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%9B%9B%E5%8D%81%E5%9B%9B%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-CKZamaWN" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-CKZamaWN"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.aac",
+              pic: "/2022/04/22/睡前故事（四十四）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>]]></content>
+      <categories>
+        <category>睡前故事</category>
+      </categories>
+      <tags>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>睡前故事（四）</title>
     <url>/2022/02/24/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%9B%9B%EF%BC%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><!-- 
@@ -1966,12 +2437,12 @@
 });
 </script> -->
 
-        <div id="aplayer-agVDwiAo" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-TBWyvCwZ" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-agVDwiAo"),
+            element: document.getElementById("aplayer-TBWyvCwZ"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -2057,23 +2528,51 @@
       </tags>
   </entry>
   <entry>
-    <title>考上编制就实现阶级跃层了吗</title>
-    <url>/2022/03/10/%E8%80%83%E4%B8%8A%E7%BC%96%E5%88%B6%E5%B0%B1%E5%AE%9E%E7%8E%B0%E9%98%B6%E7%BA%A7%E8%B7%83%E5%B1%82%E4%BA%86%E5%90%97/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>考上编制,你会发现身边的同事,最多的是那些父母本来就是体制内的人，他们本身车房不缺,无需养老过得安逸。</p>
+    <title>哄女朋友睡觉甜甜的小故事 1、恋爱的味道</title>
+    <url>/2022/04/24/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%9B%9B%E5%8D%81%E5%85%AD%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <div id="aplayer-XEGzGpKa" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-XEGzGpKa"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "欢迎收听",
+              author: "你的专属睡前故事",
+              url: "shuiqiangushi.wav",
+              pic: "/2022/04/24/睡前故事（四十六）/picture.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<p>小兔子从来没有谈过恋爱，<br>她好像知道恋爱的滋味是什么样。</p>
+<p>书上说，如果你遇见了自己喜欢的人。<br>会紧张，会激动，会魂不守舍。<br>可是，如果失恋了。</p>
 <span id="more"></span>
 
-<p>而来自普通家庭的孩子，需要通过这个工作买车买房,肩挑父母重担,自然会活得拧巴。但是也不要就此沮丧，他们背后有他们上代人的努力，而且已经突破了父母的阶层,正在改变后代的生活。</p>
-<p>其实想要实现阶级跃层并不容易，对于我们很多普通人来说，需要一代代人不懈的努力才能实现，我们这代人过得比我们的父辈好一点，我们的下一代过得比我们好一点…慢慢的整个家族自然而然也就越来越好了。</p>
-<p>都说穷人的孩子早当家，其实普通家庭的孩子很多仅仅只学习到了生存技能,并没有掌握这个社会运行的逻辑,也不懂得去研究人性,所以会在社会上吃很多亏。</p>
+<p>那种感觉就会想被猎人打了一枪，<br>虽然不会死，<br>但却会痛好长时间。</p>
+<p>小兔子收拾了下行李，<br>准备出发寻找属于自己的爱情。</p>
+<p>她先是遇见了海鸥小姐，<br>海鸥小姐说：<br>“爱情啊，一点都不好，<br>就像药一样的苦。”</p>
+<p>小兔子若有所思的离开了。</p>
+<p>然后她遇见了小狐狸，<br>小狐狸说：<br>“爱情啊，就像冬天里堆的雪人，<br>无论你付出了多少，<br>只要太阳一出来，什么都没有了。”</p>
+<p>小兔子有点沮丧。</p>
+<p>这时候她遇见了小熊，<br>小熊满脸幸福的说：<br>“爱情就像是块香草味的蛋糕，<br>是那样的甜蜜。”</p>
+<p>小兔子有点累，不知道该怎么办。</p>
+<p>突然小兔子的耳朵被捏了一下，<br>她抬头一看，原来是大兔子。<br>于是委屈的说道：<br>“你说爱情到底是什么样的啊？”</p>
+<p>大兔子拍了拍她的小脑袋：<br>爱情啊，就像我每天给你讲的小故事，<br>只要你喜欢，<br>我会永远讲给你听。</p>
 ]]></content>
       <categories>
-        <category>生活</category>
-        <category>随笔</category>
+        <category>睡前故事</category>
       </categories>
       <tags>
-        <tag>哲学</tag>
-        <tag>价值观</tag>
-        <tag>闲谈</tag>
+        <tag>爱情</tag>
+        <tag>小故事</tag>
       </tags>
   </entry>
   <entry>
@@ -2097,68 +2596,6 @@
         <tag>选择</tag>
         <tag>旅行</tag>
         <tag>生活</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>哄对象的睡前故事（三）</title>
-    <url>/2022/03/07/%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%EF%BC%88%E5%8D%81%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-ZNJwfeXc" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-ZNJwfeXc"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "欢迎收听",
-              author: "你的专属睡前故事",
-              url: "shuiqiangushi.aac",
-              pic: "/2022/03/07/睡前故事（十）/picture.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>]]></content>
-      <categories>
-        <category>睡前故事</category>
-      </categories>
-      <tags>
-        <tag>爱情</tag>
-        <tag>小故事</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>语音合成技术</title>
-    <url>/2022/02/19/%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E6%8A%80%E6%9C%AF/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p><a href="https://zhuanlan.zhihu.com/p/49711377">一个自己想实现的功能：定制个性化的语音（TTS）服务</a></p>
-</blockquote>
-<h2 id="语音合成技术原理"><a href="#语音合成技术原理" class="headerlink" title="语音合成技术原理"></a>语音合成技术原理</h2><p>语音合成（text to speech），简称TTS。将文字转化为语音的一种技术，类似于人类的嘴巴，通过不同的音色说出想表达的内容。将计算机自己产生的、或外部输入的文字信息转变为可以听得懂的、流利的汉语口语输出的技术。</p>
-<h2 id="TTS的基本组成："><a href="#TTS的基本组成：" class="headerlink" title="TTS的基本组成："></a>TTS的基本组成：</h2><h4 id="（1）文本分析"><a href="#（1）文本分析" class="headerlink" title="（1）文本分析"></a>（1）文本分析</h4><p>对输入文本进行语言学分析（主要模拟人对自然语言的理解过程），逐句进行词汇的、语法的和语义的分析，以确定句子的低层结构和每个字的音素的组成，包括文本的断句、字词切分、多音字的处理、数字的处理、缩略语的处理等。使计算机对输入的文本能完全理解，并给出后两部分所需要的各种发音提示。</p>
-<span id="more"></span>
-
-<h4 id="（2）韵律建模"><a href="#（2）韵律建模" class="headerlink" title="（2）韵律建模"></a>（2）韵律建模</h4><p>为合成语音规划出音段特征，如音高、音长和音强等，使合成语音能正确表达语意，听起来更加自然。</p>
-<h4 id="（3）语音合成（核心模块）"><a href="#（3）语音合成（核心模块）" class="headerlink" title="（3）语音合成（核心模块）"></a>（3）语音合成（核心模块）</h4><p>根据韵律建模的结果，把处理好的文本所对应的单字或短语的语音基元从语音合成库中提取，利用特定的语音合成技术对语音基元进行韵律特性的调整和修改，最终合成出符合要求的语音。</p>
-<h2 id="TTS的工作原理如下："><a href="#TTS的工作原理如下：" class="headerlink" title="TTS的工作原理如下："></a>TTS的工作原理如下：</h2><p>例如：你输入了：“今天吃饭了没有啊？”，想让电脑读出来。那么我们会怎么做呢？</p>
-<h4 id="（1）最简单的TTS："><a href="#（1）最简单的TTS：" class="headerlink" title="（1）最简单的TTS："></a>（1）最简单的TTS：</h4><p>就是电脑把每一个字分开，对于“我”字，就通过查询把“我”字对应的语音基元读出来，这样同样方式处理剩余的字，那么这句话就读出来了。但是很明显，这样读出来的语音肯定不够自然。</p>
-<p>另外，每个字对应的语音基元哪里来呢？人工苦力活，就是请人把每个汉字读出来，然后录下来。你会问，岂不要录制6千多个汉字的语音？幸运的是，汉语的音节很少，很多同音字。所以我们最多只是需要录制： 声母数×韵母数×4，（其实不是每个读音都有4声），这样算来，最多只需要录制几百个语音就可以了。当然，也有非人工的方法，如eSpeak使用共振峰合成方法，这可以使提供的语言文件非常小，但是缺点是不如采用基于人录音的语料库的声音平滑自然。另外，在合成的时候需要一张汉字对应拼音的对照表（实际上就是字典），汉字拼音输入法也依赖这张表。</p>
-<p>上面单字朗读做出来的TTS效果也还可以，特别是朗读一些没有特别含义的如姓名，家庭住址，股票代码等汉语句子，听起来足够清晰。这要归功于我们伟大的母语通常都是单音节，从古代的时候开始，每个汉字就有一个词，表达一个意思。而且汉字不同于英语，英语里面很多连读，音调节奏变化很大，汉字就简单多了。</p>
-<p>当然，你仍然要处理一些细节，比如多音字，把“银行”读成“yin xing”就不对了；再比如，标点符号的处理，数字、字母的处理。</p>
-<h4 id="（2）稍微复杂点的TTS："><a href="#（2）稍微复杂点的TTS：" class="headerlink" title="（2）稍微复杂点的TTS："></a>（2）稍微复杂点的TTS：</h4><p>如果要把TTS的效果弄好一点，再来点力气活，把基本的词录制成语音，如常见的两字词，四字成语等，再做个词库和语音库的对照表，每次需要合成时到词库里面找。这样以词为单位，比以字为单位，效果自然是好多了。当然，这就涉及到分词的技术，要把复杂的句子断成合理的词序列。另外，为了追求更好的效果，还有进化到以常用句子为单位来录音了。当然，这就得需要更大的工作量了，因为你需要读单字、词、成语、句子等等。而且语音数据也会庞大起来。</p>
-<p>再来说说文本的标识，对于复杂文本，某些内容程序没有办法处理，需要标识出来。比如，单纯的数字“128”，是应该念成“一百二十八”还是“一二八”？解决办法通常是加入XML标注，如微软的TTS：”<context ID = "number_cardinal">128</context>“念成“一百二十八”，”<context ID = "number_digit">128</context>“将念成“一二八”。TTS引擎可以去解释这些标注。遗憾的是，语音XML标注并没有形成大家都完全认可的标准，基本上是各自一套。</p>
-<h2 id="一些开源项目框架和应用"><a href="#一些开源项目框架和应用" class="headerlink" title="一些开源项目框架和应用"></a>一些开源项目框架和应用</h2><p><a href="https://github.com/mozilla/TTS">用于 Text2Speech 任务的高性能深度学习模型</a><br><a href="https://github.com/coqui-ai/TTS">coqui TTS</a><br><a href="https://github.com/fatchord/WaveRNN">WaveRNN</a><br><a href="https://azure.microsoft.com/en-us/services/cognitive-services/text-to-speech/#features">微软开放API</a></p>
-<p>其中微软的xiaoxiao晓晓、F201表现是真滴好。。。</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>TTS</tag>
-        <tag>语音合成技术</tag>
       </tags>
   </entry>
   <entry>
@@ -2210,25 +2647,23 @@
       </tags>
   </entry>
   <entry>
-    <title>那些一看就眼前一亮的句子</title>
-    <url>/2022/02/17/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E5%9B%9B%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>1、“如果你觉得你的祖国不好，你就去建设它，如果你觉得政府不好，你就去考公务员去做官，如果你觉得人民没素质，就从你开始做一个高素质的公民，如果你觉得同胞愚昧无知，就从你开始学习并改变身边的人，而不是一昧的谩骂，抱怨，逃离。” ——人民日报</p>
-<p>2、“仰望星空立大志，止于至善明大德，博学笃行成大才，脚踏实地担大任，为中华民族伟大复兴奉献青春力量，在开创多彩贵州新未来中实现人生出彩。”——省委书记谌贻琴</p>
-<p>3、“弱鸟先飞的意识，滴水穿石的精神，马上就办的作风”。——互联网+中心&#x2F;国务委员赵克志</p>
-<p>4、“不以物喜，不以己悲，居庙堂之高则忧其民，处江湖之远则忧其君。是进亦忧，退亦忧。然则何时而乐耶？其必曰先天下之忧而忧，后天下之乐而乐。”——（宋）范仲淹《岳阳楼记》</p>
+    <title>考上编制就实现阶级跃层了吗</title>
+    <url>/2022/03/10/%E8%80%83%E4%B8%8A%E7%BC%96%E5%88%B6%E5%B0%B1%E5%AE%9E%E7%8E%B0%E9%98%B6%E7%BA%A7%E8%B7%83%E5%B1%82%E4%BA%86%E5%90%97/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>考上编制,你会发现身边的同事,最多的是那些父母本来就是体制内的人，他们本身车房不缺,无需养老过得安逸。</p>
 <span id="more"></span>
 
-<p>5、“少年智则国智,少年强则国强,少年兴则国兴,少年独立则国独立”——梁起超</p>
-<p>6、做中华民族的脊梁。</p>
-<p>7、“青年要立志做大事，不要立志做大官。”——习近平</p>
-<p>8、权为民所用、情为民所系、利为民所谋</p>
-<p>9、基层工作就像是一块试金石，考验着党员干部的政治品质和道德操守，更考验着我们的坚守与坚韧。</p>
+<p>而来自普通家庭的孩子，需要通过这个工作买车买房,肩挑父母重担,自然会活得拧巴。但是也不要就此沮丧，他们背后有他们上代人的努力，而且已经突破了父母的阶层,正在改变后代的生活。</p>
+<p>其实想要实现阶级跃层并不容易，对于我们很多普通人来说，需要一代代人不懈的努力才能实现，我们这代人过得比我们的父辈好一点，我们的下一代过得比我们好一点…慢慢的整个家族自然而然也就越来越好了。</p>
+<p>都说穷人的孩子早当家，其实普通家庭的孩子很多仅仅只学习到了生存技能,并没有掌握这个社会运行的逻辑,也不懂得去研究人性,所以会在社会上吃很多亏。</p>
 ]]></content>
       <categories>
         <category>生活</category>
+        <category>随笔</category>
       </categories>
       <tags>
-        <tag>读书笔记</tag>
+        <tag>哲学</tag>
+        <tag>价值观</tag>
+        <tag>闲谈</tag>
       </tags>
   </entry>
   <entry>
@@ -2275,6 +2710,58 @@
         <tag>学习笔记</tag>
         <tag>阅读笔记</tag>
         <tag>程序员</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>语音合成技术</title>
+    <url>/2022/02/19/%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E6%8A%80%E6%9C%AF/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p><a href="https://zhuanlan.zhihu.com/p/49711377">一个自己想实现的功能：定制个性化的语音（TTS）服务</a></p>
+</blockquote>
+<h2 id="语音合成技术原理"><a href="#语音合成技术原理" class="headerlink" title="语音合成技术原理"></a>语音合成技术原理</h2><p>语音合成（text to speech），简称TTS。将文字转化为语音的一种技术，类似于人类的嘴巴，通过不同的音色说出想表达的内容。将计算机自己产生的、或外部输入的文字信息转变为可以听得懂的、流利的汉语口语输出的技术。</p>
+<h2 id="TTS的基本组成："><a href="#TTS的基本组成：" class="headerlink" title="TTS的基本组成："></a>TTS的基本组成：</h2><h4 id="（1）文本分析"><a href="#（1）文本分析" class="headerlink" title="（1）文本分析"></a>（1）文本分析</h4><p>对输入文本进行语言学分析（主要模拟人对自然语言的理解过程），逐句进行词汇的、语法的和语义的分析，以确定句子的低层结构和每个字的音素的组成，包括文本的断句、字词切分、多音字的处理、数字的处理、缩略语的处理等。使计算机对输入的文本能完全理解，并给出后两部分所需要的各种发音提示。</p>
+<span id="more"></span>
+
+<h4 id="（2）韵律建模"><a href="#（2）韵律建模" class="headerlink" title="（2）韵律建模"></a>（2）韵律建模</h4><p>为合成语音规划出音段特征，如音高、音长和音强等，使合成语音能正确表达语意，听起来更加自然。</p>
+<h4 id="（3）语音合成（核心模块）"><a href="#（3）语音合成（核心模块）" class="headerlink" title="（3）语音合成（核心模块）"></a>（3）语音合成（核心模块）</h4><p>根据韵律建模的结果，把处理好的文本所对应的单字或短语的语音基元从语音合成库中提取，利用特定的语音合成技术对语音基元进行韵律特性的调整和修改，最终合成出符合要求的语音。</p>
+<h2 id="TTS的工作原理如下："><a href="#TTS的工作原理如下：" class="headerlink" title="TTS的工作原理如下："></a>TTS的工作原理如下：</h2><p>例如：你输入了：“今天吃饭了没有啊？”，想让电脑读出来。那么我们会怎么做呢？</p>
+<h4 id="（1）最简单的TTS："><a href="#（1）最简单的TTS：" class="headerlink" title="（1）最简单的TTS："></a>（1）最简单的TTS：</h4><p>就是电脑把每一个字分开，对于“我”字，就通过查询把“我”字对应的语音基元读出来，这样同样方式处理剩余的字，那么这句话就读出来了。但是很明显，这样读出来的语音肯定不够自然。</p>
+<p>另外，每个字对应的语音基元哪里来呢？人工苦力活，就是请人把每个汉字读出来，然后录下来。你会问，岂不要录制6千多个汉字的语音？幸运的是，汉语的音节很少，很多同音字。所以我们最多只是需要录制： 声母数×韵母数×4，（其实不是每个读音都有4声），这样算来，最多只需要录制几百个语音就可以了。当然，也有非人工的方法，如eSpeak使用共振峰合成方法，这可以使提供的语言文件非常小，但是缺点是不如采用基于人录音的语料库的声音平滑自然。另外，在合成的时候需要一张汉字对应拼音的对照表（实际上就是字典），汉字拼音输入法也依赖这张表。</p>
+<p>上面单字朗读做出来的TTS效果也还可以，特别是朗读一些没有特别含义的如姓名，家庭住址，股票代码等汉语句子，听起来足够清晰。这要归功于我们伟大的母语通常都是单音节，从古代的时候开始，每个汉字就有一个词，表达一个意思。而且汉字不同于英语，英语里面很多连读，音调节奏变化很大，汉字就简单多了。</p>
+<p>当然，你仍然要处理一些细节，比如多音字，把“银行”读成“yin xing”就不对了；再比如，标点符号的处理，数字、字母的处理。</p>
+<h4 id="（2）稍微复杂点的TTS："><a href="#（2）稍微复杂点的TTS：" class="headerlink" title="（2）稍微复杂点的TTS："></a>（2）稍微复杂点的TTS：</h4><p>如果要把TTS的效果弄好一点，再来点力气活，把基本的词录制成语音，如常见的两字词，四字成语等，再做个词库和语音库的对照表，每次需要合成时到词库里面找。这样以词为单位，比以字为单位，效果自然是好多了。当然，这就涉及到分词的技术，要把复杂的句子断成合理的词序列。另外，为了追求更好的效果，还有进化到以常用句子为单位来录音了。当然，这就得需要更大的工作量了，因为你需要读单字、词、成语、句子等等。而且语音数据也会庞大起来。</p>
+<p>再来说说文本的标识，对于复杂文本，某些内容程序没有办法处理，需要标识出来。比如，单纯的数字“128”，是应该念成“一百二十八”还是“一二八”？解决办法通常是加入XML标注，如微软的TTS：”<context ID = "number_cardinal">128</context>“念成“一百二十八”，”<context ID = "number_digit">128</context>“将念成“一二八”。TTS引擎可以去解释这些标注。遗憾的是，语音XML标注并没有形成大家都完全认可的标准，基本上是各自一套。</p>
+<h2 id="一些开源项目框架和应用"><a href="#一些开源项目框架和应用" class="headerlink" title="一些开源项目框架和应用"></a>一些开源项目框架和应用</h2><p><a href="https://github.com/mozilla/TTS">用于 Text2Speech 任务的高性能深度学习模型</a><br><a href="https://github.com/coqui-ai/TTS">coqui TTS</a><br><a href="https://github.com/fatchord/WaveRNN">WaveRNN</a><br><a href="https://azure.microsoft.com/en-us/services/cognitive-services/text-to-speech/#features">微软开放API</a></p>
+<p>其中微软的xiaoxiao晓晓、F201表现是真滴好。。。</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>TTS</tag>
+        <tag>语音合成技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>那些一看就眼前一亮的句子</title>
+    <url>/2022/02/17/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%EF%BC%88%E5%9B%9B%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>1、“如果你觉得你的祖国不好，你就去建设它，如果你觉得政府不好，你就去考公务员去做官，如果你觉得人民没素质，就从你开始做一个高素质的公民，如果你觉得同胞愚昧无知，就从你开始学习并改变身边的人，而不是一昧的谩骂，抱怨，逃离。” ——人民日报</p>
+<p>2、“仰望星空立大志，止于至善明大德，博学笃行成大才，脚踏实地担大任，为中华民族伟大复兴奉献青春力量，在开创多彩贵州新未来中实现人生出彩。”——省委书记谌贻琴</p>
+<p>3、“弱鸟先飞的意识，滴水穿石的精神，马上就办的作风”。——互联网+中心&#x2F;国务委员赵克志</p>
+<p>4、“不以物喜，不以己悲，居庙堂之高则忧其民，处江湖之远则忧其君。是进亦忧，退亦忧。然则何时而乐耶？其必曰先天下之忧而忧，后天下之乐而乐。”——（宋）范仲淹《岳阳楼记》</p>
+<span id="more"></span>
+
+<p>5、“少年智则国智,少年强则国强,少年兴则国兴,少年独立则国独立”——梁起超</p>
+<p>6、做中华民族的脊梁。</p>
+<p>7、“青年要立志做大事，不要立志做大官。”——习近平</p>
+<p>8、权为民所用、情为民所系、利为民所谋</p>
+<p>9、基层工作就像是一块试金石，考验着党员干部的政治品质和道德操守，更考验着我们的坚守与坚韧。</p>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>读书笔记</tag>
       </tags>
   </entry>
 </search>
