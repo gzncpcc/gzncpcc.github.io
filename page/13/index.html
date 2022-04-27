@@ -203,6 +203,120 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gzncpcc.github.io/2022/02/21/%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%EF%BC%9AAzure-Python-SSML%E5%AE%9E%E7%8E%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/1_vpqtxzmzezeqjj9977.jpg">
+      <meta itemprop="name" content="gzncpcc">
+      <meta itemprop="description" content="绘一纸潇湘，花盏玲珑如妆，雨落弦响，陌上芳华，醉影照天长">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="gzncpcc">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/02/21/%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%EF%BC%9AAzure-Python-SSML%E5%AE%9E%E7%8E%B0/" class="post-title-link" itemprop="url">语音合成：Azure+Python+SSML实现</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-02-21 15:08:38 / 修改时间：15:22:08" itemprop="dateCreated datePublished" datetime="2022-02-21T15:08:38+08:00">2022-02-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2022/02/21/%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%EF%BC%9AAzure-Python-SSML%E5%AE%9E%E7%8E%B0/" class="post-meta-item leancloud_visitors" data-flag-title="语音合成：Azure+Python+SSML实现" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/02/21/%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%EF%BC%9AAzure-Python-SSML%E5%AE%9E%E7%8E%B0/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/02/21/%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%EF%BC%9AAzure-Python-SSML%E5%AE%9E%E7%8E%B0/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>采用的策略是微软云服务的Python SDK + SSML</p>
+</blockquote>
+<p>Azure上，语音部分的文档写的较为详细，包含各种功能，如文本转语音 REST API，TTS SDK，自定义语音模型进行文本转语音等。但是没有整体的、提纲般的介绍，看完文档极有不知如何下手。本文将一步步地介绍，如何从0开始使用Azure SDK的使用方法。我们希望实现的效果是，输入一段文本，调用SDK后，返回给我们一段wav格式的音频，播放后，即为之前输入的文本。</p>
+<h1 id="1、注册账号"><a href="#1、注册账号" class="headerlink" title="1、注册账号"></a>1、注册账号</h1><p>注册微软Azure账号看这里：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/49711377">https://zhuanlan.zhihu.com/p/49711377</a><br>需要一张vasa信用卡，也可以是虚拟卡。对于国内用户，这是极不友好的。不过也有一些其他优惠，比如学生的，自行获取国外edu教育有效了，据说GitHub学生认证也可以，不过都比较麻烦。注册的时候最好使用非大陆的IP，比如香港的IP+香港的地址</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/21/%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%EF%BC%9AAzure-Python-SSML%E5%AE%9E%E7%8E%B0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://gzncpcc.github.io/2022/02/20/%E7%99%BE%E5%BA%A6%E4%BA%91%E5%90%88%E6%88%90Python-SDK/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -659,122 +773,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://gzncpcc.github.io/2022/02/18/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%EF%BC%9A%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/1_vpqtxzmzezeqjj9977.jpg">
-      <meta itemprop="name" content="gzncpcc">
-      <meta itemprop="description" content="绘一纸潇湘，花盏玲珑如妆，雨落弦响，陌上芳华，醉影照天长">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="gzncpcc">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/02/18/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%EF%BC%9A%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97/" class="post-title-link" itemprop="url">深度学习：实验室服务器环境配置操作指南</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-02-18 17:14:49 / 修改时间：21:09:45" itemprop="dateCreated datePublished" datetime="2022-02-18T17:14:49+08:00">2022-02-18</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2022/02/18/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%EF%BC%9A%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97/" class="post-meta-item leancloud_visitors" data-flag-title="深度学习：实验室服务器环境配置操作指南" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2022/02/18/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%EF%BC%9A%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2022/02/18/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%EF%BC%9A%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>9.5k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>9 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="一、使用Anaconda配置Python环境"><a href="#一、使用Anaconda配置Python环境" class="headerlink" title="一、使用Anaconda配置Python环境"></a>一、使用Anaconda配置Python环境</h2><p>安装anaconda：<code>bash Anaconda3-2019.10-Linux-x86_64.sh </code><br><code>实验室服务器没有挂公网，所以只能用离线方式安装，包括下面的pytorch和TensorFlow都是一样。</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">panchengchang@a-node03:~/envir_packages$ bash Anaconda3-2019.10-Linux-x86_64.sh </span><br><span class="line"></span><br><span class="line">Welcome to Anaconda3 2019.10</span><br><span class="line"></span><br><span class="line">In order to <span class="built_in">continue</span> the installation process, please review the license</span><br><span class="line">agreement.</span><br><span class="line">Please, press ENTER to <span class="built_in">continue</span></span><br><span class="line">&gt;&gt;&gt; </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>按要求一直回车，要输yes就输yes就可以。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/02/18/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%EF%BC%9A%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/12/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/14/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/12/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/14/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -848,7 +850,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">75</span>
+          <span class="site-state-item-count">76</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -936,12 +938,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">64k</span>
+    <span title="站点总字数">65k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">58 分钟</span>
+    <span title="站点阅读时长">59 分钟</span>
 </div>
 
 
